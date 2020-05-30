@@ -8,6 +8,9 @@ $todaysmeal_en = "I blended daily meals into a paste and then shaped them to res
 /*ONE BITE CHALLENG*/
 $onebitechallenge_en = "Share bites of the same hamburger with a homeless person. That would help lead to understanding and accepting between us.";
 
+/*ONE BITE CHALLENGE AFTER CORONAVIRUS (COVID-19)*/
+$onebitechallengeaftercovid19_en = "Share bites of a hamburger with a homeless man and we will use a sanitizer and masks. It depicts the distance between each other.";
+
 /*牛丼の滝/*/
 $gyudonwaterfall_en = "The situation of modern eating habits: Gyudon(Beef Bowl) falls furiously into the public's stomachs, is painted like a natural waterfall.";
 
