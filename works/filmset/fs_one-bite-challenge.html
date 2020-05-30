@@ -21,7 +21,7 @@
         <div class="clearfix" id="no-pinterest">
             <ul class="img_3">
                 <?php
-$target_dir = '/home/users/1/sub.jp-bijutsu4/web/admin/images/works/add/one-bite-challenge_filmset';
+$target_dir = 'dirname(__FILE__).'/../../images/works/add/one-bite-challenge_filmset';
 $result = array();
 $command = "find " . $target_dir . " -name '*.jpg' | wc -l";
 exec($command, $result);

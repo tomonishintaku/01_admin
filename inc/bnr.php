@@ -7,7 +7,8 @@
 						<!--li><a class="lazyload"href="/works/writing.html"><img class="lazyload" src="/images/top/bnr_booklet_muron-01.png" alt="新宅睦仁ブログ本「むろん、どこにも行きたくない。悲哀奮闘篇」好評発売中"></a></li-->
 						<!--li><a class="lazyload"href="http://kyotojapan-artnow.net/?mode=cate&cbid=1239949&csid=35&sort=n" target="_blank" onclick="ga('send','event','banner','click','a3', 1);"><img class="lazyload" src="/images/top/bnr_voice_a3.png" alt="MATSUO MEGUMI +VOICE GALLERY pfs/w　a3プロジェクト"></a></li-->
 						<li><a href="http://tomonishintaku.com/blog/" onclick="ga('send','event','banner','click','blog', 1);"><img class="lazyload" src="/images/top/bnr_shintaku_blog.png" alt="現代美術家新宅睦仁の日々の徒然のエッセイやアート関連のコラムなどのブログ"></a></li>
-						<li><a href="https://aonose.wixsite.com/aonose/" onclick="ga('send','event','banner','click','aonose', 1);" target="_blank"><img class="lazyload" src="/images/top/aonose-bnr.jpg" alt="現代美術初心者でも楽しめる現代アートのaonose"></a></li>
+						<li><a href="https://www.tricera.net/artist/8100604" target="_blank"><img class="lazyload" src="/images/top/bnr_tricera-en.png" alt="tricera, selling paintings art online"></a></li>
+						<!--li><a href="https://aonose.wixsite.com/aonose/" onclick="ga('send','event','banner','click','aonose', 1);" target="_blank"><img class="lazyload" src="/images/top/aonose-bnr.jpg" alt="現代美術初心者でも楽しめる現代アートのaonose"></a></li-->
 						<!--li><a class="lazyload"href="/works/writing.html"><img class="lazyload" src="/images/top/bnr_writing.png" alt="現代美術家新宅睦仁の、文章作成、文筆の仕事の記録"></a></li-->
 					</ul>
 				</section>
