@@ -1,0 +1,85 @@
+
+
+ ul.menu_01 { list-style:none;
+ 	background-image:url("../exetc/kaiga_painting.gif");
+	background-repeat:no-repeat;
+	height:65px;
+	margin-left:0;
+	padding-left:0;
+ }
+
+ ul.menu_02 { list-style:none;
+ 	background-image:url("../exetc/art_dayo.gif");
+	background-repeat:no-repeat;
+	height:65px;
+	margin-left:0;
+	padding-left:0;
+ }
+ 
+  ul.menu_03 { list-style:none;
+ 	background-image:url("../exetc/shopping.gif");
+	background-repeat:no-repeat;
+	background-position: 0% 50%;
+	height:80px;
+	margin-left:0;
+	padding-left:0;
+
+ }
+ 
+ 
+  ul.menu_04 { list-style:none;
+ 	background-image:url("../exetc/ktbr.gif");
+	background-repeat:no-repeat;
+	background-position: 0% 50%;
+	height:80px;
+	margin-left:0;
+	padding-left:0;
+ }
+ 
+ 
+   ul.menu_05 { list-style:none;
+ 	background-image:url("../exetc/okamoto.gif");
+	background-repeat:no-repeat;
+	height:65px;
+	margin-left:0;
+	padding-left:0;
+ }
+ 
+
+  ul.menu_06 { list-style:none;
+ 	background-image:url("../exetc/rental.gif");
+	background-repeat:no-repeat;
+	height:65px;
+	margin-left:0;
+	padding-left:0;
+ }
+
+
+li {
+	line-height:1.2em;
+	background-image:url("../exetc/link_ico.gif");
+	background-position: 63% 55%;
+	background-repeat:no-repeat;
+	padding-left:65%;
+}
+
+
+.menu_01 li {
+	line-height:1.2em;
+	background-image:url("../exetc/link_ico_blue.gif");
+	background-position: 63% 55%;
+	background-repeat:no-repeat;
+	padding-left:65%;
+}
+
+
+ li a { font-size:80%;
+
+ 		}
+		
+li.still {	
+	color:silver;
+	font-size:80%;
+	background-image:none;
+	}
+

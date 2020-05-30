@@ -1,0 +1,927 @@
+@charset "utf-8";
+
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body {
+	color: #777777;	/*全体の文字色*/
+	margin: 0px;
+	padding: 0px;
+	font: 14px/2 "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+	background: url(../images/bg_line.png) repeat-x center text-outline: ;	
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure{	
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style-type: none;
+}
+img {
+	border: none;
+}
+input,textarea,select {
+	font-size: 1em;
+}
+form {
+	margin: 0px;
+}
+table {
+	border-collapse:collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+---------------------------------------------------------------------------*/
+a {
+	color: #777777;	
+}
+a:hover {
+	color: #ff1493;		
+	text-decoration: none;
+}
+
+/*bodyの直接の子要素のh1タグ（ページ最上段にあるh1）設定
+---------------------------------------------------------------------------*/
+body > h1 {
+	text-align: left;
+	margin-left: 100px;
+}
+body > h1 a, body > h1 a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+#container h1{
+	font-size: 10px;
+	font-weight: normal: ;
+	color: #ccc	;
+}
+
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: 990px;	/*コンテナー幅*/
+	margin-right: auto;
+	margin-left: auto;
+}
+/*ヘッダー（サイト名ロゴが入ったブロック）
+---------------------------------------------------------------------------*/
+header {
+	height: 50px;	
+	width: 100%;
+	position: relative;
+}
+/*h1ロゴの設定*/
+header h2 {
+	margin-top: -4px;
+}
+
+/* font awesome 用　css*/
+#container .fa{
+	padding-right: 8px;
+}
+
+
+/*上部のメインメニュー
+---------------------------------------------------------------------------*/
+/*メニューブロック全体の設定*/
+nav#mainmenu ul {
+	font-size: 10px;	
+	height: 120px;		
+	width: 480px;		
+	position: absolute;
+	top: -10px;			
+	right: -240px;		
+}
+/*各メニューの設定*/
+nav#mainmenu ul li a {
+	letter-spacing:0px;	
+	height: 38px;		
+	width: 38px;		
+	line-height: 38px;	
+	color: #FFF;		
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	background: #bbb;
+	border-radius: 70px;	
+	-webkit-transition: 0.8s;	
+	transition: 0.8s;			
+	border: 6px solid rgba(255,255,255,0.9);	
+	overflow: hidden;
+	float: left;
+	margin-right: 12px;
+}
+/*マウスオン時の設定*/
+nav#mainmenu ul li a:hover {
+	background: #FFF;	
+	color: #777777;		
+	border: 6px solid #bbb;	
+}
+
+/*トップページのスライドショー
+---------------------------------------------------------------------------*/
+#mainimg {
+	position: relative;
+	height:330px;
+	width: 970px;
+	margin-bottom: 60px;
+}
+#mainimg img {
+	-webkit-box-shadow: 0px 2px 5px #b1ac90;	
+	box-shadow: 0px 2px 5px #b1ac90;			
+	vertical-align: bottom;
+	border: 10px solid #FFF;		
+}
+#mainimg .slide_file {
+	display: none;
+}
+#slide_image {
+	z-Index:2;
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+#slide_image2 {
+	z-Index:1;			
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+
+
+/*メインコンテンツ
+---------------------------------------------------------------------------*/
+#main {
+	width: 100%;	/*メインコンテンツ幅*/
+	padding-bottom: 30px;
+}
+/*mainコンテンツのh1タグの設定*/
+#main h2 {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 84%, #f6f6f6 89%, #e1e1e1 97%, #a3a3a3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(84%,#f6f6f6), color-stop(89%,#f6f6f6), color-stop(97%,#e1e1e1), color-stop(100%,#a3a3a3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 84%,#f6f6f6 89%,#e1e1e1 97%,#a3a3a3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 84%,#f6f6f6 89%,#e1e1e1 97%,#a3a3a3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 84%,#f6f6f6 89%,#e1e1e1 97%,#a3a3a3 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 84%,#f6f6f6 89%,#e1e1e1 97%,#a3a3a3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a3a3a3',GradientType=0 ); /* IE6-9 */
+	font-size: 1.2em;
+	padding: 0 0 6px 20px;	
+	clear: both;
+	color: #777;
+	line-height: 1.2em;
+}
+#main h1.type1 {
+	background-color: #a08e64;	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#a08e64), to(#777777));	/*グラデーション*/
+	background-image: -webkit-linear-gradient(#a08e64, #777777);	/*同上*/
+	background-image: linear-gradient(#a08e64, #777777);			/*同上*/
+	color: #ccc;
+}
+/*mainコンテンツの段落タグ設定*/
+#main p {
+	padding: 0.5em 20px 1em;
+}
+
+
+/*css3 btn*/
+.btn_frame{
+	text-align: right;
+}
+
+.css_btn_a,.css_btn_b {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.css_btn_a {
+	font-size:16px;
+	font-family:Arial;
+
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #74b807;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #89c403 18%, #77a809 87% );
+	background:-ms-linear-gradient( top, #89c403 18%, #77a809 87% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(18%, #89c403), color-stop(87%, #77a809) );
+	background-color:#89c403;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:1px 0px 0px #528009;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #a4e271;
+	-moz-box-shadow:inset 1px 1px 0px 0px #a4e271;
+	box-shadow:inset 1px 1px 0px 0px #a4e271;
+	padding: 4px 52px;
+
+}
+.css_btn_a:hover {
+	background:-moz-linear-gradient( center top, #77a809 18%, #89c403 87% );
+	background:-ms-linear-gradient( top, #77a809 18%, #89c403 87% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(18%, #77a809), color-stop(87%, #89c403) );
+	background-color:#77a809;
+	color: #5a5038;		
+}
+	}.css_btn_a:active {
+		position:relative;
+		top:1px;
+
+	}
+
+	.css_btn_b {
+		font-size:14px;
+		font-family:Arial;
+		-moz-border-radius:8px;
+		-webkit-border-radius:8px;
+		border-radius:4px;
+		padding:0 18px;
+		text-decoration:none;
+		background-color:#fff;
+		color:#aaa;
+		display:inline-block;
+	
+			}.css_btn_b:hover {
+			background-color:#ffffa8;
+			color: #888;
+			}.css_btn_b:active {
+				position:relative;
+				top:1px;
+			}
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	text-align: center;
+	padding:2px 0;
+	background: #f1f1f1;
+	color: #aaa;
+	font-size:0.8em;
+}
+
+/*NEWS
+---------------------------------------------------------------------------*/
+/*ブロック全体の設定*/
+#news dl{
+	overflow: auto;	
+	min-height: 60px;	
+	margin: 5px 20px 0px;
+}
+/*日付設定*/
+#news dt {
+	font-weight: bold;	
+	float: left;
+	width: 8em;
+}
+/*記事設定*/
+#news dd {
+	border-bottom: 1px solid rgba(255,255,255,0.3);	
+	padding-left: 8em;
+}
+#news dd img {
+	vertical-align: middle;
+}
+
+/*menu.html内のページ内メニュー
+---------------------------------------------------------------------------*/
+ul.navmenu {
+	font-size: 16px;	
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+ul.navmenu li {
+	display: inline;
+}
+ul.navmenu li a {
+	background: url(../images/arrow.png) no-repeat left center;	
+	padding-right: 20px;
+	padding-left: 15px;
+	text-decoration: none;
+}
+ul.navmenu li a:hover {
+	background: url(../images/arrow.png) no-repeat 2px center;	
+}
+
+/*menu.html内のメニューブロック
+---------------------------------------------------------------------------*/
+/*各ボックスの設定*/
+#main section.list article {
+	height: 670px;	/*ボックスの高さ*/
+	width: 290px;	/*ボックスの幅*/
+	-webkit-box-shadow: 0px 2px 5px #b1ac90;	
+	box-shadow: 0px 2px 5px #b1ac90;			
+	background-color: #FFF;	
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#e6e6e6));	/*グラデーション*/
+	background-image: -webkit-linear-gradient(#FFF, #e6e6e6);	/*同上*/
+	background-image: linear-gradient(#FFF, #e6e6e6);			/*同上*/
+	padding: 15px;	/*ボックス内の余白*/
+	float: left;
+	margin: 0 5px 36px 5px;
+	position: relative;
+}
+/*ボックス内の段落タグ設定*/
+#main section.list article p {
+	padding: 0px;
+	color: #666;
+	font-size: 12px;	
+}
+/*ボックス内のh1タグ設定*/
+#main section.list article h2 {
+	background: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-size: 100%;
+	padding: 0;
+	color: #777777;	/*文字色*/
+	border-bottom: 2px dotted #777777;	/
+	margin-bottom: 5px;
+}
+/*atst_name*/
+#main section.list article .atst_name:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#main section.list article .atst_name img{
+	float: left;
+}
+#main section.list article .atst_name h3{
+	font-size:1.4em;
+	padding: 0 0 0 100px;
+	line-height: 1em;
+}
+#main section.list article .atst_name h3 .kana{
+	padding-bottom: 0.2em;
+}
+#main section.list article .atst_name h3 .born{
+	line-height: 1em;
+	padding-top: 0.8em;
+}
+#main section.list article .atst_name h3 .kana,
+#main section.list article .atst_name h3 .born{
+	font-size:0.6em;
+	font-weight:normal;
+	color: #aaa;
+	display: block;
+}
+/*テーブル１
+---------------------------------------------------------------------------*/
+.ta1 {
+	width: 950px;
+	margin: 0px auto;
+}
+.ta1, .ta1 td, .ta1 th{
+	border: 1px solid #FFF;	
+}
+/*テーブル内の右側*/
+.ta1 td{
+	padding: 10px;
+}
+.ta1 th{
+	background: rgba(255,255,255,0.1);	
+	width: 200px;	/*幅*/
+	padding: 10px;
+	text-align: center;
+}
+/*テーブル１行目に入った見出し部分*/
+.ta1 th.tamidashi{
+	width: auto;
+	text-align: left;
+}
+/*テーブルのキャプション設定*/
+.ta1 caption{
+	background: rgba(144,128,90,0.5);	
+	padding: 10px;
+	border-top: 1px solid #FFF;		/*上側の線の幅、線種、色*/
+	border-right: 1px solid #FFF;	/*右側の線の幅、線種、色*/
+	border-left: 1px solid #FFF;	/*左側の線の幅、線種、色*/
+	text-align: left;
+	font-weight: bold;	/*文字を太字にする設定*/
+	color: #FFF;
+}
+
+/*PAGE TOP設定
+---------------------------------------------------------------------------*/
+#pagetop,.pt_sp_only {
+	clear: both;
+	text-align: right;
+}
+#pagetop a,
+.pt_sp_only a {
+	background-color: rgba(255,255,255,0.7);
+	color: #777777;	/*文字色*/
+	text-decoration: none;
+	text-align: center;
+	width: 8em;		/*ボックスの幅*/
+	font-size: 10px;	/*文字サイズ*/
+	letter-spacing: 0.1em;	
+	display: inline-block;
+}
+#pagetop a:hover,
+.pt_sp_only a:hover {
+	background-color: rgba(255,255,255,1);	
+	color: #777777;
+}
+
+.pt_sp_only {
+	display: none;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {
+	background: rgba(144,128,90,0.5);
+	color: #FFF;
+}
+.mb1em {
+	margin-bottom: 1em;
+}
+.clear:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+ul.disc {
+	padding: 0em 25px 1em;
+	list-style: disc;
+}
+.color1 {
+	color: #486a00;
+}
+.pr {
+	font-size: 10px;
+}
+.btn {
+	font-size: 13px;
+}
+.wl {
+	width: 96%;
+}
+.ws {
+	width: 50%;	
+}
+.c {
+	text-align: center;
+}
+figcaption {
+	font-size: 11px;
+}
+.pagetop {
+	clear: both;
+	text-align: right;
+}
+/*ACCESS*/
+.map{
+	margin-top: 20px;
+}
+.map .right{	
+	text-align: right;
+	float: right;
+	width: 60%;
+}
+
+.ggmap {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;	
+}
+ 
+.ggmap iframe,
+.ggmapr object,
+.ggmap embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.map .left{
+	float: left;
+	padding: 0;
+	margin-right: 10px;
+	width: 38%;
+}
+.map a{
+	text-decoration: none;
+	}
+
+.map .fa{
+color: #ff1493;
+}
+/*.map .link:before{
+content:"●";
+color: #ff1493;
+padding-right: 0.5em;
+}*/
+.map .zo_about{
+	font-size:0.8em;
+	margin: 1.5em 0 0 0;
+	display: block;
+width: 380px;
+}
+.map .zo_about a{
+	font-weight: bold;
+	}
+
+/*h2 ID*/
+#member{
+	margin-bottom:20px;
+}
+
+
+/*biography artist --------------------------------------------------------*/
+#main .artist:first-child{
+	margin-top: 1.5em;
+
+	}
+#main .artist:last-child{
+	padding-bottom: 0;
+	margin-bottom: 0;	
+		border-bottom:none;
+	}
+
+#main .artist p{
+	margin: 0;
+	padding: 0;
+}
+
+.artist .atst_name:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#main.artist .atst_name img{
+float: left;
+display: block;
+width: 12%;
+margin: 0;
+padding: 0;
+}
+#main .artist .atst_name h2{
+width: 88%;
+float: right;
+margin: 0;
+padding: 0;
+font-size: 1.8em;
+border: none;
+	background: none;
+	box-shadow: none;
+
+}
+#main .artist .atst_name h2 span{
+	font-size: 12px;
+	padding:0 2em;
+	}
+	#main .artist .page_link{
+		margin:3em auto;
+		background: #eee;
+		border-radius:8px;
+		padding: 1.2em 0;
+	}
+
+#main .artist .site{
+margin-top: 0.5em;
+}
+#main .artist .site a.ex_link{
+	font-size: 1em;
+	color: #fff;
+	font-weight: bold;
+	background:#00a497;
+	padding: 0.5em 2em ;
+}
+#main .artist .site a.ex_link:hover{
+	background:#adff2f;
+}
+
+#main .artist .page_link a.ex_link{
+		float: left;
+		color: #000;
+		font-size: 1em;
+		margin:0 1.5%;
+		width: 30%;
+		text-align: center;
+		padding: 0.5em 0;
+
+}
+#main .artist .page_link a:hover{
+			background:#ffffa8;
+}
+#main .artist .page_link a .fa{
+	color: #ff1493;
+}
+#main .artist a.ex_link{
+		font-size: 12px;
+		border:none ;
+		text-decoration: none;
+		background: #fff;
+		padding: 1px 8px;
+		border-radius: 4px;
+}
+
+.artist dl,
+#main .artist p{
+	margin-left: 1.5em;
+}
+.artist dt{
+	float: left;
+	margin-right: 1em;
+}
+.artist .ex_work{
+	margin-top: 1.5em;
+}
+.artist .ex_work:after,
+.artist dl:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.artist .ex_work li{
+	float: left;
+	width: 24.2%;
+	margin-right: 1%;
+}
+.artist .ex_work li:last-child{
+	margin-right: 0;
+}
+.artist .ex_work li img{
+width: 100%;
+}
+/* media 481px以上　PCのみ */
+@media only screen and (min-width: 481px){
+		.atst_dtl {
+ position:absolute;
+ top:660px; left:190px 
+			}
+}
+/* media 480px以下 */
+@media only screen and (min-width: 0px) and (max-width: 480px){
+/*bodyの直接の子要素のh1タグ（ページ最上段にあるh1）設定
+---------------------------------------------------------------------------*/
+#container h1 {
+	display: none;
+}
+.pt_sp_only {
+	display: block;
+}
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: auto;
+	margin-right: 6px;
+	margin-left: 6px;
+}
+
+/*ヘッダー（サイト名ロゴが入ったブロック）
+---------------------------------------------------------------------------*/
+header {
+	height: auto;
+	position: static;
+	text-align: center;
+}
+/*h1ロゴの設定*/
+header h2 {
+	padding-top: 8px;
+	text-align: center;
+	position: static;
+	margin-bottom: -10px;
+}
+header h2 img {
+	width: 94%;
+	height: auto;
+}
+
+/*上部のメインメニュー
+---------------------------------------------------------------------------*/
+nav#mainmenu ul {
+	height: auto;
+	width: auto;
+	position: static;
+	top: auto;
+	margin: -12px 0;
+}
+/*各メニューの設定*/
+nav#mainmenu ul li a {
+	/*letter-spacing:-1px;*/	
+	float: none;
+	height: 38px;
+	width: 38px;
+	line-height: 38px;
+	border: 5px solid rgba(255,255,255,0.9);
+	margin-right: 16px;
+	font-size:12px;
+}
+
+nav#mainmenu ul li a.ls{
+letter-spacing:-1px;
+}
+
+nav#mainmenu ul li {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+/*マウスオン時の設定*/
+nav#mainmenu ul li a:hover {
+	border: 5px solid #777777;
+}
+
+/*mainコンテンツ
+---------------------------------------------------------------------------*/
+#main {
+	width: auto;
+}
+/*mainコンテンツのh1タグの設定*/
+#main h1 {
+	padding: 2px 5px 2px 10px;
+}
+/*mainコンテンツの段落タグ設定*/
+#main p {
+	padding: 0.5em 5px 1em;
+}
+
+/*トップページのメイン画像
+---------------------------------------------------------------------------*/
+#mainimg {
+	height: auto;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin-bottom: 20px;
+}
+#mainimg img {
+	border: 5px solid #FFF;
+}
+#slide_image {
+	height: auto;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#slide_image2 {
+	height: auto;
+	width: 100%;
+	position: absolute;
+	left:0px;
+	top:0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+section#news h1.open {
+	background: url(../images/btn_minus.png) no-repeat right center, -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#e6e6e6));
+	background: url(../images/btn_minus.png) no-repeat right center, -webkit-linear-gradient(#FFF, #e6e6e6);
+	background: url(../images/btn_minus.png) no-repeat right center, linear-gradient(#FFF, #e6e6e6);
+}
+section#news h1.close {
+	background: url(../images/btn_plus.png) no-repeat right center, -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#e6e6e6));
+	background: url(../images/btn_plus.png) no-repeat right center, -webkit-linear-gradient(#FFF, #e6e6e6);
+	background: url(../images/btn_plus.png) no-repeat right center, linear-gradient(#FFF, #e6e6e6);
+}
+/*ブロック全体の設定*/
+#news{
+margin-bottom: 1.5em;	
+}
+#news dl {
+	height: auto;
+	padding-left: 0;
+}
+/*日付設定*/
+#news dt {
+	float: none;
+	width: auto;
+}
+/*記事設定*/
+#news dd {
+	padding-left: 0;
+}
+
+/*menu.html内のページ内メニュー
+---------------------------------------------------------------------------*/
+ul.navmenu {
+	text-align: left;
+	padding: 10px 0px 10px 20px;
+}
+ul.navmenu li {
+	display: block;
+}
+
+/*menu.html内のメニューブロック
+---------------------------------------------------------------------------*/
+/*各ボックスの設定*/
+
+#main section.list article {
+	float: none;
+	margin: 0px auto 1em;
+	height: 100%;	/*ボックスの高さ*/
+	width: 90%;	/*ボックスの幅*/
+	padding: 15px;	/*ボックス内の余白*/
+	float: none;
+	margin: 0 0 12px 0;
+	position: relative;
+}
+#main section.list article figure img{
+	float: none;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+/*テーブル１
+---------------------------------------------------------------------------*/
+.ta1 {
+	width: 100%;
+}
+/*テーブル内の右側*/
+.ta1 td{
+	width: auto;
+	padding: 2px;
+}
+/*テーブル内の左側の見出し部分*/
+.ta1 th{
+	width: 100px;
+	padding: 2px;
+}
+
+/*ACCESS*/
+.map .right{	
+	float: none;
+	width: 100%;
+	margin: 0 auto;
+}
+.map .left{
+	float: none;
+	margin-right: 0px;
+	width: 98%;
+}
+
+.map .zo_about{
+width: 100%;
+}
+
+
+
+/*biography artist --------------------------------------------------------*/
+
+
+#main.artist .atst_name img{
+width: 10%;
+}
+#main .artist .atst_name h2{
+width: 64%;
+font-size: 1.5em;
+margin-left: 2%;
+}
+#main .artist .atst_name h2 span{
+	padding:0 ;
+	display: block;
+	}
+#main .artist dt,
+#main .artist dd{
+line-height: 1.6em;}
+
+.artist .ex_work li{
+	float: left;
+	width: 100%;
+	margin: 0;
+}
+
+#main .artist .page_link{
+width: 104%;
+margin-left: -2%;
+border-radius:0 ;
+padding: 0.6em 0;
+}
+#main .artist .page_link:last-child{
+margin-bottom:-2em;
+}
+#main .artist .page_link a.ex_link{
+font-size: 0.8em;
+line-height: 1.2em;
+width: 27.3%;
+padding: 1.5%;
+}
+#main .artist .page_link a.ex_link .kanji{
+white-space: nowrap;
+display: block;
+}
+
+
+
+}

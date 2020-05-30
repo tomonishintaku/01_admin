@@ -1,0 +1,62 @@
+	#outerImageContainer {
+		-moz-border-radius-topleft:10px;
+		-moz-border-radius-topright:10px;
+	}
+	#imageDataContainer {
+		-moz-border-radius-bottomleft:10px;
+		-moz-border-radius-bottomright:10px;
+	}
+	
+	
+	.img_list {
+		width:800px;
+		
+			}
+	
+	
+	ul.img_4 {
+		width:800px;
+		margin-left:0;
+		padding-left:0;
+			}
+			
+	.img_4 li {
+	float:left;
+	width:180px;
+	list-style-type:none;
+	padding-right:20px;	
+	margin-bottom:20px;		
+			}
+			
+	.img_4 li h3 {
+	width:180px;
+	padding-top:3px;
+	margin-top:0;
+	font-size:70%;
+	font-weight:normal;
+			
+			}
+
+	div.clear {
+	clear:both;
+			}
+	
+	
+	h3.line {
+	width:800px;
+	font-size:1em;
+	font-weight:bold;
+	border-bottom:solid 1px #999999;
+	color:#999999;
+	}
+	
+	
+	#footer .copyright:after {
+        content: "-2010";
+		
+}
+	 #footer p{
+	 font-size:70%;
+	}
+	
+	

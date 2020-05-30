@@ -1,0 +1,100 @@
+<p class="pr" style="margin-bottom:1em;"><a href="http://ec.tagboat.com/jp/products/list.php?author_id=100265&tngs_flg=0" target="_blank"><i aria-hidden="true" class="fa fa-hand-o-right"></i> 現代アートのネット販売タグボートで各シリーズ作品販売中!</a></p>
+<ul class="clearfix">
+	<li>
+		<a href="/works/bento.html"><img alt="BENTO/弁当" border="0" src="/images/works/nav/bento.jpg">
+		<h3>BENTO</h3>
+		<p>弁当にあるミニマリズムを、作家自らが料理し弁当を作って食べることにより一つの生き方の実践として表現したシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/non-gmo.html"><img alt="遺伝子組み換えでない" border="0" src="/images/works/nav/non-gmo.jpg">
+		<h3>遺伝子組み換えでない</h3>
+		<p><?php require_once 'short-concept.php'; echo $nongmo_jp;?></p></a>
+	</li>
+	<li>
+		<a href="/works/lets-eat-everyone.html"><img alt="みんなで食べよう" border="0" src="/images/works/nav/mndtabeyo.jpg">
+		<h3>みんなで食べよう</h3>
+		<p>富裕層への富の集中、そこで求められる富の再分配の可能性を、ケーキを切り分けるという行為に象徴させて表現したシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/cooking-leather.html"><img alt="レザー料理" src="/images/works/nav/cooking-leather.jpg">
+		<h3>レザー料理</h3>
+		<p>革ベルトや革靴など皮革製品を食材として扱い、ひとつの食のジャンルとして提示することで、この世界に並存する飢餓と飽食の構造を表象する。</p></a>
+	</li>
+	<li>
+		<a href="/works/melting-pot.html"><img alt="Melting Pot/人種のるつぼ" border="0" src="/images/works/nav/melting-pot.jpg">
+		<h3>人種のるつぼ</h3>
+		<p>テロの一因である民族間の対立の実相を、人種のるつぼという字義通り、ゲテモノ的に食材を組み合せて煮込むことで具現化する。</p></a>
+	</li>
+	<li>
+		<a class="ex-active" href="/works/hidden-flag.html"><img alt="Double Flag/シンガポール/昭南島" border="0" src="/images/works/nav/double-flag.jpg">
+		<h3>Double Flag</h3>
+		<p>日本がシンガポールを侵略し占領していた史実を、現地の日常の食事風景にお子様ランチの日の丸を忍ばせることで問い直す試み。</p></a>
+	</li>
+	<li>
+            <a href="/works/mystery-meat.html">
+                <img src="/images/works/nav/mystery-meat.jpg" alt="謎肉、食肉のタブー" border="0" >
+                <h3>謎肉</h3>
+                <p>ミンチ肉を、クジラやイヌなど食肉がタブー視されている動物の形に成形して呈示することで、野蛮とは何かを問う。</p>
+            </a>
+    </li>
+	<li>
+		<a href="/works/keep-frozen.html"><img alt="要冷凍" border="0" src="/images/works/nav/keep-frozen.jpg">
+		<h3>要冷凍</h3>
+		<p>現代における自然な暮らしとは何であるかを、人工産物であるアイスクリームを自然の常温に戻すことで問うシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/conveni-bento-mountain.html"><img alt="コンビニ弁当の山" border="0" src="/images/works/nav/mtcvbento.jpg">
+		<h3>コンビニ弁当の山</h3>
+		<p>日々廃棄される大量の弁当を山として、米一粒にも神を見出す日本の宗教観から、その山をご神体と見立て表現したシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/japanize.html"><img alt="japanize！日本の国旗、日の丸をモチーフにした作品" border="0" src="/images/works/nav/japanize.jpg">
+		<h3>Japanize！</h3>
+		<p>日本人に根強く存在する島国根性的な世界観を、各国の食物を円形の型枠に押しこめ、日本の国旗の日の丸に見立てて表現したシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/paste-abstraction.html"><img alt="Paste Abstraction/流動食・離乳食ペインティング" border="0" src="/images/works/nav/p-abstrctn.jpg">
+		<h3>Paste Abstraction</h3>
+		<p>流動食は、離乳食であると同時に介護食でもある。そこにある生と死というアンビバレントな性質を分析解剖的に表現したシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/gyudon-waterfall.html"><img alt="牛丼の滝" border="0" src="/images/works/nav/gyudonnotaki.jpg">
+		<h3>牛丼の滝</h3>
+		<p>現代の先進国にある飽食を、日本のファーストフードの代表格である牛丼（主に吉野家）を滝のようにして描くことで表現したシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/cupnoodle-waterfall.html"><img alt="カップヌードルの滝" border="0" src="/images/works/nav/cupnoodlenotaki.jpg">
+		<h3>カップヌードルの滝</h3>
+		<p>お湯を注いで3分。食の概念をも変えた合理的の極みであるカップヌードルを、自然界の滝のようにして描くことで表現したシリーズ。</p></a>
+	</li>
+	<li>
+		<a href="/works/installation-3dimensional.html"><img alt="インスタレーション/立体作品" border="0" src="/images/works/nav/ins_3dw.jpg">
+		<h3>インスタレーション/立体作品</h3>
+		<p>牛丼の滝/カップヌードルの滝シリーズのインスタレーション、牛丼の人/カップヌードルの人シリーズの立体作品等。</p></a>
+	</li>
+	<li>
+		<a href="/works/others.html"><img alt="2000年～2012年までの現代美術家新宅睦仁の過去作品" border="0" src="/images/works/nav/others.jpg">
+		<h3>その他の作品</h3>
+		<p>余技的な作品およびステンシル、ラッカー、油彩、アクリル、水彩など、さまざまな手法と表現を試みてきた2000～2010年の過去作品群。</p></a>
+	</li>
+	<li>
+		<a href="/works/exhibition/index.html"><img alt="現代美術家新宅睦仁の展覧会の履歴一覧" border="0" src="/images/works/nav/exhibition.jpg">
+		<h3>企画展・個展・グループ展</h3>
+		<p>個展はじめ、参加した企画展、グループ展、公募展等の展示風景。</p></a>
+	</li>
+	<li>
+		<a href="/works/filmset/index.html"><img alt="モチーフ用写真素材撮影風景" border="0" src="/images/works/nav/filmset.jpg">
+		<h3>作品資料/写真素材撮影風景</h3>
+		<p>牛丼、カップヌードル、コンビニ弁当など、各シリーズの作品資料や写真素材撮影の様子。</p></a>
+	</li>
+	<li>
+		<a href="/portfolio/"><img alt="PDF版の作家ポートフォリオ" border="0" src="/images/works/nav/portfolio.jpg">
+		<h3>作家ポートフォリオ(PDF)</h3>
+		<p>作家の全体像を概観できるPDF版の作品ポートフォリオをダウンロードいただけます。</p></a>
+	</li>
+	<li>
+		<a href="/works/writing.html"><img alt="エッセイやコラムなど、文章を書く仕事" border="0" src="/images/works/nav/writing.jpg">
+		<h3>文筆の仕事</h3>
+		<p>ブログ「むろん、どこにも行きたくない。」のWeb版/書籍版をはじめ、エッセイやコラム、現代美術講座など。</p></a>
+	</li>
+</ul>

@@ -1,0 +1,52 @@
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<!--include meta-->
+		<?php include("../../inc/meta.php"); ?>
+		<!--/include meta -->
+		<meta name="description" lang="ja" content="<?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $bento_jp;?>">
+		<meta name="keywords" lang="ja" content="弁当,手作り料理,日本の伝統,持たない暮らし,自然食品,ナチュラルライフ">
+		<title>BENTO/弁当のための写真素材撮影風景｜美術家/新宅睦仁</title>
+		<link href="/css/works.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+ <!--ヘッダーここから-->
+ <?php include("../../inc/header.php"); ?>
+ <!--ヘッダーここまで-->
+ <!--コンテンツここから-->
+ <div id="contents">
+  <!-- filmset_start　-->
+  <h1 class="line">BENTO/弁当のための写真素材撮影風景</h1>
+    <div id="pinterest">
+      <div id="columns">
+<?php for ($i=1; $i<=91; $i++) { ?>
+        <div class="pin">
+             <img src="/images/common/white.jpg" class="lazyload" data-src="/images/works/add/bento_filmset/img_<?php echo $i ?>.jpg" alt="BENTOという哲学または生き方、日本の伝統文化である弁当をモチーフとした作品の写真素材撮影">
+        </div>
+<?php } ?>
+    </div>
+      <p class="add_data">撮影：東間 嶺<br>※ ©Ray Toumaのクレジット表記のある写真</p>
+  </div><!--pinterest end-->
+      <div id="filmset-nav" class="img_list sp_mt">
+<!--this-work-nav start-->
+	<ul class="img_txt_1">
+		<li>
+			<a href="/works/bento.html">
+				<img src="/images/works/nav/bento.jpg" alt="BENTO/弁当" border="0" >
+				<h3>BENTO シリーズ</h3>
+				<p><?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $bento_jp;?></p>
+			</a>
+		</li>
+	</ul>
+<!--this-work-nav end-->
+        <!--filmset-nav start-->
+        <?php include("../../inc/filmset-nav.php"); ?>
+        <!--filmset-nav end-->
+      </div>
+    </div>
+    <!--コンテンツここまで-->
+    <!--フッターここから-->
+    <?php include("../../inc/footer.php"); ?>
+    <!--フッターここまで-->
+  </body>
+  </html>
