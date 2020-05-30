@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--include meta-->
+	<?php include("../inc/meta.php"); ?>
+	<!--/include meta -->
+	<meta name="description" lang="en" content="Japanese Contemporary Cooking/Foods Artist Tomoni Shintaku Portfolio PDF" /> 
+	<meta name="keywords" lang="en" content="painting, foods, meal, cuisine, cooking" /> 
+	<title>Artist Portfolio PDF｜Contemporary artist / SHINTAKU Tomoni</title>
+	<link href="/css/portfolio.css" rel="stylesheet" type="text/css">
+	<link href="/css/works.css" rel="stylesheet" type="text/css">
+	<link href="/css/contact.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<?php include("../inc/header.php"); ?>
+	<!--contents_START-->
+	<div id="contents" class="clearfix">
+		<h1 id="page-ttl">Artist Portfolio(PDF)</h1>
+		<div class="portfolio clearfix">
+			<p>This is a portfolio of artist in PDF format. You could consider which artists will be selected for exhibition plan. Please click on the link to download.
+			</p>
+			<ul id="en" class="list">
+				<li class="pf-dl"><?php require_once dirname(__FILE__).'/pfdl_en.php'; echo $pfdl_en;?>
+				<li>
+				<li class="pf-dl"><?php require_once dirname(__FILE__).'/pfdl_en.php'; echo $pfdl_raw_en;?>
+				<li>	
+			</ul>
+			<p><img alt="Artist Portfolio PDF image" border="0" src="/images/common/pdf-image.jpg"></p>
+<section class="contact" style="margin-top:2em;">
+         	<p>If you have any further questions, please don't hesitate to contact me.
+         </p>
+<?php include("../inc/contact.php"); ?>
+</section>
+		</div>
+		<section id="works-nav">
+			<?php include("../inc/works-nav.php"); ?>
+		</section><!--foot_nav end-->
+		</div>
+		<!--END_contents-->
+		<?php include("../inc/footer.php"); ?>
+</body>
+</html>

@@ -1,0 +1,52 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<!--include meta-->
+		<?php include("../../inc/meta.php"); ?>
+		<!--/include meta -->
+		<meta name="description" lang="en" content="<?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $bento_en;?>" />
+		<meta name="keywords" lang="en" content="bento, lunchbox, Japanese-cuisine" />
+		<title>Photographing elements for the "BENTO" series</title>
+		<link href="/css/works.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+ <!--ヘッダーここから-->
+ <?php include("../../inc/header.php"); ?>
+ <!--ヘッダーここまで-->
+ <!--コンテンツここから-->
+ <div id="contents">
+  <!-- filmset_start　-->
+  <h1 class="line">Photographing elements for the "BENTO" series</h1>
+    <div id="pinterest">
+      <div id="columns">
+      <?php for ($i=1; $i<=91; $i++) { ?>
+        <div class="pin">
+          <img src="/images/common/white.jpg" data-src="/images/works/add/bento_filmset/img_<?php echo $i ?>.jpg" alt="Photographing elements for the BENTO/Lunch Box Series" class="lazyload">
+        </div>
+      <?php } ?>
+    </div>
+      <p class="add_data">Photo: Ray Touma<br>*Photo with credit notation of ©Ray Touma</p>
+  </div><!--pinterest end-->
+      <div id="filmset-nav" class="img_list sp_mt">
+<!--this-work-nav start-->
+	<ul class="img_txt_1">
+		<li>
+			<a href="/en/works/bento.html">
+				<img src="/images/works/nav/bento.jpg" alt="BENTO/lunch box" border="0" >
+				<h3>BENTO series</h3>
+				<p><?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $bento_en;?></p>
+			</a>
+		</li>
+	</ul>
+<!--this-work-nav end-->
+        <!--filmset-nav start-->
+        <?php include("../../inc/filmset-nav.php"); ?>
+        <!--filmset-nav end-->
+      </div>
+    </div>
+    <!--コンテンツここまで-->
+    <!--フッターここから-->
+    <?php include("../../inc/footer.php"); ?>
+    <!--フッターここまで-->
+  </body>
+  </html>
