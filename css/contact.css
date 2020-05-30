@@ -1,0 +1,18 @@
+@charset "utf-8";
+.contact ul{
+	    margin: 2em auto;
+	list-style:none;
+}
+.contact li{
+	margin-bottom:1.5em;
+}
+.contact a {
+	display: inline;
+    margin: 0;
+    width: 100%;
+ 	font-size:1.2em;
+
+}
+@media only screen and (max-width: 480px) and (min-width: 0){
+}
+}
