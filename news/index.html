@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!--include meta-->
+    <?php include("../inc/meta.php"); ?>
+    <!--/include meta -->
+    <meta name="description" lang="ja" content="食をテーマに現代アートの制作活動を行う美術家新宅睦仁の展示・作品の最新情報" />
+    <meta name="keywords" lang="ja" content="絵画,現代アート,食物,料理" />
+    <title>ニュース｜美術家/新宅睦仁</title>
+            <style type="text/css">
+    h3.news_ttl{display: none;}
+</style>
+</head>
+<body>
+    <!--ヘッダーここから-->
+    <?php include("../inc/header.php"); ?>
+    <!--ヘッダーここまで-->
+    <!--コンテンツここから-->
+    <div id="contents" class="clearfix">
+ <h1 id="page-ttl">ニュース</h1>
+        <!--トピックスここから-->
+        <div id="topicstop" class="topicspage">
+   <div class="news-list">
+<?php
+  $arg = array(
+             'posts_per_page' => 25, // 表示する件数
+             'orderby' => 'date', // 日付でソート
+             'order' => 'DESC', // DESCで最新から表示、ASCで最古から表示
+             'category_name' => 'notice' // 表示したいカテゴリーのスラッグを指定
+         );
+  $posts = get_posts( $arg );
+  if( $posts ): ?>
+    <ul>
+  <?php
+      foreach ( $posts as $post ) :
+        setup_postdata( $post ); ?>
+      <li><a href="<?php the_permalink(); ?>"><div class="image"><?php the_post_thumbnail('thumbnail'); ?></div><div class="text"><span class="date"><?php the_time( 'Y.m.d' ); ?></span><h4><?php the_title(); ?></h4></div></a></li>
+<?php endforeach; ?>
+    </ul>
+<?php
+  endif;
+  wp_reset_postdata();
+?>
+</div>
+            </div>
+            <!--トピックスここまで-->
+        </div>
+        <!--コンテンツここまで--> 
+        <?php include("../inc/footer.php"); ?>
+    </body>
+    </html>

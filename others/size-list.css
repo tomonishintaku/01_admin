@@ -1,0 +1,125 @@
+@charset "shift_jis";
+
+/* 各サイズアンカーリンク */
+
+  ul.a_link{
+	padding-bottom:3.7em;
+	margin-top:-2.7em;
+	padding-top:0;
+	list-style:none;
+	font-weight:bold;
+}
+
+  ul.a_link li span{ 
+  color:#E618B8;
+  font-size:90%;
+  padding-right:0.5em;
+  }
+
+/* design_art_page_txt_link */
+
+#content li a:link{
+ 	color:#333;
+ 	text-decoration:none;
+  }  
+
+#content li a:visited{ 
+	color:#660066;
+	text-decoration:none;
+ } 
+
+#content li a:hover{
+	text-decoration: underline;
+      }
+/* JISサイズテーブル */
+
+#size_box {
+margin-top:3em;
+width:100%;
+}
+
+#size_box table{
+width:100%;
+border-collapse:collapse;
+margin-bottom:1em;
+}
+#size_box .caution {
+font-size:0.8em;
+color:#c00;
+}
+
+tr:nth-child(odd) {
+background-color:#eee;
+}
+
+th{
+background-color:#ddd;
+}
+	td,th{
+border-bottom:1px solid #999;
+border-top:1px solid #999;
+border-right:1px solid #999;
+border-left:1px solid #999;
+padding:2px 4px;
+text-align:left;
+}
+
+  td.p10{
+width:10%;
+}
+
+ td.p12{
+width:12%;
+}
+
+ td.p16{
+width:16%;
+}
+ td.p21{
+width:21%;
+}
+ td.p22{
+width:22%;
+}
+
+ td.p15{
+width:15%;
+}
+ td.p35{
+width:35%;
+}
+ td.p40{
+width:40%;
+}
+
+ td.p60{
+width:60%;
+}
+
+#content caption{
+font-size:100%;
+padding:0;
+margin:0;
+text-align:left; 
+}
+
+/*a-nav*/
+.a-nav{
+width:100%;}
+
+.a-nav a{
+height:4em;
+width:23%;
+padding:10px 0.5%;
+font-size:0.8em;
+line-height:1em;
+float:left;
+background:#eee;
+border:1px solid #ddd;
+}
+
+.a-nav:after {
+  content: "";
+  clear: both;
+  display: block;
+}
