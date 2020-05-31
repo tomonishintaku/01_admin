@@ -17,7 +17,7 @@
 		<div class="clearfix" id="no-pinterest">
 			<ul class="img_3">
 <?php
-$target_dir = 'dirname(__FILE__).'/../../images/works/add/i-love-usa_filmset';
+$target_dir = dirname(__FILE__).'/../../images/works/add/i-love-usa_filmset';
 $result = array();
 $command = "find " . $target_dir . " -name '*.jpg' | wc -l";
 exec($command, $result);
