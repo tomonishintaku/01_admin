@@ -1,0 +1,48 @@
+AddType application/x-httpd-lsphp .html
+SetEnvIf Request_URI ".*" UnlimitedWpLogin
+SetEnvIf Request_URI ".*" AllowForeignWpLogin
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^.*/index.(html|php)
+RewriteRule ^(.*)index.(html|php)$ http://tomonishintaku.com//$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.tomonishintaku\.com
+RewriteRule (.*) https://tomonishintaku.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+RewriteCond %{REQUEST_URI} ^.*/index.(html|php)
+RewriteRule ^(.*)index.(html|php)$ https://tomonishintaku.com/$1 [R=301,L]
+
+Redirect permanent /en/exhibition/2016-conveni-bento-yama-time-is-money.html https://tomonishintaku.com/en/exhibition/161126_conveni-bento2.html
+
+RewriteBase /
+RewriteRule ^works/exhibition/(.*)$ https://tomonishintaku.com/exhibition/$1 [R=301,L]
+RewriteRule ^en/works/exhibition/(.*)$ https://tomonishintaku.com/en/exhibition/$1 [R=301,L]
+RewriteRule ^images/works/mndtabeyo/(.*)$ https://tomonishintaku.com/images/works/lets-eat-everyone/$1 [R=301,L]
+RewriteRule ^images/works/exhibition/(.*)$ https://tomonishintaku.com/images/exhibition/$1 [R=301,L]
+
+Redirect permanent /en/works/hidden-flag.html https://tomonishintaku.com/en/works/double-flag.html
+Redirect permanent /works/hidden-flag.html https://tomonishintaku.com/works/double-flag.html
+Redirect permanent /en/portfolio/171025_shintaku_tomoni_en.pdf https://tomonishintaku.com/en/portfolio/180321_shintaku_tomoni_en.pdf
+Redirect permanent /images/common/white.jpg https://tomonishintaku.com/images/common/white.gif
+
+<ifModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 days"
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType text/css "access plus 6 hour"
+ExpiresByType image/gif "access plus 10 days"
+ExpiresByType image/jpg "access plus 10 days"
+ExpiresByType image/jpeg "access plus 10 days"
+ExpiresByType image/png "access plus 10 days"
+ExpiresByType text/js "access plus 10 days"
+ExpiresByType text/javascript "access plus 10 days"
+ExpiresByType application/javascript "access plus 10 days"
+ExpiresByType application/x-javascript "access plus 10 days"
+</ifModule>
