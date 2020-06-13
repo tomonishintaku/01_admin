@@ -210,7 +210,7 @@ This is Tomoni Shintaku first solo exhibition with One East Asia gallery.
                 <h3 class="chapter-head" id="installation-view">Scenes of Solo Exhibition "COLOUR ME WELL"</h3>
                   				<ul class="img_3 clearfix">
 <?php
-$target_dir = '/home/users/1/sub.jp-bijutsu4/web/admin/images/exhibition/2018-colour-me-well/ex-view';
+$target_dir = dirname(__FILE__).'/../../images/exhibition/2018-colour-me-well/ex-view';
 $result = array();
 $command = "find " . $target_dir . " -name '*.jpg' | wc -l";
 exec($command, $result);
