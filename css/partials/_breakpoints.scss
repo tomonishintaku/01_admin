@@ -1,0 +1,43 @@
+// MIN-width group ***********************
+// USE THIS  @include for-481up {}  
+@mixin for-481up {
+    @media only screen and (min-width: 481px) {
+        @content;
+    }
+}
+
+// USE THIS  @include for-768up {}
+@mixin for-769up {
+    @media only screen and (min-width: 769px) {
+        @content;
+    }
+}
+
+// USE THIS  @include for-1025up {}
+@mixin for-1025up {
+    @media only screen and (min-width: 1025px) {
+        @content;
+    }
+}
+
+// MAX-width group ***********************
+// USE THIS  @include for-480below {}  
+@mixin for-480below {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+// USE THIS  @include for-768below {}
+@mixin for-768below {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+// USE THIS  @include for-1024below {}
+@mixin for-1024below {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
