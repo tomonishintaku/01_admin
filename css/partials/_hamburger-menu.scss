@@ -28,14 +28,15 @@
 
     //CSS共通
 
-    #contents {
+    /*影響を及ぼすので注意！！！
+   #contents {
       display: flex;
       width: 100%;
       justify-content: center;
       align-items: center;
       transform: translateX(0);
       transition: .4s transform;
-    }
+    }*/
 
 
     #nav-btn {

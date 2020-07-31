@@ -2,10 +2,13 @@
 
 @import "partials/variables";
 @import "partials/breakpoints";
-@import "partials/hamburger-menu";
+@import "partials/mobile-menu";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/english";
 
-/*
-__USE mixin--MIN-width group
+
+/*__USE mixin--MIN-width group
 @include for-481up {}
 @include for-768up {}
 @include for-1025up {}
@@ -30,11 +33,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: helvetica, arial, hiragino kaku gothic pro, meiryo, ms pgothic, sans-serif;
-    color: #333;
+    color: $deep-dark;
     font-size: 14px;
 }
-
-
 
 hr {
     display: none
@@ -92,18 +93,10 @@ a:active {
     padding-bottom: 24px
 }
 
-#foot {
-    padding-bottom: .5em;
-    margin: 0 auto;
-    position: relative;
-    bottom: 0;
-    width: 100%
-}
-
 h1#page-ttl,
 h2#page-ttl {
     text-align: left;
-    color: #333;
+    color: $deep-dark;
     font-size: 1.5em;
     font-weight: 700;
     line-height: 1.3em;
@@ -116,14 +109,14 @@ h2#page-ttl {
 
 #top_bnr_space li {
     float: left;
-    width: 25%;
+    width: 24.5%;
     list-style-type: none;
     margin-bottom: 0
 }
 
 .pc-line-news {
     padding: 2px 0;
-    color: #777;
+    color: $light-dark;
     background: #fff4ff;
     position: fixed;
     top: 0;
@@ -152,11 +145,6 @@ h3.news_ttl span {
     font-size: 10px
 }
 
-.foot_bnr {
-    width: $content-width;
-    margin: 1em auto
-}
-
 .bio .main_info .left {
     float: left;
     width: 14%;
@@ -182,7 +170,7 @@ h3.news_ttl span {
     display: inline-block;
     padding: .25em .5em;
     text-decoration: none;
-    color: #555;
+    color: $dark;
     border: solid 1px #888;
     border-radius: 4px
 }
@@ -208,28 +196,6 @@ h3.news_ttl span {
 .bio .lang {
     margin: 1em auto 0;
     text-align: right
-}
-
-#head #lang a,
-.bio .lang a {
-    border-radius: 6px;
-    border: solid #ccc 1px;
-    background: #eee;
-    padding: .2em 2em;
-    color: #ff1493;
-    font-weight: 700
-}
-
-#head #lang a:hover,
-.bio .lang a:hover {
-    background: #ddd;
-    text-decoration: none
-}
-
-#head #lang {
-    display: block;
-    float: right;
-    margin: .5em 0 0
 }
 
 .contact a {
@@ -310,59 +276,14 @@ h3.news_ttl span {
 }
 
 #pagetop a:link {
-    color: #777;
+    color: $light-dark;
     opacity: .7
-}
-
-#foot ul li {
-    float: left;
-    list-style: none;
-    max-width: 100%;
-    margin-top: 0
 }
 
 .button {
     font-size: 2pc
 }
 
-.youtube i {
-    color: #c4302b
-}
-
-.linkedin i {
-    color: #3276b0
-}
-
-.instagram i {
-    color: #3f729b
-}
-
-.twitter i {
-    color: #0081ce
-}
-
-.facebook i {
-    color: #2b4170
-}
-
-.whatsapp i {
-    color: #25D366
-}
-
-.email i {
-    color: #c71610
-}
-
-.d-meter {
-    background: #92bf4c;
-    font-size: 9pt !important;
-    padding: 5px 8px;
-    line-height: 30px
-}
-
-.google i {
-    color: #c33219
-}
 
 #cv-sns {
     margin: 0 auto 1em;
@@ -378,21 +299,6 @@ h3.news_ttl span {
     color: #fff;
     border-radius: 4px;
     font-size: 20pt
-}
-
-#head #logotype #en-link img {
-    width: 15%;
-    padding-bottom: 7px
-}
-
-#head #logotype #en-link {
-    margin: 0 0 0 4px
-}
-
-#head .ad,
-#head .blog,
-#head .sp-ad {
-    display: none
 }
 
 #pagetop {
@@ -437,7 +343,7 @@ h3.news_ttl span {
 }
 
 .news-list li a .date {
-    color: #777;
+    color: $light-dark;
     display: block;
     padding-bottom: .5em
 }
@@ -457,32 +363,6 @@ h3.news_ttl span {
         overflow-x: hidden
     }
 
-    #head .home {
-        display: -webkit-flex;
-        display: flex
-    }
-
-    #head .home a {
-        width: 76%
-    }
-
-    #head .home a:last-child {
-        border-left: 1px solid #fff;
-        font-size: 9pt;
-        padding-top: 13px;
-        height: 22px;
-        line-height: 1.2em;
-        width: 24%
-    }
-
-    .lang-switch {
-        display: flex;
-        width: 100%;
-        height: 1em;
-        text-align: center;
-        padding: 20px 0
-    }
-
     .dl-menuwrapper .lang-switch a {
         font-weight: 400
     }
@@ -495,24 +375,14 @@ h3.news_ttl span {
 
     #head #dl-menu .lang-switch span {
         font-size: 1pc;
-        border-left: 1px solid #777;
+        border-left: 1px solid $light-dark;
         font-weight: 700;
-        color: #777;
+        color: $light-dark;
         padding: 0
     }
 
     .lang-switch .blog-nav {
         display: none
-    }
-
-    #contents #top_bnr_space {
-        width: 100%;
-        margin-bottom: -1.5em
-    }
-
-    #top_bnr_space li {
-        width: 49.5%;
-        padding-bottom: 4px
     }
 
     .mobile-menu-bnr ul,
@@ -525,7 +395,7 @@ h3.news_ttl span {
     .latest-text a,
     .latest-text span {
         font-size: 12px;
-        color: #777;
+        color: $light-dark;
         line-height: 1.2em
     }
 
@@ -541,7 +411,7 @@ h3.news_ttl span {
     .dl-menuwrapper .latest-text a {
         position: relative;
         white-space: normal;
-        border-left: 1px solid #777;
+        border-left: 1px solid $light-dark;
         padding: 0 0 0 1em;
         font-weight: 400;
         font-size: 12px;
@@ -579,17 +449,15 @@ h3.news_ttl span {
         margin: 0 auto
     }
 
-    #top_bnr_space li:nth-child(odd) {
-        margin-right: 1%
-    }
+    #top_bnr_space {
+        li {
+            margin-right: 0.5%;
 
-    #top_bnr_space li img {
-        width: 100%;
-        height: 100%
-    }
-
-    .foot_bnr {
-        width: 97%
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 
     #cv-sns {
@@ -638,16 +506,6 @@ h3.news_ttl span {
         margin-bottom: 30px
     }
 
-    #head h3.std,
-    h1 {
-        text-align: left;
-        font-size: 80%;
-        font-weight: 400;
-        line-height: 1.5em;
-        margin: .5em auto;
-        color: #555
-    }
-
     h2.large {
         height: 37px;
         background-image: url(../images/h2_large.gif);
@@ -688,18 +546,6 @@ h3.news_ttl span {
 
     #main_v img {
         width: 100%
-    }
-
-    #head {
-        height: 44px;
-        width: 99%;
-        padding: 0 1% 0 2%;
-        margin: 0 0 0 -1%;
-        position: fixed;
-        top: 0;
-        background: #fff;
-        z-index: 2;
-        border-bottom: 1px solid #ddd
     }
 
     #gnav,
@@ -744,21 +590,6 @@ h3.news_ttl span {
         font-size: 2em
     }
 
-    #head h2#logotype {
-        margin: 0;
-        width: 320px;
-    }
-
-
-    #head h2#logotype img {
-        margin-top: 6px;
-        width: 52%
-    }
-
-    div#gnav {
-        width: 100%
-    }
-
     ul#global_navi {
         width: 100%;
         margin: 0 auto;
@@ -796,10 +627,6 @@ h3.news_ttl span {
 
     .bio .lang {
         margin: 4em auto .5em
-    }
-
-    #head #lang a {
-        padding: 0 5px
     }
 
     .list_add,
@@ -881,47 +708,6 @@ h3.news_ttl span {
         font-size: .9em
     }
 
-    #foot,
-    #foot ul {
-        margin: 0 auto;
-        width: 100%
-    }
-
-    #foot ul {
-        overflow: hidden;
-        height: 37px;
-        border-top: solid 1px #ccc;
-        border-bottom: solid 1px #ccc;
-        padding-left: 0;
-        width: 104%;
-        margin: 0 -1%
-    }
-
-    #foot address {
-        width: 100%;
-        margin: 0 auto;
-        height: 10px;
-        padding: 5px 5px 0;
-        font-size: 10px;
-        color: #555;
-        line-height: 1em
-    }
-
-    #foot address img {
-        vertical-align: top
-    }
-
-    #foot p.public_caution {
-        margin: 0 auto;
-        padding: 1em 5px 0;
-        line-height: 1em;
-        font-size: 10px
-    }
-
-    #foot ul li:first-child {
-        margin-left: 10px
-    }
-
     .main_info .pf-dl {
         margin: 1.5em 0
     }
@@ -987,13 +773,9 @@ h3.news_ttl span {
 
 @include for-1025up {
 
-    #head #logotype #en-link img {
-        padding-bottom: 10px
-    }
-
     .latest-text a {
         display: block;
-        color: #777
+        color: $light-dark
     }
 
     .latest-text a:hover {
@@ -1032,16 +814,6 @@ h3.news_ttl span {
         line-height: 110%;
         font-size: 85%;
         margin-bottom: 30px
-    }
-
-    #head h3.std,
-    h1,
-    #head h2.std {
-        text-align: right;
-        font-size: 80%;
-        font-weight: 400;
-        margin-top: 14px;
-        line-height: 1.2em
     }
 
     h2.large {
@@ -1097,73 +869,6 @@ h3.news_ttl span {
     .layouthalf {
         width: 332px;
         float: left
-    }
-
-    #head {
-        height: 60px;
-        width: $content-width;
-        margin: 34px auto 0;
-        position: relative
-    }
-
-    #head h2#logotype {
-        margin-top: -10px;
-        position: absolute;
-        left: 0;
-        top: 0
-    }
-
-    #head h2#logotype img {
-        width: 60%
-    }
-
-    #head #dl-menu {
-        display: none
-    }
-
-    ul#global_navi {
-        width: $content-width;
-        margin: 0 auto
-    }
-
-    ul#global_navi li {
-        float: left;
-        list-style: none;
-        border-left: solid 1px #e0e0e0;
-        width: 16.53%;
-        height: 36px;
-        text-align: center;
-        white-space: nowrap;
-        line-height: 2.7em
-    }
-
-    ul#global_navi li:last-child {
-        border-right: solid 1px #e0e0e0
-    }
-
-    ul#global_navi li:nth-child(3) {
-        letter-spacing: 3px
-    }
-
-    ul#global_navi a {
-        font-weight: 700;
-        color: #4d4d4d;
-        display: block;
-        height: 36px
-    }
-
-    ul#global_navi a:hover {
-        border-bottom: solid 3px #e0e0e0;
-        text-decoration: none;
-        box-sizing: border-box
-    }
-
-    div#gnav {
-        background-image: none;
-        border-top: solid 1px #e0e0e0;
-        border-bottom: solid 1px #e0e0e0;
-        height: 36px;
-        margin-bottom: 28px
     }
 
     ul#contents_navi {
@@ -1231,53 +936,9 @@ h3.news_ttl span {
         line-height: 150%
     }
 
-    #top_bnr_space {
-        margin-bottom: -1em
-    }
-
     #top_bnr_space li img {
         width: 234px;
         height: 60px
-    }
-
-    #foot {
-        min-width: $content-width;
-        border-top: solid 1px #e0e0e0;
-        border-bottom: solid 1px #e0e0e0;
-        height: 36px;
-        margin: 60px auto 50px
-    }
-
-    #foot ul {
-        height: 37px;
-        padding: 0;
-        position: relative;
-        width: 104%;
-        margin: 0 -1%
-    }
-
-    #foot address,
-    #foot ul {
-        width: $content-width;
-        margin: 0 auto
-    }
-
-    #foot address {
-        height: 10px;
-        padding: 0 0 0 4px;
-        font-size: 10px;
-        color: #555
-    }
-
-    #foot address img {
-        vertical-align: top
-    }
-
-    #foot p.public_caution {
-        width: $content-width;
-        margin: 0 auto;
-        padding: 1em 0 0 4px;
-        font-size: .8em
     }
 
     input.hankaku {
@@ -1342,7 +1003,7 @@ h3.news_ttl span {
         padding: 2px 0;
         background: #fff4ff;
         text-align: center;
-        color: #777;
+        color: $light-dark;
         position: fixed;
         top: 0;
         left: 0;
@@ -1353,11 +1014,6 @@ h3.news_ttl span {
     .contact a span {
         display: block
     }
-
-    #foot ul li {
-        margin-top: 3px
-    }
-
 }
 
 .line-height-18 {
@@ -1367,7 +1023,6 @@ h3.news_ttl span {
 .img-border {
     border: 1px solid #ccc;
 }
-
 
 /*OVERWRITE dl menu componet css*/
 
@@ -1403,103 +1058,20 @@ h3.news_ttl span {
     #head #dl-menu {
         left: 85vw;
     }
-}
 
-// for all ENGLISH contents. under "body" tag's "article" has class "EN_wrapper" *******************************
-.EN_wrapper {
-    font-size: 16px;
+    #contents {
+        #top_bnr_space {
+            width: 100%;
+            margin-bottom: -1.5em;
 
-    @include for-480below {
+            li {
+                width: 49.5%;
+                padding-bottom: 4px;
 
-        #works-nav li h3,
-        #ex-nav li h3 {
-            height: 3.2em;
-            overflow-y: hidden;
-        }
-
-        #work-history-grp h3 {
-            margin-top: 0.2em;
-            line-height: 1.2em;
-        }
-
-        #work-history-grp p {
-            height: 8em;
-            line-height: 1em;
-            overflow-y: hidden;
-        }
-    }
-
-    @include for-481up {
-        ul#global_navi li {
-            line-height: 2.4em
-        }
-    }
-}
-
-// for EN blog contents "body" tag has class "en-blog"
-.en-blog {
-    #head h2#logotype {
-        @include for-1024below {
-            width: 220px !important;
-            margin: 0 auto;
-        }
-    }
-
-    #head {
-        @include for-1024below {
-            width: 100vw;
-            padding: 0 0 3.5rem 2vw;
-        }
-    }
-
-    h1.entry-title {
-        color: #777;
-    }
-
-    .home .entry-title a,
-    .ast-single-post .entry-title {
-        font-size: 2.2rem !important;
-    }
-
-    #head h2.std {
-        color: #777777;
-    }
-
-    @include for-481up {
-
-        ul#global_navi li {
-            line-height: 2.7em !important;
-        }
-
-        #head {
-            h2 {
-                &.std {
-                    font-size: 0.9rem !important;
-                }
-
-                &#logotype img {
-                    width: 80% !important;
+                &:nth-child(odd) {
+                    margin-right: 1%
                 }
             }
         }
-
-        .home .post-content a img,
-        .archive .post-content a img {
-            width: 100%;
-        }
-
-        .ast-separate-container {
-            margin-top: 3.5rem;
-        }
-    }
-
-    //end  for-481up 
-
-    .site-content {
-        width: 100vw !important;
     }
 }
-
-
-
-// for ENGLISH contenst END **********************************
