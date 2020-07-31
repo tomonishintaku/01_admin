@@ -35,7 +35,7 @@
 					</ul>
 				</li>
 				<li class="lang-switch" itemprop="name">
-					<div class="lang-switch__left"><a class="common-nav en" href="en%3C?php%20echo%20$_SERVER['PHP_SELF']%20?%3E" itemprop="URL">English</a><a class="blog-nav" href="/en/blog/">English</a></div> <div class="lang-switch__right"><span class="common-nav">Japanese</span><span class="blog-nav">Japanese</span></div>
+					<div class="lang-switch__left"><a class="common-nav en" href="/en<?php echo $_SERVER['PHP_SELF'] ?>" itemprop="URL">English</a><a class="blog-nav" href="/en/blog/">English</a></div> <div class="lang-switch__right"><span class="common-nav">Japanese</span><span class="blog-nav">Japanese</span></div>
 				</li>
 			</ul>
 	</nav>

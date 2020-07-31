@@ -142,9 +142,6 @@
         font-size: 0.9rem;
       }
 
-      &#logotype img {
-        width: 80%;
-      }
     }
   }
 }
@@ -220,6 +217,7 @@
 
 //desktop version
 @include for-1025up {
+
   #global_navi {
     width: $content-width;
     margin: 0 auto;
@@ -271,13 +269,13 @@
   #head {
     height: 60px;
     width: $content-width;
-    margin: 34px auto 0;
+    margin: 0 auto 44px auto;;
     position: relative;
 
     #logotype #en-link img {
-      width: 16%;
-      padding-bottom: 16px;
-    }
+      width: 14%;
+      padding-bottom: 12px;
+        }
 
     .head {
       &__desktop {
@@ -311,6 +309,22 @@
   #dl-menu {
     display: none
   }
+
+
+  .blog{
+#head{
+  h2#logotype {
+    margin-top: -60px!important;
+}
+
+  .head__desktop {
+    margin: 100px auto 0;
+}
+}
+
+
+  }
+
 
   // #head END
 

@@ -4,24 +4,14 @@
 	
 		<h2 id="logotype" lang="ja"><a href="/" class="std"><img src="/images/common/site-logo.png" alt="料理、食をテーマに作品を制作する現代美術家/新宅睦仁/シンタクトモニ"></a><a href="/en<?php echo $_SERVER['PHP_SELF'] ?>" id="en-link" class="std"><img src="/images/common/head-lang_jp.png" alt="website-for-english"></a><a href="/blog/" class="blog"><img src="/images/common/head_pic_blog.png" alt="現代美術家/新宅睦仁/シンタクトモニのエッセイ・コラムのブログ"></a></h2>
 
-		<h2 id="logotype" lang="en"><a class="std" href="/en/"><img alt="Contemporary artist｜SHINTAKU Tomoni website" src="/images/common/site-logo_en.png"></a><a href="<?php $str = $_SERVER['PHP_SELF']; $str = str_replace('/en', '', $str); echo $str;?>" id="en-link" class="std"><img alt="website-for-Japanese" src="/images/common/head-lang_en.png"></a></h2>
+		<h2 id="logotype" lang="en"><a class="std" href="/en/"><img alt="Contemporary artist｜SHINTAKU Tomoni website" src="/images/common/site-logo_en.png"></a><a class="std" href="%3C?php%20$str%20=%20$_SERVER['PHP_SELF'];%20$str%20=%20str_replace('/en',%20'',%20$str);%20echo%20$str;?%3E" id="en-link"><img alt="website-for-Japanese" src="/images/common/head-lang_en.png"></a></h2>
 
 	</div>
 	<nav class="menu global-nav">
 			<ul class="menu__list" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
 				<li class="newsflash" itemprop="name">
-
-					<!-- road blog articles from WP -->
-					<?php
-					  $url = $_SERVER['REQUEST_URI'];
-					  if(strstr($url,'en')==false):
-					?>
-
 					<div lang="ja"><?php require_once dirname(__FILE__).'/../blog/wp-load.php'; $page_id = 7229; $content = get_page($page_id); echo $content->post_content; ?></div>
-
-					<?php endif; ?>
-					<!-- road blog articles from WP END-->
-					
+					<div lang="en"><?php require_once dirname(__FILE__).'/../../en/blog/wp-load.php'; $page_id = 932; $content = get_page($page_id); echo $content->post_content; ?></div>
 				</li>
 				<li itemprop="name">
 					<a href="/news" itemprop="URL" lang="ja">ニュース</a>
@@ -64,12 +54,10 @@
 <!-- HUMBURGER menu contents END-->
 
 <!-- DESKTOP menu -->
-<div lang="ja">
 	<?php $path = $_SERVER['SCRIPT_NAME']; if ( $path == '/index.html' ) { $h_tag = '<h1 class="std">食（料理・食文化）をテーマに、絵画やインスタレーションによる現代アートの制作活動を行う美術家/新宅睦仁</h1>';}else{ $h_tag = '<h2 class="std">食をテーマに、絵画やインスタレーションによる現代アートの制作活動を行う美術家/新宅睦仁</h2>';}?><?php echo $h_tag; ?>
-</div>
-<div lang="en">
+
 	<?php $path = $_SERVER['SCRIPT_NAME']; if ( $path == '/en/index.html' ) { $h_tag = '<h1 class="std">Contemporary Artist Tomoni Shintaku. I am using food, cuisine and meal motifs as my theme for painting and installation.</h1>';}else{ $h_tag = '<h2 class="std">Contemporary Artist Tomoni Shintaku. My theme is food, cuisine and meal motifs for painting and installation.</h2>';}?><?php echo $h_tag; ?>
-</div>
+
 <nav id="gnav" class="head__desktop">
 	<ul class="clearfix" id="global_navi" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
 		<li itemprop="name">
@@ -106,7 +94,7 @@
 	</a>
 	<a href="/en/news" lang="en">
 		<div class="pc-line-news" lang="en">
-			<?php/* $page_id = 932; $content = get_page($page_id); echo $content->post_content; */?>
+			<?php $page_id = 932; $content = get_page($page_id); echo $content->post_content; ?>
 		</div>
 	</a>
     <!-- HUMBURGER menu  -->
