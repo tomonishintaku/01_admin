@@ -3,19 +3,19 @@
 
 #head {
   #logotype #en-link {
-    margin: 0 0 0 4px
+    margin: 0 0 0 4px;
   }
 
   .ad,
   .blog,
   .sp-ad {
-    display: none
+    display: none;
   }
 
   #lang {
     display: block;
     float: right;
-    margin: .5em 0 0
+    margin: 0.5em 0 0;
   }
 
   #logotype {
@@ -23,7 +23,6 @@
       margin: 0 auto;
       text-align: center;
     }
-
   }
 }
 
@@ -32,15 +31,15 @@
   border-radius: 6px;
   border: solid #ccc 1px;
   background: #eee;
-  padding: .2em 2em;
+  padding: 0.2em 2em;
   color: #ff1493;
-  font-weight: 700
+  font-weight: 700;
 }
 
 #head #lang a:hover,
 .bio .lang a:hover {
   background: #ddd;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .pc-line-news {
@@ -53,11 +52,9 @@
   }
 
   @include for-1024below {
-
     #head {
-
       #lang a {
-        padding: 0 5px
+        padding: 0 5px;
       }
     }
 
@@ -81,8 +78,6 @@
     display: none;
   }
 }
-
-
 
 @include for-1024below {
   .list-base {
@@ -128,31 +123,25 @@
       display: flex;
       @extend .list-base;
     }
-
   }
-
 }
 
 //481up END
 @include for-481up {
-
   #head {
     h2 {
       &.std {
         font-size: 0.9rem;
       }
-
     }
   }
 }
 
 //481up END
 
-
 //mobile version
 
 @include for-1024below {
-
   #head {
     height: 44px;
     width: 99%;
@@ -163,6 +152,13 @@
     background: #fff;
     z-index: 2;
     border-bottom: 1px solid #ddd;
+
+    .head__menu,
+    h1,
+    h3.std,
+    h2.std {
+      display: none
+    }
 
     .menu {
       a {
@@ -183,7 +179,7 @@
           padding-top: 13px;
           height: 22px;
           line-height: 1.2em;
-          width: 24%
+          width: 24%;
         }
       }
     }
@@ -194,8 +190,8 @@
       font-size: 80%;
       font-weight: 400;
       line-height: 1.5em;
-      margin: .5em auto;
-      color: #555
+      margin: 0.5em auto;
+      color: #555;
     }
 
     h2#logotype {
@@ -203,14 +199,12 @@
 
       img {
         margin-top: 0.8rem;
-        width: 52%
+        width: 52%;
       }
     }
-
   }
 
   //#head  END
-
 }
 
 //mobile version END
@@ -218,69 +212,54 @@
 //desktop version
 @include for-1025up {
 
-  #global_navi {
+  // postion horizontal between ".head__logo" and "head__desktop"
+  .head {
     width: $content-width;
     margin: 0 auto;
-
-    a {
-      font-weight: 700;
-      color: #4d4d4d;
-      display: block;
-      height: 36px;
-
-      &:hover {
-        border-bottom: solid 3px #e0e0e0;
-        text-decoration: none;
-        box-sizing: border-box
-      }
-    }
-
-    li {
-      float: left;
-      list-style: none;
-      border-left: solid 1px #e0e0e0;
-      width: 16.53%;
-      height: 36px;
-      text-align: center;
-      white-space: nowrap;
-      line-height: 2.7em;
-
-      &:last-child {
-        border-right: solid 1px #e0e0e0
-      }
-
-      &:nth-child(3) {
-        letter-spacing: 3px
-      }
-    }
-  }
-
-  //#global_navi END
-
-  #gnav {
-    background-image: none;
-    border-top: solid 1px #e0e0e0;
-    border-bottom: solid 1px #e0e0e0;
-    height: $desktop-lines-height;
-    margin-bottom: 28px;
-    width: 100%
-  }
-
-  #head {
-    height: 60px;
-    width: $content-width;
-    margin: 0 auto 44px auto;;
-    position: relative;
+    padding: 1rem 0;
 
     #logotype #en-link img {
-      width: 14%;
-      padding-bottom: 12px;
-        }
+      width: 16%;
+      position: relative;
+      top: -16px;
+    }
 
-    .head {
-      &__desktop {
-        height: $desktop-lines-height;
-        margin: $desktop-lines-height auto 0;
+    $logo-size:360px;
+
+    &__logo {
+      width: $logo-size;
+      display: inline-block;
+
+      #logotype {
+        width: $logo-size;
+      }
+
+    }
+
+    &__menu {
+      float: right;
+
+
+      ul {
+        display: flex;
+
+        li {
+          text-align: center;
+          white-space: nowrap;
+          list-style: none;
+          padding: 0 1.5rem;
+          line-height: 3.5em;
+
+          &:last-child {
+            padding-right: 0;
+
+          }
+
+          a {
+            color: #4d4d4d;
+            display: block;
+          }
+        }
       }
     }
 
@@ -291,44 +270,11 @@
       font-size: 80%;
       font-weight: 400;
       margin-top: 14px;
-      line-height: 1.2em
+      line-height: 1.2em;
     }
   }
-
-  h2#logotype {
-    margin-top: -10px;
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    img {
-      width: 60%
-    }
-  }
-
-  #dl-menu {
-    display: none
-  }
-
-
-  .blog{
-#head{
-  h2#logotype {
-    margin-top: -60px!important;
-}
-
-  .head__desktop {
-    margin: 100px auto 0;
-}
-}
-
-
-  }
-
 
   // #head END
-
-
 }
 
 //desktop version END

@@ -1,6 +1,6 @@
-<header id="head">
+<header id="head" class="head">
     <!--  HUMBURGER menu contents-->
-    <div class="min-header">
+    <div class="min-header head__logo">
 
         <h2 id="logotype" lang="ja"><a href="/" class="std"><img src="/images/common/site-logo.png"
                     alt="料理、食をテーマに作品を制作する現代美術家/新宅睦仁/シンタクトモニ"></a><a href="/en<?php echo $_SERVER['PHP_SELF'] ?>"
@@ -18,18 +18,21 @@
         <ul class="menu__list" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
             <li class="newsflash" itemprop="name">
 
-                <!-- road blog articles from WP -->
                 <?php
-					  $url = $_SERVER['REQUEST_URI'];
-					  if(strstr($url,'/en/')==false):
-					?>
-
+        //Branch WP load for Japanese and English
+                	 $url = $_SERVER['REQUEST_URI'];
+           if(strstr($url,'/en/')==true):
+				?>
+                <div lang="en">
+                    <?php require_once dirname(__FILE__).'../../en/blog/wp-load.php'; $page_id = 932; $content = get_page($page_id); echo $content->post_content; ?>
+                </div>
+                <?php else: ?>
                 <div lang="ja">
                     <?php require_once dirname(__FILE__).'/../blog/wp-load.php'; $page_id = 7229; $content = get_page($page_id); echo $content->post_content; ?>
                 </div>
-
-                <?php endif; ?>
-                <!-- road blog articles from WP END-->
+                <?php endif; 
+        //Branch WP load for Japanese and English END
+        ?>
 
             </li>
             <li itemprop="name">
@@ -72,28 +75,28 @@
                         class="blog-nav">Japanese</span></div>
             </li>
             <li class="lang-switch" itemprop="name" lang="en">
-			<div class="lang-switch__right">
-<!-- 英語ページのインクルードのパスを全て修正する必要あり -->
-                <!-- a href="<?php $str = $_SERVER['SCRIPT_NAME']; $str = str_replace('/en', '', $str); echo $str;?>"
-                    class="common-nav en"--><a href="/"
-                    class="common-nav en">Japanese</a><a href="/blog/" class="blog-nav">Japanese</a></div>
                 <div class="lang-switch__right">
-                <span class="common-nav">English</span><span class="blog-nav">English</span>
-				</div>
+                    <!-- 英語ページのインクルードのパスを全て修正する必要あり -->
+                    <!-- a href="<?php $str = $_SERVER['SCRIPT_NAME']; $str = str_replace('/en', '', $str); echo $str;?>"
+                    class="common-nav en"--><a href="/" class="common-nav en">Japanese</a><a href="/blog/"
+                        class="blog-nav">Japanese</a></div>
+                <div class="lang-switch__right">
+                    <span class="common-nav">English</span><span class="blog-nav">English</span>
+                </div>
             </li>
         </ul>
     </nav>
     <!-- HUMBURGER menu contents END-->
 
     <!-- DESKTOP menu -->
-    <div lang="ja">
+    <!--div lang="ja">
         <?php $path = $_SERVER['SCRIPT_NAME']; if ( $path == '/index.html' ) { $h_tag = '<h1 class="std">食（料理・食文化）をテーマに、絵画やインスタレーションによる現代アートの制作活動を行う美術家/新宅睦仁</h1>';}else{ $h_tag = '<h2 class="std">食をテーマに、絵画やインスタレーションによる現代アートの制作活動を行う美術家/新宅睦仁</h2>';}?><?php echo $h_tag; ?>
     </div>
     <div lang="en">
         <?php $path = $_SERVER['SCRIPT_NAME']; if ( $path == '/en/index.html' ) { $h_tag = '<h1 class="std">Contemporary Artist Tomoni Shintaku. I am using food, cuisine and meal motifs as my theme for painting and installation.</h1>';}else{ $h_tag = '<h2 class="std">Contemporary Artist Tomoni Shintaku. My theme is food, cuisine and meal motifs for painting and installation.</h2>';}?><?php echo $h_tag; ?>
-    </div>
-    <nav id="gnav" class="head__desktop">
-        <ul class="clearfix" id="global_navi" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+    </div-->
+    <nav class="head__menu">
+        <ul class="clearfix" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
             <li itemprop="name">
                 <a href="/news" itemprop="URL" lang="ja">ニュース</a>
                 <a href="/en/news" itemprop="URL" lang="en">NEWS</a>
@@ -121,18 +124,18 @@
         </ul>
     </nav>
     <!-- DESKTOP menu END-->
-    <a href="/news" lang="ja">
+    <!--a href="/news" lang="ja">
         <div class="pc-line-news">
-            <?php $page_id = 7229; $content = get_page($page_id); echo $content->post_content; ?>
+            <?php/* $page_id = 7229; $content = get_page($page_id); echo $content->post_content; */?>
         </div>
     </a>
     <a href="/en/news" lang="en">
         <div class="pc-line-news" lang="en">
             <?php/* $page_id = 932; $content = get_page($page_id); echo $content->post_content; */?>
         </div>
-    </a>
+    </a-->
     <!-- HUMBURGER menu  -->
-    <!-- //parts: (1) {_mobile-menu.scss}, (2) "HUMBURGER menu" section in {scripts.js}, (3) "HUMBURGER menu" section in {header.php}  -->
+    <?php /* parts: (1) {_mobile-menu.scss}, (2) "HUMBURGER menu" section in {scripts.js}, (3) "HUMBURGER menu" section in {header.php} */ ?>
     <div class="hamburger" id="js-hamburger">
         <span class="hamburger__line hamburger__line--1"></span>
         <span class="hamburger__line hamburger__line--2"></span>

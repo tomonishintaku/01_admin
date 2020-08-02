@@ -1,7 +1,7 @@
 @import "breakpoints";
 @import "variables";
 
-#foot {
+.foot {
   padding-bottom: .5em;
   margin: 0 auto;
   position: relative;
@@ -19,7 +19,7 @@
 //mobile version
 @include for-1024below {
 
-  #foot {
+  .foot {
 
     ul {
       margin: 0 auto;
@@ -72,25 +72,28 @@
 //desktop version
 @include for-1025up {
 
-  #foot {
+  .foot {
     min-width: $content-width;
-    border-top: solid 1px $border-color;
-    border-bottom: solid 1px $border-color;
     height: $desktop-lines-height;
-    margin: 60px auto 50px;
 
-    ul {
-      height: 37px;
-      padding: 0;
-      position: relative;
-      width: 104%;
-      margin: 0 -1%;
+    &__copy {}
 
-      li {
-        margin-top: 3px
+    &__sns {
+      float: right;
+
+      ul {
+        padding: 0;
+        position: relative;
+        display: flex;
+        list-style: none;
+
+        li {}
+
       }
 
     }
+
+
 
     address,
     ul {
