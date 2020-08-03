@@ -5,7 +5,7 @@
 
 /*__USE mixin--MIN-width group
 @include for-481up {}
-@include for-768up {}
+@include for-769up {}
 @include for-1025up {}
 __USE mixin--MAX-width group
 @include for-480below {}
@@ -15,6 +15,13 @@ __USE mixin--MAX-width group
 
 body{
  font-size:  $EN-text-size;
+
+ @include for-1024below {
+          #wrap //EN blog
+          {
+            margin-top: $top-content-margin;
+          }
+}
 }
 ol,
 ul {
@@ -79,11 +86,6 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
-}
-
-address {
-  letter-spacing: 1px;
-  margin: 20px 0;
 }
 
 #page-featured-img {
@@ -2635,9 +2637,6 @@ div {
     }
   }
 
-  .single .post-entry-thumbnail {
-    margin-top: 1.5em;
-  }
 }
 
 
@@ -2798,14 +2797,22 @@ body {
 
 }
 
+.post-entry-footer {
+  margin-bottom: $top-content-margin;
+}
 
 @include for-1024below {
+
+  #wrap {
+    margin-top: $top-content-margin;
+    }
 
   #blog-wrap,
   .page-pagination,
   .post-entry {
     width: 100%;
   }
+
 
 }
 

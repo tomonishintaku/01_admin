@@ -5,7 +5,7 @@
 
 /*__USE mixin--MIN-width group
 @include for-481up {}
-@include for-768up {}
+@include for-769up {}
 @include for-1025up {}
 __USE mixin--MAX-width group
 @include for-480below {}
@@ -678,7 +678,6 @@ dd h3 {
 
 #footer {
   h3 {
-    font-size: 14px;
     margin-bottom: 10px;
   }
 
@@ -945,14 +944,12 @@ table {
   }
 
   h4 {
-    font-size: 14px;
     line-height: 25px;
     margin: 0;
     padding: 10px 10px 10px 0;
   }
 
   #mybox ul li ul li {
-    font-size: 14px;
     line-height: 27px;
   }
 }
@@ -962,7 +959,6 @@ table {
   width: 100%;
   background-color: #444;
   padding: 5px 10px;
-  font-size: 14px;
   color: #fff;
   text-decoration: none;
 
@@ -1378,7 +1374,6 @@ nav li a:hover {
 
 #s {
   color: #333;
-  font-size: 14px;
   z-index: 10;
   padding: 10px 65px 10px 10px;
   width: 100%;
@@ -1399,7 +1394,6 @@ nav li a:hover {
 
   li {
     display: inline;
-    font-size: 14px;
     padding: 0 10px;
   }
 }
@@ -1438,7 +1432,6 @@ footer .footermenust li {
 .pagination {
   clear: both;
   position: relative;
-  font-size: 14px;
   line-height: 13px;
   margin-bottom: 20px;
   padding: 20px 0;
@@ -1677,7 +1670,6 @@ main {
     border-left-style: solid;
     border-bottom-color: #999;
     border-left-color: #999;
-    font-size: 14px;
     padding: 3px;
     text-align: center;
     background-color: #f3f3f3;
@@ -1691,7 +1683,6 @@ main {
     text-align: left;
     padding-top: 10px;
     padding-bottom: 5px;
-    font-size: 14px;
   }
 
   tbody {
@@ -1735,7 +1726,6 @@ main {
 
 #comments {
   p {
-    font-size: 14px;
     font-weight: 400;
     margin: 0;
     padding: 5px 0;
@@ -1756,7 +1746,6 @@ main {
 }
 
 #comments {
-  font-size: 14px;
   margin-bottom: 20px;
   padding: 10px 20px;
 }
@@ -1881,7 +1870,6 @@ ul.children {
 .p-navi dl {
   dt {
     font-weight: 700;
-    font-size: 14px;
     line-height: 27px;
     float: left;
     width: 50px;
@@ -1908,7 +1896,6 @@ ul.children {
 }
 
 .rss-bar {
-  font-size: 14px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   background: #fff;
@@ -1919,12 +1906,10 @@ ul.children {
 #topnews-box {
   dd {
     padding-bottom: 5px;
-    font-size: 14px;
   }
 
   dt {
     padding-bottom: 5px;
-    font-size: 14px;
     color: #727272;
   }
 
@@ -2152,7 +2137,6 @@ section {
     dd,
     dt {
       padding-bottom: 5px;
-      font-size: 14px;
     }
   }
 
@@ -2235,7 +2219,6 @@ section {
   }
 
   .rss-bar {
-    font-size: 14px;
     background: #91bae4;
     background: -webkit-linear-gradient(#fff 0, #f3f3f3 100%);
     background: linear-gradient(#fff 0, #f3f3f3 100%);
@@ -2325,7 +2308,6 @@ section {
   }
 
   h1.descr {
-    font-size: 14px;
     margin: 0 auto -3em;
     width: 580px;
     position: relative;
@@ -2333,7 +2315,6 @@ section {
   }
 
   p.descr {
-    font-size: 14px;
     margin: 0 auto -3em;
     width: 580px;
     position: relative;
@@ -2482,7 +2463,6 @@ nav {
 }
 
 p {
-  font-size: 14px;
   line-height: 23px;
   margin-bottom: 20px;
 }
@@ -2515,7 +2495,6 @@ h2 {
 
   ol li,
   ul li {
-    font-size: 14px;
     line-height: 27px;
   }
 }
@@ -2528,7 +2507,6 @@ h2 {
 .graybox,
 .redbox,
 .yellowbox {
-  font-size: 14px;
   line-height: 27px;
   margin-bottom: 20px;
 }
@@ -2799,7 +2777,6 @@ main {
   }
 
   main {
-    padding: 5rem 0;
     margin: 0 auto;
   }
 
@@ -2913,13 +2890,6 @@ p.descr {
   body {
     overflow-x: hidden;
   }
-
-  #wrapper {
-    width: 96%;
-    padding: 0;
-    margin: 0 auto;
-  }
-
   #top_bnr_space img {
     height: 40px;
     margin-bottom: 0;

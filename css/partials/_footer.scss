@@ -9,6 +9,12 @@ $sns-width: 23.7%;
   position: relative;
   bottom: 0;
 
+  p.public_caution {
+    margin: 0 auto;
+    padding: 1em 0 0 0;
+  }
+
+
   &__copy {
     float: left;
     width: calc(100% - #{$sns-width});
@@ -36,10 +42,7 @@ $sns-width: 23.7%;
   //mobile version
   @include for-1024below {
 
-    .foot {
-      padding: $general-space;
-      width: calc(100% - #{$general-space*2});
-    
+    .foot {    
       &__copy {
         width: 100%;
       }
@@ -61,7 +64,6 @@ $sns-width: 23.7%;
 
     .foot {
       width: $content-width;
-      height: $desktop-lines-height;
     address {
       height: 10px;
       padding: 0 0 0 4px;
@@ -73,12 +75,6 @@ $sns-width: 23.7%;
       }
     }
 
-    p.public_caution {
-      width: $content-width;
-      margin: 0 auto;
-      padding: 1em 0 0 4px;
-      font-size: 0.8em;
-    }
   }
 
   .foot_bnr {

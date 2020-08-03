@@ -1,3 +1,18 @@
+@charset "utf-8";
+
+@import "variables";
+@import "breakpoints";
+
+/*__USE mixin--MIN-width group
+@include for-481up {}
+@include for-769up {}
+@include for-1025up {}
+__USE mixin--MAX-width group
+@include for-480below {}
+@include for-768below {}
+@include for-1024below {}
+*/
+
 * {
     font-style: normal;
     margin: 0;
@@ -14,6 +29,62 @@ body {
     font-family: $font-setting;
     color: $deep-dark;
     font-size: 14px;
+
+
+// set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site}
+#wrap, //EN blog
+#wrapper, //JA blog
+#contents //MAIN site pages
+{
+margin: 0 auto;
+}
+
+@include for-1024below {
+    //Set MOBILE device spacing
+            #wrap, //EN blog
+            #wrapper, //JA blog
+            #contents, //MAIN site pages
+            .foot //footer elements
+            {
+        padding: calc(#{$general-space / 2});
+        width: calc(100% - #{$general-space});
+    }
+
+    #contents{ //MAIN site pages
+        margin-top: $top-content-margin;
+    }
+
+
+}
+
+@include for-768below {
+//Set MOBILE device spacing
+        #wrap, //EN blog
+        #wrapper, //JA blog
+        #contents, //MAIN site pages
+        .foot //footer elements
+        {
+    padding: $general-space;
+    width: calc(100% - #{$general-space*2});
+}
+
+#wrapper //JA blog 管理バーが非表示の場合のmarginがあるため注意！！！
+{
+    margin-top: $top-content-margin;
+    font-size:1.2rem;
+.smanone2 p{
+    font-size:1rem;
+    line-height: 1.7rem;
+}
+
+}
+
+
+}
+// set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site} END
+
+
+
 }
 
 hr {
@@ -69,11 +140,6 @@ a:active {
 
 .cpy {
     font-family: $font-setting;
-}
-
-#contents {
-    margin: 0 auto;
-    padding-bottom: 24px
 }
 
 h1#page-ttl,
@@ -346,10 +412,11 @@ h3.news_ttl span {
         overflow-x: hidden
     }
 
+    #head{
     .lang-switch .blog-nav {
         display: none
     }
-
+}
     .mobile-menu-bnr ul,
     .mobile-menu-bnr li {
         background: #fff !important;
@@ -474,13 +541,6 @@ h3.news_ttl span {
         padding-bottom: 10px;
         text-indent: 23px
     }
-
-    #contents {
-        width: 98%;
-        padding: 0;
-        margin: 0 auto
-    }
-
     #contents_back {
         margin-top: 2em
     }
@@ -519,11 +579,6 @@ h3.news_ttl span {
         float: left;
         list-style: none
     }
-
-    h1#page-ttl {
-        margin-top: 3em
-    }
-
     .bio .main_info .left {
         float: none;
         width: 50%;
@@ -668,18 +723,6 @@ h3.news_ttl span {
     .contact a {
         width: 100%;
         margin: 2em 0
-    }
-}
-
-@media(max-device-width:1024px) and (orientation:landscape) {
-    body {
-        padding: 0 1%
-    }
-}
-
-@media(max-device-width:768px) and (orientation:portrait) {
-    body {
-        padding: 0 1%
     }
 }
 

@@ -6,7 +6,7 @@
     }
 }
 
-// USE THIS  @include for-768up {}
+// USE THIS  @include for-769up {}
 @mixin for-769up {
     @media only screen and (min-width: 769px) {
         @content;

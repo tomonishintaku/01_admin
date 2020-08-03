@@ -118,7 +118,7 @@
         text-align: left;
       }
       &__right {
-        color:$lighter-dark;
+        color:$light-gray;
       }
 
     }
@@ -167,6 +167,7 @@
     .menu {
       a {
         color: $dark;
+        display: block;
       }
     }
 
@@ -202,8 +203,8 @@
       width: 280px;
 
       img {
-        margin-top: 0.8rem;
-        width: 52%;
+        margin-top: 0.55rem;
+        width: 70%;
       }
     }
   }
