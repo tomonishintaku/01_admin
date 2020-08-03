@@ -1,106 +1,67 @@
 @import "breakpoints";
 @import "variables";
 
+$sns-width: 23.7%;
+
 .foot {
-  padding-bottom: .5em;
+  padding-bottom: $general-space;
   margin: 0 auto;
   position: relative;
   bottom: 0;
-  width: 100%;
 
-  ul li {
+  &__copy {
     float: left;
-    list-style: none;
-    max-width: 100%;
-    margin-top: 0
+    width: calc(100% - #{$sns-width});
   }
-}
 
-//mobile version
-@include for-1024below {
-
-  .foot {
+  &__sns {
+    float: right;
+    width: #{$sns-width};
 
     ul {
-      margin: 0 auto;
-      width: 100%;
-      overflow: hidden;
-      height: 37px;
-      border-top: solid 1px $border-color;
-      border-bottom: solid 1px $border-color;
-      padding-left: 0;
-      width: 104%;
-      margin: 0 -1%;
+      padding: 0;
+      position: relative;
+      display: flex;
+      list-style: none;
 
-      li:first-child {
-        margin-left: 10px
-      }
-    }
-
-    address {
-      width: 100%;
-      margin: 0 auto;
-      height: 10px;
-      padding: 5px 5px 0;
-      font-size: 10px;
-      color: $dark;
-      line-height: 1em;
-
-      img {
-        vertical-align: top
-      }
-    }
-
-    p.public_caution {
-      margin: 0 auto;
-      padding: 1em 5px 0;
-      line-height: 1em;
-      font-size: 10px
-    }
-  }
-
-  .foot_bnr {
-    width: 97%;
-    margin-bottom: 1rem;
-  }
-}
-
-//mobile version END
-
-
-
-//desktop version
-@include for-1025up {
-
-  .foot {
-    min-width: $content-width;
-    height: $desktop-lines-height;
-
-    &__copy {}
-
-    &__sns {
-      float: right;
-
-      ul {
-        padding: 0;
-        position: relative;
-        display: flex;
+      li {
+        float: left;
         list-style: none;
-
-        li {}
-
+        max-width: 100%;
+        margin-top: 0;
       }
-
     }
+  }
+}
+  //mobile version
+  @include for-1024below {
 
+    .foot {
+      padding: $general-space;
+      width: calc(100% - #{$general-space*2});
+    
+      &__copy {
+        width: 100%;
+      }
+    
+      &__sns {
+        width: 100%;
+      }
+    
+    .foot_bnr {
+      width: 97%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+  //mobile version END
 
+  //desktop version
+  @include for-1025up {
 
-    address,
-    ul {
+    .foot {
       width: $content-width;
-      margin: 0 auto
-    }
-
+      height: $desktop-lines-height;
     address {
       height: 10px;
       padding: 0 0 0 4px;
@@ -108,7 +69,7 @@
       color: $dark;
 
       img {
-        vertical-align: top
+        vertical-align: top;
       }
     }
 
@@ -116,15 +77,14 @@
       width: $content-width;
       margin: 0 auto;
       padding: 1em 0 0 4px;
-      font-size: .8em
+      font-size: 0.8em;
     }
   }
 
   .foot_bnr {
     width: $content-width;
-    margin: 1em auto
+    margin: 1em auto;
   }
-
-}
+}  
 
 //desktop version END

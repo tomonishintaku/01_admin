@@ -1,6 +1,9 @@
 // for all ENGLISH contents. under "body" tag's "article" has class "EN_wrapper" *******************************
-.EN_wrapper {
-  font-size: 16px;
+
+html:lang(en) {
+#contents{
+  font-size: $EN-text-size;
+}
 
   @include for-480below {
 

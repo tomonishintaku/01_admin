@@ -1,12 +1,11 @@
 @charset "utf-8";
 
-@import "partials/variables";
-@import "partials/breakpoints";
 @import "partials/mobile-menu";
 @import "partials/header";
 @import "partials/footer";
-@import "partials/english";
+@import "partials/common-top";
 @import "partials/common-base";
+@import "partials/english";
 
 
 /*__USE mixin--MIN-width group

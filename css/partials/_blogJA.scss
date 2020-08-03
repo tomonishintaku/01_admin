@@ -3,6 +3,16 @@
 @import "variables";
 @import "breakpoints";
 
+/*__USE mixin--MIN-width group
+@include for-481up {}
+@include for-768up {}
+@include for-1025up {}
+__USE mixin--MAX-width group
+@include for-480below {}
+@include for-768below {}
+@include for-1024below {}
+*/
+
 
 #side aside ul li {
   list-style-type: none;
@@ -27,7 +37,6 @@ img.float-left {
 }
 
 #s-navi {
-
   dd.acordion_tree,
   dl.acordion {
     box-sizing: border-box;
@@ -119,12 +128,11 @@ video {
 }
 
 a:hover img {
-  -moz-opacity: .8;
+  -moz-opacity: 0.8;
   opacity: 0.8;
 }
 
 img {
-
   &.size-full,
   &.size-large {
     margin-bottom: 10px;
@@ -138,7 +146,6 @@ iframe {
 }
 
 .resetwidth {
-
   img,
   object .resetwidth iframe,
   video {
@@ -210,7 +217,7 @@ iframe {
   left: 10px;
 }
 
-[dir=rtl] {
+[dir="rtl"] {
   .slick-next {
     left: 10px !important;
     right: auto;
@@ -223,10 +230,9 @@ iframe {
 }
 
 #wrapper h2 {
-
   &:after,
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     border-top: 10px solid #f3f3f3;
     border-right: 10px solid transparent;
@@ -257,7 +263,7 @@ header {
     margin-bottom: 10px;
     font-size: 22px;
     color: #fff;
-    font-family: Oswald, sans-serif;
+    font-family: $font-setting;
     padding: 0;
 
     a {
@@ -266,7 +272,7 @@ header {
       font-weight: 700;
 
       &:hover {
-        -moz-opacity: .8;
+        -moz-opacity: 0.8;
         opacity: 0.8;
       }
     }
@@ -493,7 +499,7 @@ dd h3 {
 
   .sub_txt {
     margin-bottom: 2em;
-    font-size: .7em;
+    font-size: 0.7em;
     color: #888;
     line-height: 1.5em;
     display: block;
@@ -555,7 +561,6 @@ dd h3 {
 }
 
 .graybox {
-
   li,
   ol {
     margin: 0;
@@ -563,7 +568,6 @@ dd h3 {
 }
 
 .redbox {
-
   li,
   ol {
     margin: 0;
@@ -571,7 +575,6 @@ dd h3 {
 }
 
 .yellowbox {
-
   li,
   ol {
     margin: 0;
@@ -589,7 +592,7 @@ dd h3 {
 
   &:after,
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     border-top: 10px solid #f3f3f3;
     border-right: 10px solid transparent;
@@ -645,7 +648,7 @@ dd h3 {
 }
 
 .poprank-no2 {
-  font-family: Montserrat, sans-serif;
+  font-family: $font-setting;
   padding: 2px 8px;
   font-size: 13px;
   font-weight: 700;
@@ -663,7 +666,7 @@ dd h3 {
 }
 
 .poprank-no {
-  font-family: Montserrat, sans-serif;
+  font-family: $font-setting;
   position: absolute;
   top: 0;
   left: 0;
@@ -725,7 +728,7 @@ footer {
   }
 
   .head-telno a {
-    font-family: Montserrat, sans-serif;
+    font-family: $font-setting;
     font-size: 25px;
     padding: 5px 10px;
     text-align: center;
@@ -818,7 +821,6 @@ footer {
 }
 
 .kanren {
-
   .blog_info p,
   h3 {
     margin: 0 0 5px;
@@ -858,7 +860,6 @@ footer {
 }
 
 table {
-
   th,
   tr td {
     font-size: 13px;
@@ -925,7 +926,7 @@ table {
 
 .recommend-list .date {
   padding-right: 1em;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #777;
 }
 
@@ -972,8 +973,8 @@ table {
   }
 
   &:hover {
-    -moz-opacity: .6;
-    opacity: .6;
+    -moz-opacity: 0.6;
+    opacity: 0.6;
     text-decoration: none;
     color: #fff;
   }
@@ -1028,7 +1029,7 @@ table {
       background: linear-gradient(#1584c4 0, #0277bd 100%);
 
       &:hover {
-        -moz-opacity: .8;
+        -moz-opacity: 0.8;
         opacity: 0.8;
       }
     }
@@ -1088,7 +1089,6 @@ table {
 }
 
 .pagination {
-
   a,
   span {
     text-decoration: none;
@@ -1109,7 +1109,6 @@ table {
 }
 
 table {
-
   th,
   tr td {
     padding: 5px;
@@ -1123,7 +1122,6 @@ table {
 }
 
 .post {
-
   ol li,
   ul li {
     font-size: 17px;
@@ -1211,7 +1209,6 @@ img {
 }
 
 .post {
-
   ol,
   ul {
     margin-bottom: 20px;
@@ -1342,11 +1339,6 @@ nav li a:hover {
   }
 }
 
-footer,
-header {
-  text-align: center;
-}
-
 .acordion_tree ul.menu li {
   float: none;
   font-size: 15px;
@@ -1465,7 +1457,6 @@ footer .footermenust li {
 }
 
 .pagination {
-
   a,
   span {
     display: block;
@@ -1728,7 +1719,7 @@ main {
     color: #fff;
     padding: 10px;
     display: block;
-    -moz-opacity: .6;
+    -moz-opacity: 0.6;
     opacity: 0.6;
 
     &:hover {
@@ -1781,7 +1772,6 @@ main {
 }
 
 #comments {
-
   h3,
   h4 {
     margin-bottom: 0;
@@ -1878,7 +1868,7 @@ ul.children {
     border-radius: 2px;
     border: 1px solid #f2f2f2;
 
-    &[type=submit] {
+    &[type="submit"] {
       background-color: #f3f3f3;
       padding: 10px;
       -webkit-appearance: none;
@@ -1954,7 +1944,7 @@ ul.children {
   }
 }
 
-#header-slides[dir=rtl] {
+#header-slides[dir="rtl"] {
   direction: rtl;
 }
 
@@ -2010,7 +2000,6 @@ section {
 }
 
 .lp {
-
   #breadcrumb,
   #gazou,
   #itiran,
@@ -2032,7 +2021,6 @@ section {
   }
 
   post {
-
     img,
     object,
     video {
@@ -2045,77 +2033,80 @@ section {
   }
 }
 
-@media only screen and (orientation: landscape) {
-
-  #wrapper,
+@include for-1025up {
   body {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 1em;
-  }
-}
-
-@media all and (-ms-high-contrast: none) {
-  .rss-bar {
-    padding-top: 5px !important;
-  }
-
-  #s {
-    color: #ccc;
-    padding-top: 7px !important;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  #wrapper {
-    width: 96%;
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  #top_bnr_space img {
-    height: 40px;
-    margin-bottom: 0;
+    width: 100%;
     padding: 0;
   }
 
-  .recommend-list .date {
-    display: block;
+  h1.descr {
+    font-size: 12px;
+    color: #616161;
+    margin-top: 40px;
+    margin-bottom: -60px;
+    width: 650px !important;
+    font-size: 1rem;
+    position: relative;
+    top: 0.9rem;
+    text-align: right;
   }
 
-  .head-ad {
-    margin: 0 auto 1em;
-  }
-
-  #side aside {
-    clear: both;
-    float: none;
-    width: auto;
-    position: static !important;
-  }
-
-  h1.descr,
   p.descr {
-    font-size: 15px;
-    font-weight: 400;
-    margin: 1em auto 0;
-    padding: 0;
-    line-height: 1.4em;
-    text-align: left;
+    width: 650px !important;
+    font-size: 1rem;
+    position: relative;
+    top: 0.9rem;
+    text-align: right;
   }
 
-  #header-l {
-    margin-top: 0;
+  .single {
+    h1.descr,
+    p.descr {
+      top: -6px;
+    }
   }
-}
 
-@media only screen and (min-width: 414px) {
+  .archive p.descr {
+    top: -6px;
+  }
+
+  .text-pc-center {
+    text-align: center;
+  }
+
+  .post {
+    div.art-pic-half {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    p img.art-pic-half {
+      display: block;
+      width: 50%;
+      margin: 1em auto 0 auto;
+    }
+  }
+
+  .abh_tab_content .abh_text .abh_description {
+    margin-bottom: 0;
+  }
+
+  .single-page #contentInner {
+    float: none;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .single-page main {
+    margin-right: 0;
+  }
+  .home h1.descr,
+  p.descr {
+    top: 14px;
+  }
+
   .colum1 {
-
     #side,
     .st-pagelink {
       display: none;
@@ -2158,7 +2149,6 @@ section {
   }
 
   #topnews-box {
-
     dd,
     dt {
       padding-bottom: 5px;
@@ -2312,8 +2302,7 @@ section {
   }
 }
 
-@media only screen and (min-width: 781px) {
-
+@include for-1025up {
   #head h2.blog,
   h1.descr,
   p.descr {
@@ -2323,10 +2312,10 @@ section {
   }
 
   .head-telno {
-    font-family: Montserrat, sans-serif;
+    font-family: $font-setting;
 
     a {
-      font-family: Montserrat, sans-serif;
+      font-family: $font-setting;
     }
   }
 
@@ -2406,7 +2395,7 @@ header ul {
       }
     }
 
-    >li:last-child {
+    > li:last-child {
       border: 0;
     }
   }
@@ -2419,7 +2408,6 @@ header ul {
 }
 
 .h2fuu {
-
   &:after,
   &:before {
     bottom: -10px;
@@ -2428,7 +2416,6 @@ header ul {
 }
 
 h2 {
-
   &:after,
   &:before {
     bottom: -10px;
@@ -2662,7 +2649,6 @@ main {
   padding: 0;
 }
 
-
 .post h4.p-entry {
   color: #000;
   line-height: 28px;
@@ -2775,10 +2761,6 @@ main {
   height: 4em;
 }
 
-#pagetop {
-  font-size: 14px;
-}
-
 .sns {
   .fa {
     padding: 0 0 0 2px;
@@ -2811,80 +2793,13 @@ main {
   }
 }
 
-@media only screen and (min-width: 481px) {
-  body {
-    width: 100%;
-    padding: 0;
-  }
-
-  h1.descr {
-    font-size: 12px;
-    color: #616161;
-    margin-top: 40px;
-    margin-bottom: -60px;
-    width: 650px !important;
-    font-size: 1rem;
-    position: relative;
-    top: 0.9rem;
-    text-align: right;
-  }
-
-  p.descr {
-    width: 650px !important;
-    font-size: 1rem;
-    position: relative;
-    top: 0.9rem;
-    text-align: right;
-  }
-
-  .single {
-
-    h1.descr,
-    p.descr {
-      top: -6px;
-    }
-  }
-
-  .archive p.descr {
-    top: -6px;
-  }
-
-  .text-pc-center {
-    text-align: center;
-  }
-
-  .post {
-    div.art-pic-half {
-      display: block;
-      width: 50%;
-      margin: 0 auto;
-    }
-
-    p img.art-pic-half {
-      display: block;
-      width: 50%;
-      margin: 1em auto 0 auto;
-    }
-  }
-
-  .abh_tab_content .abh_text .abh_description {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (max-width: 780px) and (min-width: 320px) {
-  main {
-    padding: 10px !important;
-  }
-}
-
-@media only screen and (max-width: 480px) and (min-width: 0px) {
+@include for-1024below {
   .post p img.art-pic-half {
     width: 100%;
   }
 
   main {
-    padding: 20px 0;
+    padding: 5rem 0;
     margin: 0 auto;
   }
 
@@ -2893,7 +2808,6 @@ main {
   }
 
   .android {
-
     h1.descr,
     p.descr {
       padding: 3.5em 0.5em 0 0.5em;
@@ -2901,7 +2815,6 @@ main {
   }
 
   .iphone {
-
     h1.descr,
     p.descr {
       padding: 3.5em 0.5em 0 0.5em;
@@ -2929,7 +2842,6 @@ main {
     margin: 0 auto 1em auto;
 
     dl {
-
       dd,
       dt {
         padding-top: 0.5em;
@@ -2982,49 +2894,10 @@ main {
   }
 }
 
-
 h1.descr,
 p.descr {
   width: 39rem !important;
   font-size: 0.9rem;
-}
-
-@media only screen and (min-width: 1581px) {
-
-  h1.descr,
-  p.descr {
-    width: 36rem !important;
-  }
-}
-
-@media only screen and (max-width: 1481px) {
-
-  h1.descr,
-  p.descr {
-    width: 41rem !important;
-  }
-
-}
-
-@media only screen and (max-width: 1181px) {
-
-  h1.descr,
-  p.descr {
-    width: 45rem !important;
-  }
-
-}
-
-@media only screen and (min-width: 781px) {
-  .single-page #contentInner {
-    float: none;
-    width: 620px;
-    margin: 0 auto;
-  }
-
-  .single-page main {
-    margin-right: 0;
-  }
 }
 
 .single-post .foot_bnr,
@@ -3036,11 +2909,59 @@ p.descr {
   padding: 20px 12px 0 12px !important;
 }
 
+@include for-1024below {
+  body {
+    overflow-x: hidden;
+  }
 
-@media only screen and (min-width: 481px) {
+  #wrapper {
+    width: 96%;
+    padding: 0;
+    margin: 0 auto;
+  }
 
-  .home h1.descr,
+  #top_bnr_space img {
+    height: 40px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .recommend-list .date {
+    display: block;
+  }
+
+  .head-ad {
+    margin: 0 auto 1em;
+  }
+
+  #side aside {
+    clear: both;
+    float: none;
+    width: 100%;
+  }
+
+  h1.descr,
   p.descr {
-    top: 14px;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 1em auto 0;
+    padding: 0;
+    line-height: 1.4em;
+    text-align: left;
+  }
+
+  #header-l {
+    margin-top: 0;
+  }
+
+  #head #logotype {
+    .blog {
+      display: block;
+      margin: 0 auto;
+      img {
+        margin: 0.5rem auto;
+        width: 80%;
+      }
+    }
   }
 }

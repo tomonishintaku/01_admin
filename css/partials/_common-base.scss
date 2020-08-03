@@ -11,7 +11,7 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: helvetica, arial, hiragino kaku gothic pro, meiryo, ms pgothic, sans-serif;
+    font-family: $font-setting;
     color: $deep-dark;
     font-size: 14px;
 }
@@ -27,6 +27,10 @@ a img {
 dl img,
 ul li img {
     vertical-align: top
+}
+
+.clear {
+  clear: both;
 }
 
 .clearfix:after {
@@ -64,7 +68,7 @@ a:active {
 }
 
 .cpy {
-    font-family: Verdana
+    font-family: $font-setting;
 }
 
 #contents {
@@ -934,7 +938,6 @@ h3.news_ttl span {
 
 @include for-480below {
 
-    #contents {
         #top_bnr_space {
             width: 100%;
             margin-bottom: -1.5em;
@@ -948,5 +951,4 @@ h3.news_ttl span {
                 }
             }
         }
-    }
 }

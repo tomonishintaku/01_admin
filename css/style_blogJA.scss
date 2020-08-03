@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import "partials/variables";
-@import "partials/breakpoints";
 @import "partials/mobile-menu";
 @import "partials/header";
 @import "partials/footer";
@@ -9,7 +7,6 @@
 @import "partials/common-base";
 
 @import "partials/blogJA";
-
 
 /*__USE mixin--MIN-width group
 @include for-481up {}
