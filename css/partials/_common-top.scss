@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "breakpoints";
-@import "variables";
+@import "_breakpoints";
+@import "_variables";
 
 /*__USE mixin--MIN-width group
 @include for-481up {}
@@ -77,6 +77,7 @@ h1#main-img {
 
     li {
       width: 33%;
+
       p {
         padding: 0.5em 0 0 0;
         margin-bottom: 1.5em;
@@ -100,6 +101,7 @@ h1#main-img {
       width: 100%;
       display: block;
     }
+
     li {
       width: 100%;
     }

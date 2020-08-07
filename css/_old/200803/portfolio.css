@@ -1,0 +1,18 @@
+@charset "utf-8";
+.portfolio .pf-dl {
+	margin-top: 1.5em
+}
+.portfolio .pf-dl a {
+	font-size:1.2em;
+	font-weight: 700
+}
+.portfolio .pf-dl a span {
+	font-weight: 400;
+	display: inline
+}
+.portfolio p img{
+	width: 100%;
+}
+@media only screen and (min-width:0) and (max-width:480px) {
+
+}

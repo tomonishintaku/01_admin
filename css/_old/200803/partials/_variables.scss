@@ -1,0 +1,66 @@
+//main content width for destop
+$content-width:1024px;
+$desktop-lines-height:36px;
+
+$general-space:4%;
+$top-content-margin:3.5rem;
+
+//for English conten\ts
+$EN-text-size: 16px;
+$EN-ling-height:1.85rem;
+
+//font-setting
+$font-setting: helvetica,
+arial,
+hiragino kaku gothic pro,
+meiryo,
+ms pgothic,
+sans-serif;
+
+//general colors
+$white:#fff;
+$black:#000;
+$deep-dark:#333;
+$dark:#555;
+$light-dark:#777;
+$lighter-dark:#999;
+$light-gray:#ccc;
+$border-color:#e0e0e0;
+
+//SNS colors
+
+$youtube:#c4302b;
+$linkedin: #3276b0;
+$instagram: #3f729b;
+$twitter: #0081ce;
+$facebook: #2b4170;
+$whatsapp: #25D366;
+$email: #c71610;
+
+.youtube i {
+    color: $youtube;
+}
+
+.linkedin i {
+    color: $linkedin;
+}
+
+.instagram i {
+    color: $instagram;
+}
+
+.twitter i {
+    color: $twitter;
+}
+
+.facebook i {
+    color: $facebook;
+}
+
+.whatsapp i {
+    color: $whatsapp;
+}
+
+.email i {
+    color: $email;
+}

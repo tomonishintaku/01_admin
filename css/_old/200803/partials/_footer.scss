@@ -1,0 +1,90 @@
+@import "breakpoints";
+@import "variables";
+
+$sns-width: 23.7%;
+
+.foot {
+    padding-bottom: $general-space;
+    margin: 0 auto;
+    position: relative;
+    bottom: 0;
+
+    p.public_caution {
+        margin: 0 auto;
+        padding: 1em 0 0 0;
+    }
+
+
+    &__copy {
+        float: left;
+        width: calc(100% - #{$sns-width});
+    }
+
+    &__sns {
+        float: right;
+        width: #{$sns-width};
+
+        ul {
+            padding: 0;
+            position: relative;
+            display: flex;
+            list-style: none;
+
+            li {
+                float: left;
+                list-style: none;
+                max-width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+//mobile version
+@include for-1024below {
+
+    .foot {
+        &__copy {
+            width: 100%;
+            font-size: 0.8rem;
+        }
+
+        &__sns {
+            width: 100%;
+        }
+
+        .foot_bnr {
+            width: 97%;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+//mobile version END
+
+//desktop version
+@include for-1025up {
+
+    .foot {
+        width: $content-width;
+
+        address {
+            height: 10px;
+            padding: 0 0 0 4px;
+            font-size: 10px;
+            color: $dark;
+
+            img {
+                vertical-align: top;
+            }
+        }
+
+    }
+
+    .foot_bnr {
+        width: $content-width;
+        margin: 1em auto;
+    }
+}
+
+//desktop version END

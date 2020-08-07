@@ -1,98 +1,98 @@
-@charset "utf-8";
-/*SNS button*/
-.social-area-syncer{
-	padding: 10px 0 20px 0;
-	width: 100%;
-}
-.social-area-syncer:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-ul.social-button-syncer{
-	width: 100%;
-	list-style-type: none;
-}
-ul.social-button-syncer li{
-	float: right;
-	width: 33%;
-	text-align: center;
-}
-#ex_view img{
-	width: 100%;
-
-}
-#event-info dl{
-line-height: 1.7em;
-margin-bottom: 0;
-}
-.img_4 li p.price{
-color:#c00;
-text-align: right;
-}
-.btn_frame{
-	white-space: normal;
-}
-.chapter-head-sub{font-size: 1.4em;}
-.chapter-head{
-margin-bottom: 1.5em;
-}
-.img_list .btn_frame{
-	margin-bottom: 2em;
-}
-.notice{
-margin:2em 0;
-color: #c00;
-}
-
-/* デスクトップ */
-@media screen and (min-width:480px){
-#ex_view .img_list img{
-	display: block;
-	float: left;
-width: 50%;
-padding:0;
-margin:auto;
-}
-#ex_view .img_list .img_4 img{
-width: 100%;
-}
-.chapter-head-sub {
-margin-top:1em;	
-}
-#ex_view .ex_info{
-width:48%; 
-padding: 0;
-margin:0 0 0 2%;
-}
-#ex_view .ex_info .txt{
-	width:100%; 
-	padding: 0;
-margin:0;
-}
-.img_list:after {
-	content: ".";
-	display: block;
-	height: 0;
-	font-size: 0;
-	clear: both;
-	visibility: hidden
-}
-/*SNS button*/
-ul.social-button-syncer li{
-	float: right;
-	width: 48px;
-}
-.some-buttons .btn_frame .css_btn_a{
-width: 600px;
-}
-
-}
-
-@media only screen and (min-width:0) and (max-width:480px) {
-.img_4 li p.price{
- margin: -15px 0 20px 0;
-}
-}
-
-
+@charset "utf-8";
+/*SNS button*/
+.social-area-syncer{
+	padding: 10px 0 20px 0;
+	width: 100%;
+}
+.social-area-syncer:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ul.social-button-syncer{
+	width: 100%;
+	list-style-type: none;
+}
+ul.social-button-syncer li{
+	float: right;
+	width: 33%;
+	text-align: center;
+}
+#ex_view img{
+	width: 100%;
+
+}
+#event-info dl{
+line-height: 1.7em;
+margin-bottom: 0;
+}
+.img_4 li p.price{
+color:#c00;
+text-align: right;
+}
+.btn_frame{
+	white-space: normal;
+}
+.chapter-head-sub{font-size: 1.4em;}
+.chapter-head{
+margin-bottom: 1.5em;
+}
+.img_list .btn_frame{
+	margin-bottom: 2em;
+}
+.notice{
+margin:2em 0;
+color: #c00;
+}
+
+/* デスクトップ */
+@media screen and (min-width:480px){
+#ex_view .img_list img{
+	display: block;
+	float: left;
+width: 50%;
+padding:0;
+margin:auto;
+}
+#ex_view .img_list .img_4 img{
+width: 100%;
+}
+.chapter-head-sub {
+margin-top:1em;	
+}
+#ex_view .ex_info{
+width:48%; 
+padding: 0;
+margin:0 0 0 2%;
+}
+#ex_view .ex_info .txt{
+	width:100%; 
+	padding: 0;
+margin:0;
+}
+.img_list:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden
+}
+/*SNS button*/
+ul.social-button-syncer li{
+	float: right;
+	width: 48px;
+}
+.some-buttons .btn_frame .css_btn_a{
+width: 600px;
+}
+
+}
+
+@media only screen and (min-width:0) and (max-width:480px) {
+.img_4 li p.price{
+ margin: -15px 0 20px 0;
+}
+}
+
+

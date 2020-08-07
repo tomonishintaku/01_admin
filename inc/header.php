@@ -1,17 +1,25 @@
+<?php require_once dirname(__FILE__).'/common/functions.php';?>
 <header id="head" class="head">
     <!--  HUMBURGER menu contents-->
     <div class="min-header head__logo">
 
-        <h2 id="logotype" lang="ja"><a href="/" class="std"><img src="/images/common/site-logo.png"
-                    alt="料理、食をテーマに作品を制作する現代美術家/新宅睦仁/シンタクトモニ"></a><a href="/en<?php echo $_SERVER['PHP_SELF'] ?>"
-                id="en-link" class="std"><img src="/images/common/head-lang_jp.png" alt="website-for-english"></a><a
-                href="/blog/" class="blog"><img src="/images/common/head_pic_blog.png"
-                    alt="現代美術家/新宅睦仁/シンタクトモニのエッセイ・コラムのブログ"></a></h2>
+<!-- Japanese logo set -->
+        <h2 id="logotype" lang="ja">
+        	<a href="/" class="std"><img src="/images/common/site-logo.png"
+                    alt="料理、食をテーマに作品を制作する現代美術家/新宅睦仁/シンタクトモニ"></a>
+            <a href="/en<?php echo $_SERVER['PHP_SELF'] ?>"
+                id="en-link" class="std"><img src="/images/common/head-lang_jp.png" alt="website-for-english"></a>
+            <a href="/blog/" class="blog"><img src="/images/common/head_pic_blog.png" alt="現代美術家/新宅睦仁/シンタクトモニのエッセイ・コラムのブログ"></a>
+        </h2>
 
-        <h2 id="logotype" lang="en"><a class="std" href="/en/"><img alt="Contemporary artist｜SHINTAKU Tomoni website"
-                    src="/images/common/site-logo_en.png"></a><a
-                href="<?php $str = $_SERVER['PHP_SELF']; $str = str_replace('/en', '', $str); echo $str;?>" id="en-link"
-                class="std"><img alt="website-for-Japanese" src="/images/common/head-lang_en.png"></a></h2>
+<!-- English logo set -->
+        <h2 id="logotype" lang="en">
+        	<a class="std" href="/en/"><img alt="Contemporary artist｜SHINTAKU Tomoni website"
+                    src="/images/common/site-logo_en.png"></a>
+             <a href="<?php $str = $_SERVER['PHP_SELF']; $str = str_replace('/en', '', $str); echo $str;?>" id="en-link"
+                class="std"><img alt="website-for-Japanese" src="/images/common/head-lang_en.png"></a>
+			 <a href="/en/blog/" class="blog"><img alt="Contemporary artist｜SHINTAKU Tomoni website" src="/images/common/head_pic_blog_en.png"></a>
+        </h2>
 
     </div>
     <nav class="menu global-nav">
@@ -65,21 +73,19 @@
             </li>
             <li class="sns" itemprop="name">
                 <ul>
-                    <?php $sns = file_get_contents('https://tomonishintaku.com/inc/sns.php'); echo $sns; ?>
+                    <?php branchURL('/en/', $sns_en, $sns); /*This function from "/inc/common/functions.php"*/?>
                 </ul>
             </li>
             <li class="lang-switch" itemprop="name" lang="ja">
-                <div class="lang-switch__left"><a class="common-nav en" href="/en<?php echo $_SERVER['SCRIPT_NAME'] ?>"
+                <div class="lang-switch__left"><a class="common-nav en" href="/en<?php echo $_SERVER['PHP_SELF'] ?>"
                         itemprop="URL">English</a><a class="blog-nav" href="/en/blog/">English</a></div>
                 <div class="lang-switch__right"><span class="common-nav">Japanese</span><span
                         class="blog-nav">Japanese</span></div>
             </li>
             <li class="lang-switch" itemprop="name" lang="en">
                 <div class="lang-switch__right">
-                    <!-- 英語ページのインクルードのパスを全て修正する必要あり -->
-                    <!-- a href="<?php $str = $_SERVER['SCRIPT_NAME']; $str = str_replace('/en', '', $str); echo $str;?>"
-                    class="common-nav en"--><a href="/" class="common-nav en">Japanese</a><a href="/blog/"
-                        class="blog-nav">Japanese</a></div>
+                    <a href="<?php $str = $_SERVER['PHP_SELF']; $str = str_replace('/en', '', $str); echo $str;?>" class="common-nav en">
+                    Japanese</a></div>
                 <div class="lang-switch__right">
                     <span class="common-nav">English</span><span class="blog-nav">English</span>
                 </div>

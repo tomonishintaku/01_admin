@@ -1,0 +1,89 @@
+// for all ENGLISH contents. under "body" tag's "article" has class "EN_wrapper" *******************************
+
+html:lang(en) {
+#contents{
+  font-size: $EN-text-size;
+}
+
+  @include for-480below {
+
+    #works-nav li h3,
+    #ex-nav li h3 {
+      height: 3.2em;
+      overflow-y: hidden;
+    }
+
+    #work-history-grp h3 {
+      margin-top: 0.2em;
+      line-height: 1.2em;
+    }
+
+    #work-history-grp p {
+      height: 8em;
+      line-height: 1em;
+      overflow-y: hidden;
+    }
+  }
+
+  @include for-481up {
+    ul#global_navi li {
+      line-height: 2.4em
+    }
+  }
+}
+
+// for EN blog contents "body" tag has class "en-blog"
+.en-blog {
+  #head h2#logotype {
+    @include for-1024below {
+      width: 220px !important;
+      margin: 0 auto;
+    }
+  }
+
+  #head {
+    @include for-1024below {
+      width: 100vw;
+      padding: 0 0 3.5rem 2vw;
+    }
+  }
+
+  h1.entry-title {
+    color: $light-dark;
+  }
+
+  .home .entry-title a,
+  .ast-single-post .entry-title {
+    font-size: 2.2rem !important;
+  }
+
+  #head h2.std {
+    color: $light-dark;
+  }
+
+  @include for-481up {
+
+    ul#global_navi li {
+      line-height: 2.7em !important;
+    }
+
+    .home .post-content a img,
+    .archive .post-content a img {
+      width: 100%;
+    }
+
+    .ast-separate-container {
+      margin-top: 3.5rem;
+    }
+  }
+
+  //end  for-481up 
+
+  .site-content {
+    width: 100vw !important;
+  }
+}
+
+
+
+// for ENGLISH contenst END **********************************

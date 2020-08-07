@@ -1,5 +1,5 @@
-@import "breakpoints";
-@import "variables";
+@import "_breakpoints";
+@import "_variables";
 
 // HUMBURGER menu 
 
@@ -7,7 +7,7 @@
 
   .min-header {
     z-index: 9;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -91,7 +91,61 @@
       top: #{$line-space * 2}px;
     }
 
+    //When scrolling the style will change
+
+    .transfrom-bar {
+      //use for @extend
+      left: 36px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $light-gray;
+    }
+
+    &.transform {
+
+      .#{$hbg}__line--1 {
+        @extend .transfrom-bar;
+      }
+
+      .#{$hbg}__line--2 {
+        @extend .transfrom-bar;
+      }
+
+      .#{$hbg}__line--3 {
+        @extend .transfrom-bar;
+      }
+
+    }
   }
+
+  .nav-open {
+    .#{$hbg}.transform {
+
+      .opened-transform-bar {
+        //use for @extend
+        width: 28px;
+        height: 2px;
+        top: -#{$line-space}px;
+        left: #{$line-space * 2}px;
+        border-radius: 0;
+        background-color: $dark;
+      }
+
+      .#{$hbg}__line--1 {
+        transform: translateY(20px) rotate(-45deg);
+        @extend .opened-transform-bar;
+      }
+
+      .#{$hbg}__line--3 {
+        transform: translateY(20px) rotate(45deg);
+        @extend .opened-transform-bar;
+      }
+
+    }
+
+  }
+
 
   .black-bg {
     position: fixed;

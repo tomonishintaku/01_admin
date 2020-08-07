@@ -2,15 +2,28 @@
 $content-width:1024px;
 $desktop-lines-height:36px;
 
-$general-space:2.5%;
+$general-space:4%;
 $top-content-margin:3.5rem;
 
-//for English conten\ts
+//for English contents
 $EN-text-size: 16px;
 $EN-ling-height:1.85rem;
 
+//for default setting
+$def-text-size: 14px;
+$def-ling-height:1.85rem;
+
 //font-setting
-$font-setting: helvetica, arial, hiragino kaku gothic pro, meiryo, ms pgothic, sans-serif;
+$font-setting: "Montserrat",
+"游ゴシック",
+YuGothic,
+"ヒラギノ角ゴ ProN W3",
+"Hiragino Kaku Gothic ProN",
+"メイリオ",
+Meiryo,
+helvetica,
+arial,
+sans-serif;
 
 //general colors
 $white:#fff;

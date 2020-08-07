@@ -1,144 +1,154 @@
-@import "breakpoints";
-@import "variables";
+@import "_breakpoints";
+@import "_variables";
 
 #head {
-  #logotype #en-link {
-    margin: 0 0 0 4px;
-  }
-
-  .ad,
-  .blog,
-  .sp-ad {
-    display: none;
-  }
-
-  #lang {
-    display: block;
-    float: right;
-    margin: 0.5em 0 0;
-  }
-
-  #logotype {
-    @include for-1024below {
-      margin: 0 auto;
-      text-align: center;
+    #logotype #en-link {
+        margin: 0 0 0 4px;
     }
-  }
+
+    .ad,
+    .blog,
+    .sp-ad {
+        display: none;
+    }
+
+    #lang {
+        display: block;
+        float: right;
+        margin: 0.5em 0 0;
+    }
+
+    #logotype {
+        @include for-1024below {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
 }
 
 #head #lang a,
 .bio .lang a {
-  border-radius: 6px;
-  border: solid #ccc 1px;
-  background: #eee;
-  padding: 0.2em 2em;
-  color: #ff1493;
-  font-weight: 700;
+    border-radius: 6px;
+    border: solid #ccc 1px;
+    background: #eee;
+    padding: 0.2em 2em;
+    color: #ff1493;
+    font-weight: 700;
 }
 
 #head #lang a:hover,
 .bio .lang a:hover {
-  background: #ddd;
-  text-decoration: none;
+    background: #ddd;
+    text-decoration: none;
 }
 
 .pc-line-news {
-  display: none;
+    display: none;
 }
 
 #logotype {
-  .blog {
-    display: none;
-  }
-
-  @include for-1024below {
-    #head {
-      #lang a {
-        padding: 0 5px;
-      }
+    .blog {
+        display: none;
     }
 
-    #en-link {
-      display: none;
+    @include for-1024below {
+        #head {
+            #lang a {
+                padding: 0 5px;
+            }
+        }
+
+        #en-link {
+            display: none;
+        }
     }
-  }
 }
 
 .blog {
-  #logotype {
-    .blog {
-      display: block;
+    #logotype {
+        .blog {
+            display: block;
+        }
     }
-  }
 }
 
 // Hidden desktop logo menu
 @include for-1025up {
-  .menu {
-    display: none;
-  }
+    .menu {
+        display: none;
+    }
 }
 
 @include for-1024below {
-  .list-base {
-    list-style: none;
-  }
+    .list-base {
+        list-style: none;
+    }
 
-  .menu {
-    line-height: 3rem;
+    .menu {
+        line-height: 3rem;
 
-    &__list {
-      padding-left: 1.5rem;
-      @extend .list-base;
+        &__list {
+            padding-left: 1.5rem;
+            @extend .list-base;
 
-      .sns {
-        margin-top: 1rem;
-      }
+            .sns {
+                margin-top: 1rem;
+                height: 48px;
 
-      .newsflash {
-        text-decoration: underline;
-        width: 80%;
-        padding-bottom: 1.2rem;
+                li {
+                    width: 48px;
 
-        .latest-text a {
-          line-height: 1.8em;
+                    a {
+                        text-align: left;
+                    }
+                }
+            }
+
+            .newsflash {
+                text-decoration: underline;
+                width: 80%;
+                padding-bottom: 1.2rem;
+
+                .latest-text a {
+                    line-height: 1.8em;
+                }
+            }
         }
-      }
+
+        .lang-switch {
+            display: flex;
+            width: 100%;
+            height: 1em;
+            text-align: center;
+
+            &__left,
+            &__right {
+                width: 50%;
+                text-align: left;
+            }
+
+            &__right {
+                color: $light-gray;
+            }
+
+        }
+
+        .sns ul {
+            display: flex;
+            @extend .list-base;
+        }
     }
-
-    .lang-switch {
-      display: flex;
-      width: 100%;
-      height: 1em;
-      text-align: center;
-
-      &__left,
-      &__right {
-        width: 50%;
-        text-align: left;
-      }
-      &__right {
-        color:$light-gray;
-      }
-
-    }
-
-    .sns ul {
-      display: flex;
-      @extend .list-base;
-    }
-  }
 }
 
 //481up END
 @include for-481up {
-  #head {
-    h2 {
-      &.std {
-        font-size: 0.9rem;
-      }
+    #head {
+        h2 {
+            &.std {
+                font-size: 0.9rem;
+            }
+        }
     }
-  }
 }
 
 //481up END
@@ -146,70 +156,71 @@
 //mobile version
 
 @include for-1024below {
-  #head {
-    height: 44px;
-    width: 99%;
-    padding: 0 1% 0 2%;
-    margin: 0 0 0 -1%;
-    position: fixed;
-    top: 0;
-    background: #fff;
-    z-index: 2;
-    border-bottom: 1px solid #ddd;
+    #head {
+        /*height: 44px;
+        width: 99%;
+        padding: 0 1% 0 2%;
+        margin: 0 0 0 -1%;
+        position: fixed;
+        top: 0;
+        background: #fff;
+        z-index: 2;
+        border-bottom: 1px solid #ddd;*/
 
-    .head__menu,
-    h1,
-    h3.std,
-    h2.std {
-      display: none
-    }
-
-    .menu {
-      a {
-        color: $dark;
-        display: block;
-      }
-    }
-
-    .home {
-      display: -webkit-flex;
-      display: flex;
-
-      a {
-        width: 76%;
-
-        &:last-child {
-          border-left: 1px solid #fff;
-          font-size: 9pt;
-          padding-top: 13px;
-          height: 22px;
-          line-height: 1.2em;
-          width: 24%;
+        .head__menu,
+        h1,
+        h3.std,
+        h2.std {
+            display: none
         }
-      }
+
+        .menu {
+            a {
+                color: $dark;
+                display: block;
+            }
+        }
+
+        .home {
+            display: -webkit-flex;
+            display: flex;
+
+            a {
+                width: 76%;
+
+                &:last-child {
+                    border-left: 1px solid #fff;
+                    font-size: 9pt;
+                    padding-top: 13px;
+                    height: 22px;
+                    line-height: 1.2em;
+                    width: 24%;
+                }
+            }
+        }
+
+        h3.std,
+        h1 {
+            text-align: left;
+            font-size: 80%;
+            font-weight: 400;
+            line-height: 1.5em;
+            margin: 0.5em auto;
+            color: #555;
+        }
+
+        //blogs logo setting
+        h2#logotype {
+            width: 280px;
+
+            img {
+                margin-top: 0.6rem;
+                width: 60%;
+            }
+        }
     }
 
-    h3.std,
-    h1 {
-      text-align: left;
-      font-size: 80%;
-      font-weight: 400;
-      line-height: 1.5em;
-      margin: 0.5em auto;
-      color: #555;
-    }
-
-    h2#logotype {
-      width: 280px;
-
-      img {
-        margin-top: 0.55rem;
-        width: 70%;
-      }
-    }
-  }
-
-  //#head  END
+    //#head  END
 }
 
 //mobile version END
@@ -217,69 +228,69 @@
 //desktop version
 @include for-1025up {
 
-  // postion horizontal between ".head__logo" and "head__desktop"
-  .head {
-    width: $content-width;
-    margin: 0 auto;
-    padding: 1rem 0;
+    // postion horizontal between ".head__logo" and "head__desktop"
+    .head {
+        width: $content-width;
+        margin: 0 auto;
+        padding: 1rem 0;
 
-    #logotype #en-link img {
-      width: 16%;
-      position: relative;
-      top: -16px;
-    }
-
-    $logo-size:360px;
-
-    &__logo {
-      width: $logo-size;
-      display: inline-block;
-
-      #logotype {
-        width: $logo-size;
-      }
-
-    }
-
-    &__menu {
-      float: right;
-
-
-      ul {
-        display: flex;
-
-        li {
-          text-align: center;
-          white-space: nowrap;
-          list-style: none;
-          padding: 0 1.5rem;
-          line-height: 3.5em;
-
-          &:last-child {
-            padding-right: 0;
-
-          }
-
-          a {
-            color: #4d4d4d;
-            display: block;
-          }
+        #logotype #en-link img {
+            width: 16%;
+            position: relative;
+            top: -16px;
         }
-      }
+
+        $logo-size:360px;
+
+        &__logo {
+            width: $logo-size;
+            display: inline-block;
+
+            #logotype {
+                width: $logo-size;
+            }
+
+        }
+
+        &__menu {
+            float: right;
+
+
+            ul {
+                display: flex;
+
+                li {
+                    text-align: center;
+                    white-space: nowrap;
+                    list-style: none;
+                    padding: 0 1.5rem;
+                    line-height: 3.5em;
+
+                    &:last-child {
+                        padding-right: 0;
+
+                    }
+
+                    a {
+                        color: #4d4d4d;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        h3.std,
+        h1,
+        h2.std {
+            text-align: right;
+            font-size: 80%;
+            font-weight: 400;
+            margin-top: 14px;
+            line-height: 1.2em;
+        }
     }
 
-    h3.std,
-    h1,
-    h2.std {
-      text-align: right;
-      font-size: 80%;
-      font-weight: 400;
-      margin-top: 14px;
-      line-height: 1.2em;
-    }
-  }
-
-  // #head END
+    // #head END
 }
 
 //desktop version END

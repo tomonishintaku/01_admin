@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import "partials/mobile-menu";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/english";
+@import "partials/common-base";
+
+@import "partials/blogEN";
+
+
+/*__USE mixin--MIN-width group
+@include for-481up {}
+@include for-768up {}
+@include for-1025up {}
+__USE mixin--MAX-width group
+@include for-480below {}
+@include for-768below {}
+@include for-1024below {}
+*/

@@ -1,40 +1,40 @@
-/******************************
- ソーシャルエリア全体を囲む要素
- * 他のコンテンツと距離を取りたい場合は[margin]を設定して下さい
-******************************/
-.social-area-syncer{
-	padding: 10px 0 20px 0;
-	width: 100%;
-}
-
-.social-area-syncer:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-/******************************
- [ul]要素
-******************************/
-/* スマホ */
-ul.social-button-syncer{
-	width: 100%;
-	list-style-type: none;
-}
-ul.social-button-syncer li{
-	float: right;
-	width: 33%;
-	text-align: center;
-}
-
-
-/* デスクトップ */
-@media screen and (min-width:480px){
-
-ul.social-button-syncer li{
-	float: right;
-	width: 48px;
-}
-
-}
-
+/******************************
+ ソーシャルエリア全体を囲む要素
+ * 他のコンテンツと距離を取りたい場合は[margin]を設定して下さい
+******************************/
+.social-area-syncer{
+	padding: 10px 0 20px 0;
+	width: 100%;
+}
+
+.social-area-syncer:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/******************************
+ [ul]要素
+******************************/
+/* スマホ */
+ul.social-button-syncer{
+	width: 100%;
+	list-style-type: none;
+}
+ul.social-button-syncer li{
+	float: right;
+	width: 33%;
+	text-align: center;
+}
+
+
+/* デスクトップ */
+@media screen and (min-width:480px){
+
+ul.social-button-syncer li{
+	float: right;
+	width: 48px;
+}
+
+}
+

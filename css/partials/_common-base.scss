@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "variables";
-@import "breakpoints";
+@import "_variables";
+@import "_breakpoints";
 
 /*__USE mixin--MIN-width group
 @include for-481up {}
@@ -31,59 +31,84 @@ body {
     font-size: 14px;
 
 
-// set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site}
-#wrap, //EN blog
-#wrapper, //JA blog
-#contents //MAIN site pages
-{
-margin: 0 auto;
-}
+    // set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site}
+    #wrap,
+    //EN blog
+    #wrapper,
+    //JA blog
+    #contents //MAIN site pages
 
-@include for-1024below {
-    //Set MOBILE device spacing
-            #wrap, //EN blog
-            #wrapper, //JA blog
-            #contents, //MAIN site pages
-            .foot //footer elements
-            {
-        padding: calc(#{$general-space / 2});
-        width: calc(100% - #{$general-space});
-    }
-
-    #contents{ //MAIN site pages
-        margin-top: $top-content-margin;
-    }
-
-
-}
-
-@include for-768below {
-//Set MOBILE device spacing
-        #wrap, //EN blog
-        #wrapper, //JA blog
-        #contents, //MAIN site pages
-        .foot //footer elements
         {
-    padding: $general-space;
-    width: calc(100% - #{$general-space*2});
-}
+        margin: 0 auto;
+    }
 
-#wrapper //JA blog 管理バーが非表示の場合のmarginがあるため注意！！！
-{
-    margin-top: $top-content-margin;
-    font-size:1.2rem;
-.smanone2 p{
-    font-size:1rem;
-    line-height: 1.7rem;
-}
+    @include for-1024below {
 
-}
+        //Set MOBILE device spacing
+        #wrap,
+        //EN blog
+        #wrapper,
+        //JA blog
+        #contents //MAIN site pages
 
+            {
+            padding: calc(#{$general-space / 2});
+            width: calc(100% - #{$general-space});
+        }
 
-}
-// set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site} END
+        #contents {
+            //MAIN site pages
+            margin-top: $top-content-margin;
+        }
 
+        audio {
+            width: 100%;
+        }
+    }
 
+    //  for-1024below END
+
+    @include for-768below {
+        //Set MOBILE device spacing
+        #wrap,
+        //EN blog
+        #wrapper,
+        //JA blog
+        #contents //MAIN site pages
+
+            {
+            padding: $general-space;
+            width: calc(100% - #{$general-space*2});
+        }
+
+        #wrapper //JA blog 管理バーが非表示の場合のmarginがあるため注意！！！
+
+            {
+            margin-top: $top-content-margin;
+            font-size: 1.1rem;
+
+            .smanone2 p {
+                font-size: 1rem;
+                line-height: 1.7rem;
+            }
+
+        }
+
+    }
+
+    //body tag wrapper for blogs
+    //& = body tag
+    &.JAblog-wrapper {
+        .blogs-foot {
+            padding: calc(#{$general-space / 2});
+            width: calc(100% - #{$general-space});
+        }
+    }
+
+    //& = body tag
+    &.ENblog-wrapper {}
+
+    // set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site} END
 
 }
 
@@ -101,7 +126,7 @@ ul li img {
 }
 
 .clear {
-  clear: both;
+    clear: both;
 }
 
 .clearfix:after {
@@ -153,14 +178,27 @@ h2#page-ttl {
 }
 
 #top_bnr_space {
-    min-height: 54px
-}
 
-#top_bnr_space li {
-    float: left;
-    width: 24.5%;
-    list-style-type: none;
-    margin-bottom: 0
+    li {
+        float: left;
+        width: 24.5%;
+        list-style-type: none;
+        margin-bottom: 0;
+
+        @include for-1025up {
+            padding-right: 0.65%;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        img {
+            width: 248px;
+            height: auto;
+        }
+    }
+
 }
 
 .pc-line-news {
@@ -412,11 +450,12 @@ h3.news_ttl span {
         overflow-x: hidden
     }
 
-    #head{
-    .lang-switch .blog-nav {
-        display: none
+    #head {
+        .lang-switch .blog-nav {
+            display: none
+        }
     }
-}
+
     .mobile-menu-bnr ul,
     .mobile-menu-bnr li {
         background: #fff !important;
@@ -449,7 +488,7 @@ h3.news_ttl span {
         background: #fff
     }
 
-    .mobile-menu-bnr .foot_bnr {
+    .mobile-menu-bnr .foot.foot_bnr {
         width: 100%
     }
 
@@ -541,6 +580,7 @@ h3.news_ttl span {
         padding-bottom: 10px;
         text-indent: 23px
     }
+
     #contents_back {
         margin-top: 2em
     }
@@ -579,6 +619,7 @@ h3.news_ttl span {
         float: left;
         list-style: none
     }
+
     .bio .main_info .left {
         float: none;
         width: 50%;
@@ -891,10 +932,7 @@ h3.news_ttl span {
         line-height: 150%
     }
 
-    #top_bnr_space li img {
-        width: 234px;
-        height: 60px
-    }
+
 
     input.hankaku {
         ime-mode: disabled
@@ -981,17 +1019,17 @@ h3.news_ttl span {
 
 @include for-480below {
 
-        #top_bnr_space {
-            width: 100%;
-            margin-bottom: -1.5em;
+    #top_bnr_space {
+        width: 100%;
+        margin-bottom: -1.5em;
 
-            li {
-                width: 49%;
-                padding-bottom: 4px;
+        li {
+            width: 49%;
+            padding-bottom: 4px;
 
-                &:nth-child(odd) {
-                    margin-right: 1%
-                }
+            &:nth-child(odd) {
+                margin-right: 1%
             }
         }
+    }
 }

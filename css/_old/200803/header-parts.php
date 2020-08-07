@@ -1,0 +1,1 @@
+<?php $str = $_SERVER['REQUEST_URI']; $str = str_replace('/en', '', $str); echo $str;?>

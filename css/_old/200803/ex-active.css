@@ -1,0 +1,16 @@
+
+@charset "utf-8";
+a.ex-active {
+	color: #555;
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none
+}
+a.ex-active img {
+	filter: url("data:image/svg+xml;utf8,<svgxmlns=\'http://www.w3.org/2000/svg\'><filterid=\'grayscale\'><feColorMatrixtype=\'matrix\'values=\'0.33330.33330.3333000.33330.33330.3333000.33330.33330.33330000010\'/></filter></svg>#grayscale");
+	filter: gray;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	-ms-filter: grayscale(100%)
+}
