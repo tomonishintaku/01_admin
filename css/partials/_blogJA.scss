@@ -23,7 +23,10 @@ img.float-left {
     float: left;
 }
 
-#comments input,
+#sidebg,
+.rssbox a,
+input,
+textarea,
 #s {
     box-sizing: border-box;
 }
@@ -36,12 +39,6 @@ img.float-left {
     }
 }
 
-#sidebg,
-.rssbox a,
-input,
-textarea {
-    box-sizing: border-box;
-}
 
 .st-hide {
     display: none;
@@ -1076,11 +1073,6 @@ img.float-right {
     }
 }
 
-input,
-textarea {
-    max-width: 100%;
-    padding: 5px;
-}
 
 .responbox {
     margin-bottom: 10px;
@@ -1235,11 +1227,6 @@ nav li a:hover {
     border: 1px solid $light-gray;
 }
 
-#s,
-#searchsubmit {
-    border-radius: 0;
-    height: 34px;
-}
 
 #s {
     color: #333;
@@ -1671,26 +1658,6 @@ ul.children {
         border: 0;
     }
 
-    textarea {
-        margin-bottom: 10px;
-        width: 100%;
-        border: 1px solid #f2f2f2;
-    }
-
-    input {
-        padding: 10px;
-        width: 100%;
-        border-radius: 2px;
-        border: 1px solid #f2f2f2;
-
-        &[type="submit"] {
-            background-color: #f3f3f3;
-            padding: 10px;
-            -webkit-appearance: none;
-            border-radius: 3px;
-            border: 1px solid #f2f2f2;
-        }
-    }
 }
 
 .p-navi dl {

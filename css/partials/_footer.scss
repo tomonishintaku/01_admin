@@ -69,6 +69,7 @@ $foot-height: 2.5rem;
     .foot,
     .blogs-foot {
         min-height: #{$foot-height * 2};
+        box-sizing: content-box;
 
         &__copy {
             width: 100%;

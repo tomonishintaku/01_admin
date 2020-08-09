@@ -337,8 +337,13 @@ html[xmlns] .slides {
 .post-entry {
     overflow: hidden;
     background: #f9fafb;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
     margin-bottom: 30px;
+
+    .in-japanese {
+        line-height: 1.6rem;
+    }
+
+
 }
 
 .post-entry-text {
@@ -597,232 +602,11 @@ body.page .post-entry header h1 {
     }
 }
 
-input[type="search"] {
-    background: url("./images/search.png") no-repeat scroll 96% center #fff;
-    color: #666;
-    font-family: $font-setting;
-    font-size: 0.813em;
-    padding: 0 16px 0 15px;
-    width: 100%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    outline: none;
-    border: none;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 0;
-}
-
-#footer input[type="search"] {
-    background-image: url("./images/search-light.png");
-}
-
-input[type="search"] {
-    &::-webkit-search-decoration {
-        display: none;
-    }
-
-    &::-webkit-search-cancel-button {
-        -webkit-appearance: none;
-    }
-}
-
-#footer input[type="search"] {
-    background-color: #222;
-    border-color: #222;
-    color: #666;
-
-    &:focus {
-        color: #aaa;
-    }
-
-    box-shadow: none;
-}
-
-#searchbar {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-top: -20px;
-}
-
-input {
-
-    &[type="text"],
-    &[type="password"] {
-        height: 40px;
-        line-height: 40px;
-    }
-
-    &[type="text"],
-    &[type="password"] {
-        font-family: $font-setting;
-        background: #fff;
-        border: 1px solid #ddd;
-        color: #666;
-        display: block;
-        font-size: 12px;
-        margin-left: 0;
-        padding: 0 15px;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent, 0 0 0 transparent;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        max-width: 100%;
-        -webkit-appearance: none;
-        border-radius: 2px;
-    }
-}
-
-textarea {
-    font-family: $font-setting;
-    background: #fff;
-    border: 1px solid #ddd;
-    color: #666;
-    display: block;
-    font-size: 12px;
-    margin-left: 0;
-    padding: 0 15px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent, 0 0 0 transparent;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    max-width: 100%;
-    -webkit-appearance: none;
-    border-radius: 2px;
-    width: 100%;
-    padding: 10px;
-}
-
-input {
-
-    &[type="text"]:focus,
-    &[type="password"]:focus {
-        outline: none;
-        border-color: #ccc;
-        -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-        -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-    }
-}
-
-textarea:focus {
-    outline: none;
-    border-color: #ccc;
-    -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-    -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-}
-
-.entry {
-    button {
-        font-family: $font-setting;
-        position: relative;
-        display: block;
-        padding: 0 15px;
-        height: 40px;
-        line-height: 40px;
-        outline: none;
-        border: none;
-        background: #2eae9b;
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-        font-size: 0.813em;
-        cursor: pointer;
-        -webkit-appearance: none !important;
-    }
-
-    input {
-
-        &[type="button"],
-        &[type="submit"] {
-            font-family: $font-setting;
-            position: relative;
-            display: block;
-            padding: 0 15px;
-            height: 40px;
-            line-height: 40px;
-            outline: none;
-            border: none;
-            background: #2eae9b;
-            color: #fff;
-            font-weight: bold;
-            text-transform: uppercase;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-            font-size: 0.813em;
-            cursor: pointer;
-            -webkit-appearance: none !important;
-        }
-    }
-}
-
-#commentsbox input[type="submit"] {
-    font-family: $font-setting;
-    position: relative;
-    display: block;
-    padding: 0 15px;
-    height: 40px;
-    line-height: 40px;
-    outline: none;
-    border: none;
-    background: #2eae9b;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    font-size: 0.813em;
-    cursor: pointer;
-    -webkit-appearance: none !important;
-}
-
 .entry {
     button:hover {
         background: #35c9b3;
     }
 
-    input {
-
-        &[type="button"]:hover,
-        &[type="submit"]:hover {
-            background: #35c9b3;
-        }
-    }
-}
-
-#commentsbox input[type="submit"]:hover {
-    background: #35c9b3;
-}
-
-.entry {
-    button:active {
-        top: 1px;
-    }
-
-    input {
-
-        &[type="button"]:active,
-        &[type="submit"]:active {
-            top: 1px;
-        }
-    }
-}
-
-#commentsbox {
-    input[type="submit"]:active {
-        top: 1px;
-    }
-
-    margin-top: 30px;
 }
 
 h3.comments-title {
@@ -954,43 +738,11 @@ h3#reply-title {
     width: 95.6%;
 }
 
-#commentform {
-    input {
-        float: left;
-        margin-right: 10px;
-    }
-
-    label {
-        font-family: $font-setting;
-        font-size: 13px;
-        font-weight: normal;
-    }
-}
-
 #commentsbox span.required {
     color: #C30;
     font-size: 9px;
 }
 
-#commentform {
-    input {
-
-        &#author,
-        &#email,
-        &#url {
-            font-size: 13px;
-            width: 40%;
-            margin-top: 0;
-        }
-    }
-
-    textarea {
-        font-size: 13px;
-        width: 100%;
-        margin-top: 10px;
-        height: 5rem;
-    }
-}
 
 #error-page-title {
     font-size: 5em;
@@ -1464,11 +1216,6 @@ body {
         border-bottom: 1px solid #222;
     }
 
-    #commentform input#author,
-    #commentform input#email,
-    #commentform input#url {
-        width: 60%
-    }
 }
 
 @include for-1024below {
