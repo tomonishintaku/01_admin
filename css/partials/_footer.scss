@@ -11,9 +11,11 @@ $foot-height: 2.5rem;
     position: relative;
     bottom: 0;
 
-    p.public_caution {
+    .public_caution {
         margin: 0 auto;
-        padding: 1em 0 0 0;
+        padding: 1em 0 0.5rem 0;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
     }
 
     &__copy {
@@ -28,6 +30,10 @@ $foot-height: 2.5rem;
     &__sns {
         float: right;
         width: #{$sns-width};
+
+        i {
+            font-size: 2.35rem;
+        }
 
         @include for-768below {
             padding-top: 1rem;

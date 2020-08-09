@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+@import "_variables";
+@import "_breakpoints";
+
+/*__USE mixin--MIN-width group
+@include for-481up {}
+@include for-769up {}
+@include for-1025up {}
+__USE mixin--MAX-width group
+@include for-480below {}
+@include for-768below {}
+@include for-1024below {}
+*/
+
+//LINK style hover, input parts  
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: $deep-dark;
+}
+
+a {
+    color: $link-color;
+    transition: color 0.3s;
+
+    &:hover {
+        color: $link-color;
+        text-decoration: underline;
+
+        img {
+            -moz-opacity: 0.8;
+            opacity: 0.8;
+        }
+    }
+
+    &:link {
+        color: #1546a7;
+        text-decoration: none;
+    }
+
+    &:visited {
+        color: #609;
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: #609;
+        text-decoration: none;
+    }
+}
+
+#pagetop {
+    text-align: right;
+    padding-right: 2%;
+    margin: 2em auto 1em;
+    z-index: 1;
+
+    padding: 10px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 8px;
+    right: 0;
+    font-size: 28px;
+
+    a {
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            opacity: .5;
+        }
+
+        &:link {
+            color: $light-dark;
+            opacity: .7;
+        }
+    }
+}
+
+
+.button {
+    font-size: 2pc
+}
+
+//LINK style hover, input parts END  

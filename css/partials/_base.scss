@@ -2,6 +2,8 @@
 
 @import "_variables";
 @import "_breakpoints";
+@import "_links";
+@import "_parts";
 
 /*__USE mixin--MIN-width group
 @include for-481up {}
@@ -14,13 +16,16 @@ __USE mixin--MAX-width group
 */
 
 * {
-    font-style: normal;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
-html {
-    height: 100%
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 body {
@@ -28,140 +33,53 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: $font-setting;
     color: $deep-dark;
-    font-size: 14px;
+    font-size: $def-text-size;
 
-
-    // set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site}
-    #wrap,
-    //EN blog
-    #wrapper,
-    //JA blog
-    #contents //MAIN site pages
-
-        {
+    #contents {
         margin: 0 auto;
+    }
+
+    &.ENblog-wrapper {
+        font-size: $EN-text-size;
     }
 
     @include for-1024below {
 
-        //Set MOBILE device spacing
-        #wrap,
-        //EN blog
-        #wrapper,
-        //JA blog
-        #contents //MAIN site pages
-
-            {
+        #contents {
             padding: calc(#{$general-space / 2});
             width: calc(100% - #{$general-space});
-        }
-
-        #contents {
-            //MAIN site pages
             margin-top: $top-content-margin;
         }
 
-        audio {
-            width: 100%;
-        }
     }
 
     //  for-1024below END
 
     @include for-768below {
-        //Set MOBILE device spacing
-        #wrap,
-        //EN blog
-        #wrapper,
-        //JA blog
-        #contents //MAIN site pages
-
-            {
+        #contents {
             padding: $general-space;
             width: calc(100% - #{$general-space*2});
         }
 
-        #wrapper //JA blog 管理バーが非表示の場合のmarginがあるため注意！！！
-
-            {
+        .JAblog-wrapper #contents {
+            // CAUTION this elemetn has height of WP admin bar. Check when you logout.
             margin-top: $top-content-margin;
             font-size: 1.1rem;
+
+            .blogs-foot {
+                padding: calc(#{$general-space / 2});
+                width: calc(100% - #{$general-space});
+            }
 
             .smanone2 p {
                 font-size: 1rem;
                 line-height: 1.7rem;
             }
-
-        }
-
-    }
-
-    //body tag wrapper for blogs
-    //& = body tag
-    &.JAblog-wrapper {
-        .blogs-foot {
-            padding: calc(#{$general-space / 2});
-            width: calc(100% - #{$general-space});
         }
     }
-
-    //& = body tag
-    &.ENblog-wrapper {}
-
-    // set common spacing for 3 differ layouts {EN blog}, {JA blog}, {MAIN site} END
-
 }
 
-hr {
-    display: none
-}
-
-a img {
-    border-style: none
-}
-
-dl img,
-ul li img {
-    vertical-align: top
-}
-
-.clear {
-    clear: both;
-}
-
-.clearfix:after {
-    content: "";
-    clear: both;
-    display: block
-}
-
-* html .clearfix {
-    display: inline-table;
-    display: block
-}
-
-i {
-    padding-right: .5em
-}
-
-a:link {
-    color: #1546a7;
-    text-decoration: none
-}
-
-a:visited {
-    color: purple
-}
-
-a:hover,
-a:visited {
-    text-decoration: underline
-}
-
-a:active {
-    color: purple;
-    text-decoration: none
-}
+// #contents END
 
 .cpy {
     font-family: $font-setting;
@@ -262,10 +180,6 @@ h3.news_ttl span {
     border-radius: 4px
 }
 
-.pf-dl a:hover {
-    background: #adff2f
-}
-
 .portfolio .list {
     margin: 3em 0
 }
@@ -351,25 +265,6 @@ h3.news_ttl span {
     line-height: 1em
 }
 
-#pagetop {
-    text-align: right;
-    padding-right: 2%;
-    margin: 2em auto 1em;
-    z-index: 1
-}
-
-#pagetop a:hover {
-    text-decoration: none
-}
-
-#pagetop a:link {
-    color: $light-dark;
-    opacity: .7
-}
-
-.button {
-    font-size: 2pc
-}
 
 
 #cv-sns {
@@ -388,23 +283,6 @@ h3.news_ttl span {
     font-size: 20pt
 }
 
-#pagetop {
-    padding: 10px;
-    margin: 0 auto;
-    position: fixed;
-    bottom: 8px;
-    right: 0;
-    font-size: 28px
-}
-
-#pagetop a {
-    display: block;
-    text-decoration: none
-}
-
-#pagetop:hover {
-    opacity: .5
-}
 
 .news-list li {
     list-style: none;

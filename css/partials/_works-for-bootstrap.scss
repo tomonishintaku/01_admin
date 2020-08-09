@@ -1,5 +1,18 @@
 @charset "utf-8";
 
+@import "partials/variables";
+@import "partials/breakpoints";
+/*
+__USE mixin--MIN-width group
+@include for-481up {}
+@include for-768up {}
+@include for-1025up {}
+__USE mixin--MAX-width group
+@include for-480below {}
+@include for-768below {}
+@include for-1024below {}
+*/
+
 #imagelightbox {
     position: fixed;
     z-index: 9999;
@@ -324,7 +337,7 @@ p.article {
         list-style: none;
         float: left;
         width: 33.3%;
-        min-height: 448px;
+        min-height: 378px;
         padding: 0;
         text-align: center;
     }
@@ -598,7 +611,7 @@ span.status {
     font-weight: 400;
 }
 
-@media only screen and (min-width: 0) and (max-width: 480px) {
+@include for-1024below {
     .youtube {
         height: 50vw;
     }
@@ -930,7 +943,7 @@ span.status {
     }
 }
 
-@media only screen and (min-width: 481px) {
+@include for-1025up {
     .row a {
         display: block;
         vertical-align: middle;

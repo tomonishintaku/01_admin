@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+@import "_variables";
+@import "_breakpoints";
+
+/*__USE mixin--MIN-width group
+@include for-481up {}
+@include for-769up {}
+@include for-1025up {}
+__USE mixin--MAX-width group
+@include for-480below {}
+@include for-768below {}
+@include for-1024below {}
+*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    line-height: 1.4em;
+    font-family: $font-setting;
+    color: #1e3141;
+}
+
+
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 1.1rem;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio {
+    width: 100%;
+}
+
+hr {
+    display: none
+}
+
+a img {
+    border-style: none
+}
+
+dl img,
+ul li img {
+    vertical-align: top
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block
+}
+
+i {
+    padding-right: .5em
+}
+
+ul li {
+    list-style-type: none;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+small {
+    font-size: 80%;
+}
+
+p {
+    margin-bottom: 1.75rem;
+    line-height: 1.9rem;
+}
+
+table {
+
+    th,
+    tr td {
+        padding: 5px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-bottom-color: #999;
+        border-left-color: #999;
+    }
+}
+
+
+blockquote {
+    border: none;
+
+    &:before {
+        content: '';
+    }
+
+    position: relative;
+    margin: .5em 0 2em 0;
+    padding: 1em;
+    background-color: #eee;
+    color: #666;
+    z-index: 1;
+    overflow: hidden;
+
+    p {
+
+        &:before,
+        &:after {
+            font-size: 1000%;
+            background-color: #eee;
+            font-family: 'Times New Roman', "ＭＳ Ｐゴシック", sans-serif;
+            color: #fff !important;
+            position: absolute;
+            z-index: 0;
+            height: 0;
+        }
+
+        &:before {
+            content: "“";
+            line-height: .8;
+            left: 5px;
+            top: 5px;
+            z-index: -1;
+        }
+
+        &:after {
+            content: "”";
+            line-height: .15;
+            right: 5px;
+            bottom: 5px;
+            z-index: -1;
+        }
+
+    }
+
+
+    &.tw {
+        background-image: url(/blog/wp-content/themes/stinger7/images/quote-tw.png);
+        padding-top: 3.5rem;
+    }
+
+}
+
+.refer {
+    margin-bottom: 0;
+    text-align: right;
+
+    .sub_txt {
+        text-align: right;
+        margin-top: 0.5rem;
+        font-size: 0.7em;
+        color: #888;
+        line-height: 1.5em;
+        display: block;
+
+        & a {
+            padding-left: 0.5em;
+        }
+    }
+
+}

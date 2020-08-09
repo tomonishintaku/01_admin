@@ -14,14 +14,6 @@ __USE mixin--MAX-width group
 */
 
 
-#side aside ul li {
-    list-style-type: none;
-
-    ul li {
-        list-style-type: none;
-    }
-}
-
 .post article .pagelist-box .st-childlink li {
     list-style-type: none;
 }
@@ -51,43 +43,6 @@ textarea {
     box-sizing: border-box;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section,
-summary {
-    display: block;
-}
-
-body,
-html {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-body {
-    word-wrap: break-word;
-    background-color: #f2f2f2;
-
-    &.mceContentBody {
-        background-color: $white;
-    }
-}
-
 .st-hide {
     display: none;
 }
@@ -106,14 +61,6 @@ hr.hrcss {
     margin-right: 10px;
 }
 
-a {
-    color: #4682b4;
-
-    &:hover {
-        color: #b22222;
-    }
-}
-
 img,
 object,
 video {
@@ -126,11 +73,6 @@ video {
 
 .inline-img img {
     display: inline !important;
-}
-
-a:hover img {
-    -moz-opacity: 0.8;
-    opacity: 0.8;
 }
 
 img {
@@ -238,10 +180,6 @@ iframe {
     }
 }
 
-.post p {
-    margin-bottom: 34px;
-}
-
 .entry-title {
     line-height: 30px;
     margin-bottom: 10px;
@@ -298,7 +236,6 @@ header {
 }
 
 .entry-title {
-    font-size: 24px;
     color: #333;
     text-align: left;
 
@@ -327,64 +264,54 @@ header {
 }
 
 .post {
-    blockquote {
-        background-repeat: no-repeat;
-    }
 
     h3 {
         background-repeat: no-repeat;
-        margin-bottom: 20px;
+        margin: 10px 0 20px 0;
+        font-size: 18px;
+        background-position: left center;
+        border-bottom: 1px #999 dotted;
+        padding: 10px;
+
+        & a {
+            color: #333;
+            text-decoration: none;
+        }
     }
 
     h4 {
         margin-bottom: 20px;
-    }
-}
+        padding: 10px 15px;
+        background-color: #f3f3f3;
+        line-height: 24px;
 
-#wrapper h2:after {
-    border-radius: 2px;
-}
-
-.post {
-    h3 {
-        font-size: 18px;
-        margin-top: 10px;
-        background-position: left center;
-        margin-left: 0;
-        border-bottom: 1px #999 dotted;
-        padding: 10px;
+        &.point {
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 20px;
+            line-height: 28px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: $light-gray;
+            background-color: transparent;
+        }
     }
 
     h5 {
         font-size: 16px;
+        margin-bottom: 10px;
     }
-}
-
-dd h3 a {
-    font-size: 16px;
-    color: #333;
-    text-decoration: none;
-}
-
-h3 a {
-    color: #333;
-    text-decoration: none;
 }
 
 dd h3 {
     line-height: 23px;
-}
 
-.post {
-    h4 {
-        padding: 10px 15px;
-        background-color: #f3f3f3;
-        line-height: 24px;
+    & a {
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
     }
 
-    h5 {
-        margin-bottom: 10px;
-    }
 }
 
 .wp-caption-text {
@@ -408,18 +335,10 @@ dd h3 {
     }
 }
 
-.post h4.point {
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
-    line-height: 28px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: $light-gray;
-    background-color: transparent;
-}
 
 .blogbox {
+    padding: 5px;
+
     p {
         font-size: 12px;
         margin: 0;
@@ -432,13 +351,7 @@ dd h3 {
 
 .no-thumbitiran {
     margin-bottom: 20px;
-}
 
-.blogbox {
-    padding: 5px;
-}
-
-.no-thumbitiran {
     h3 {
         margin-bottom: 0;
         font-size: 16px;
@@ -454,10 +367,6 @@ dd h3 {
         text-decoration: none;
     }
 
-    h3 a:hover,
-    h5 a:hover {
-        color: #b22222;
-    }
 
     p {
         color: #333;
@@ -476,34 +385,6 @@ dd h3 {
     }
 }
 
-.post {
-    blockquote {
-        background-color: #f3f3f3;
-        background-image: url(images/quote.png);
-        background-position: left top;
-        margin-top: 16px;
-        margin-right: 0;
-        margin-bottom: 24px;
-        padding: 38px 18px 2px;
-    }
-
-    .sub_txt {
-        margin-bottom: 2em;
-        font-size: 0.7em;
-        color: #888;
-        line-height: 1.5em;
-        display: block;
-    }
-}
-
-.refer .sub_txt {
-    text-align: right;
-    margin-top: 0.5rem;
-}
-
-.sub_txt a {
-    padding-left: 0.5em;
-}
 
 .hutoaka {
     color: red;
@@ -688,10 +569,6 @@ dd h3 {
     a {
         text-decoration: none;
         color: #212121;
-
-        &:hover {
-            color: #b22222;
-        }
     }
 
     .copy,
@@ -893,9 +770,6 @@ table {
             color: #333;
             text-decoration: none;
 
-            &:hover {
-                color: #b22222;
-            }
         }
     }
 }
@@ -945,28 +819,6 @@ table {
 
     #mybox ul li ul li {
         line-height: 27px;
-    }
-}
-
-.rssbox a {
-    display: block;
-    width: 100%;
-    background-color: #444;
-    padding: 5px 10px;
-    color: $white;
-    text-decoration: none;
-
-    &:active,
-    &:link,
-    &:visited {
-        color: $white;
-    }
-
-    &:hover {
-        -moz-opacity: 0.6;
-        opacity: 0.6;
-        text-decoration: none;
-        color: $white;
     }
 }
 
@@ -1048,9 +900,6 @@ table {
                 border: 0;
                 margin-bottom: 0;
 
-                &:hover {
-                    color: red;
-                }
             }
 
             .children li a {
@@ -1099,19 +948,6 @@ table {
     width: 100%;
 }
 
-table {
-
-    th,
-    tr td {
-        padding: 5px;
-        border-bottom-width: 1px;
-        border-left-width: 1px;
-        border-bottom-style: solid;
-        border-left-style: solid;
-        border-bottom-color: #999;
-        border-left-color: #999;
-    }
-}
 
 .post {
 
@@ -1596,23 +1432,6 @@ div#breadcrumb {
         }
     }
 
-    .googleplus {
-        a {
-            background: #dc4e41;
-            padding: 2px 4px;
-
-            &:hover {
-                background: #bb4237;
-            }
-        }
-
-        .snstext {
-            border-left: 1px solid #e0776d;
-            padding-left: 10px;
-            margin-left: 5px;
-        }
-    }
-
     .hatebu {
         a {
             background: #00a5de;
@@ -1929,10 +1748,6 @@ ul.children {
 
     div dl dd a {
         color: #333;
-
-        &:hover {
-            color: #b22222;
-        }
     }
 }
 
@@ -2008,12 +1823,11 @@ section {
     }
 
     .entry-title {
-        font-size: 13px;
         color: $light-gray;
         line-height: 18px;
     }
 
-    post {
+    .post {
 
         img,
         object,
@@ -2384,10 +2198,6 @@ header ul {
                 border-top: $light-gray dotted 1px;
                 z-index: 2;
             }
-
-            a:hover {
-                color: red;
-            }
         }
 
         >li:last-child {
@@ -2483,14 +2293,9 @@ dd p {
 }
 
 .entry-title {
-    font-size: 24px;
     line-height: 35px;
     color: #333;
     margin-bottom: 20px;
-
-    a:hover {
-        text-decoration: underline;
-    }
 }
 
 h2 {
@@ -2648,17 +2453,6 @@ main {
 
 .poprank-no2 {
     border-radius: 50%;
-}
-
-.post blockquote {
-    p {
-        margin-bottom: 0;
-    }
-
-    &.tw {
-        background-image: url(/blog/wp-content/themes/stinger7/images/quote-tw.png);
-        padding-top: 3.5rem;
-    }
 }
 
 .fa-clock-o,

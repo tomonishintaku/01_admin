@@ -1,17 +1,11 @@
 // for all ENGLISH contents. under "body" tag's "article" has class "EN_wrapper" *******************************
 
 html:lang(en) {
-#contents{
-  font-size: $EN-text-size;
-}
+  #contents {
+    font-size: $EN-text-size;
+  }
 
   @include for-480below {
-
-    #works-nav li h3,
-    #ex-nav li h3 {
-      height: 3.2em;
-      overflow-y: hidden;
-    }
 
     #work-history-grp h3 {
       margin-top: 0.2em;
