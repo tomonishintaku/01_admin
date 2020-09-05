@@ -116,7 +116,7 @@ small {
 
 p {
     margin-bottom: 1.75rem;
-    line-height: 1.9rem;
+    line-height: 1.85rem;
 }
 
 table {
@@ -137,6 +137,18 @@ table {
 blockquote {
     border: none;
 
+
+    .sub_txt {
+        text-align: right;
+        margin-top: 1rem;
+        font-size: 0.75em;
+        color: #888;
+        line-height: 1.5em;
+        display: block;
+
+    }
+
+
     &:before {
         content: '';
     }
@@ -150,6 +162,8 @@ blockquote {
     overflow: hidden;
 
     p {
+
+        margin-bottom: 0;
 
         &:before,
         &:after {
@@ -184,6 +198,19 @@ blockquote {
     &.tw {
         background-image: url(/blog/wp-content/themes/stinger7/images/quote-tw.png);
         padding-top: 3.5rem;
+        background-repeat: no-repeat;
+
+        p {
+            &:before {
+
+                display: none;
+            }
+
+            &:after {
+                display: none;
+            }
+
+        }
     }
 
 }
@@ -193,105 +220,9 @@ blockquote {
     text-align: right;
 
     .sub_txt {
-        text-align: right;
-        margin-top: 0.5rem;
-        font-size: 0.7em;
-        color: #888;
-        line-height: 1.5em;
-        display: block;
-
         & a {
             padding-left: 0.5em;
         }
     }
 
-}
-
-
-//input parts
-
-input {
-
-    padding: 10px;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 2px;
-
-    &[type="submit"] {
-        background-color: #f3f3f3;
-        padding: 10px;
-        -webkit-appearance: none;
-        border-radius: 3px;
-        border: 1px solid #f2f2f2;
-    }
-
-
-    &[type="button"]:hover,
-    &[type="submit"]:hover {
-        background: $link-color;
-    }
-
-    &[type="text"],
-    &[type="password"] {
-        height: 40px;
-        line-height: 40px;
-    }
-
-    &[type="text"],
-    &[type="password"] {
-        font-family: $font-setting;
-        background: #fff;
-        border: 1px solid #ddd;
-        color: #666;
-        display: block;
-        font-size: 12px;
-        margin-left: 0;
-        padding: 0 15px;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent, 0 0 0 transparent;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        max-width: 100%;
-        -webkit-appearance: none;
-        border-radius: 2px;
-    }
-
-    &[type="text"]:focus,
-    &[type="password"]:focus {
-        outline: none;
-        border-color: #ccc;
-        -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-        -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-    }
-
-}
-
-textarea {
-    margin-bottom: 10px;
-    margin-left: 0;
-    width: 100%;
-    max-width: 100%;
-    border: 1px solid #f2f2f2;
-    padding: 5px;
-    font-family: $font-setting;
-    background: #fff;
-    border: 1px solid #ddd;
-    color: #666;
-    display: block;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent, 0 0 0 transparent;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    border-radius: 2px;
-    padding: 10px;
-
-    &:focus {
-        outline: none;
-        border-color: #ccc;
-        -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-        -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
-    }
 }

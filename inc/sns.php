@@ -1,4 +1,3 @@
-<ul>
 	<li class="main-sns">
 		<a class="button twitter" href="https://twitter.com/tomonishintaku" target="_blank" title="Click to share this post on Twitter"><i aria-hidden="true" class="fab fa-twitter-square"></i></a>
 	</li>
@@ -14,4 +13,3 @@
 	<li>
 		<a class="button linkedin" href="https://www.linkedin.com/in/tomonishintaku/" target="_blank" title="Click to share this post on LinkedIn"><i aria-hidden="true" class="fab fa-linkedin"></i></a>
 	</li>
-</ul>

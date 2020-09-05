@@ -12,7 +12,7 @@
         ?>
     <?php
         //Branch banner for Japanese and English
-           $url = $_SERVER['REQUEST_URI'];
+                	 $url = $_SERVER['REQUEST_URI'];
            if(strstr($url,'/en/')==true):
 				?>
     <?php $bnr = file_get_contents('https://tomonishintaku.com/en/inc/bnr.php'); echo $bnr; ?>

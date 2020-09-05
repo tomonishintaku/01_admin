@@ -11,11 +11,9 @@ $foot-height: 2.5rem;
     position: relative;
     bottom: 0;
 
-    .public_caution {
+    p.public_caution {
         margin: 0 auto;
-        padding: 1em 0 0.5rem 0;
-        font-size: 0.8rem;
-        line-height: 1.2rem;
+        padding: 1em 0 0 0;
     }
 
     &__copy {
@@ -30,10 +28,6 @@ $foot-height: 2.5rem;
     &__sns {
         float: right;
         width: #{$sns-width};
-
-        i {
-            font-size: 2.35rem;
-        }
 
         @include for-768below {
             padding-top: 1rem;
@@ -69,7 +63,6 @@ $foot-height: 2.5rem;
     .foot,
     .blogs-foot {
         min-height: #{$foot-height * 2};
-        box-sizing: content-box;
 
         &__copy {
             width: 100%;

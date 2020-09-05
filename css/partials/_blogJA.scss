@@ -23,11 +23,7 @@ img.float-left {
     float: left;
 }
 
-#sidebg,
-.rssbox a,
-input,
-textarea,
-#s {
+#comments input {
     box-sizing: border-box;
 }
 
@@ -39,6 +35,12 @@ textarea,
     }
 }
 
+#sidebg,
+.rssbox a,
+input,
+textarea {
+    box-sizing: border-box;
+}
 
 .st-hide {
     display: none;
@@ -932,12 +934,6 @@ table {
     }
 }
 
-.rss-bar a,
-.sns li a:hover,
-.st-pagelink a {
-    text-decoration: none;
-}
-
 .post table {
     border-top: 1px #999 solid;
     border-right: 1px #999 solid;
@@ -1073,6 +1069,11 @@ img.float-right {
     }
 }
 
+input,
+textarea {
+    max-width: 100%;
+    padding: 5px;
+}
 
 .responbox {
     margin-bottom: 10px;
@@ -1217,33 +1218,6 @@ nav li a:hover {
     }
 }
 
-#search {
-    padding-bottom: 0;
-    position: relative;
-    width: 100%;
-}
-
-#searchform {
-    border: 1px solid $light-gray;
-}
-
-
-#s {
-    color: #333;
-    z-index: 10;
-    padding: 10px 65px 10px 10px;
-    width: 100%;
-    border-style: none;
-}
-
-#searchsubmit {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50px;
-    z-index: 20;
-}
-
 .footermenust {
     padding: 20px;
     margin-bottom: 5px;
@@ -1271,19 +1245,7 @@ footer .footermenust li {
     color: #757575;
 }
 
-.st-pagelink {
-    padding: 20px 0;
 
-    a {
-        font-size: 13px;
-    }
-
-    .page-numbers {
-        border: 1px solid $light-gray;
-        padding: 5px 8px;
-        margin-right: 5px;
-    }
-}
 
 .pagination {
     clear: both;
@@ -1658,6 +1620,26 @@ ul.children {
         border: 0;
     }
 
+    textarea {
+        margin-bottom: 10px;
+        width: 100%;
+        border: 1px solid #f2f2f2;
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+        border-radius: 2px;
+        border: 1px solid #f2f2f2;
+
+        &[type="submit"] {
+            background-color: #f3f3f3;
+            padding: 10px;
+            -webkit-appearance: none;
+            border-radius: 3px;
+            border: 1px solid #f2f2f2;
+        }
+    }
 }
 
 .p-navi dl {
@@ -2519,9 +2501,7 @@ main {
     }
 }
 
-.st-pagelink .current {
-    color: #ddd;
-}
+
 
 .sns i {
     padding: 0 !important;

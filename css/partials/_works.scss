@@ -249,6 +249,19 @@ __USE mixin--MAX-width group
 
 }
 
+.row {
+    img {
+        width: 100%;
+    }
+
+    a {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+
 //.fs-link
 .fs-link {
     margin-top: 1.5em;
@@ -952,19 +965,33 @@ h3.article_ttl {
 
             @include for-1024below {
                 display: block;
+                width: 70%;
+                margin-left: 5%;
+                float: right;
+
             }
         }
 
-        li p {
-            min-height: 190px;
-
-            @include for-1024below {
-                display: none;
+        li {
+            img {
+                width: 25%;
             }
+
+            p {
+                min-height: 190px;
+                float: right;
+                width: 70%;
+                margin-left: 5%;
+
+                @include for-1024below {
+                    display: none;
+                }
+
+            }
+
         }
     }
 }
-
 
 
 @include for-1024below {
@@ -1259,7 +1286,6 @@ ul.img_4 {
             font-size: 12px;
             line-height: 1.5em;
             text-align: left;
-            padding: 0 10px 10px;
             overflow: hidden;
         }
     }
@@ -1537,7 +1563,7 @@ ul.social-button-syncer {
     }
 
     #ex_view .ex_info {
-        width: 98%;
+        width: 100%;
         padding: 2rem 0;
         margin: 0 0 0 2%;
         display: flex;

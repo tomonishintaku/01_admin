@@ -338,12 +338,6 @@ html[xmlns] .slides {
     overflow: hidden;
     background: #f9fafb;
     margin-bottom: 30px;
-
-    .in-japanese {
-        line-height: 1.6rem;
-    }
-
-
 }
 
 .post-entry-text {
@@ -398,14 +392,13 @@ body.page .post-entry header h1 {
     color: #8d9398;
 
     a {
-        color: #2eae9b;
+        color: $link-bg-color;
         text-decoration: none;
     }
 }
 
 .post-entry.format-quote {
     display: block;
-    background: #279383;
     color: #fff;
     position: relative;
     text-shadow: none !important;
@@ -469,7 +462,7 @@ body.page .post-entry header h1 {
 
     a:hover {
         text-decoration: none;
-        color: #2eae9b;
+        color: $link-bg-color;
     }
 
     p {
@@ -489,7 +482,7 @@ body.page .post-entry header h1 {
         font-size: 0.875em;
 
         &:hover {
-            color: #2eae9b;
+            color: $link-bg-color;
         }
     }
 
@@ -523,64 +516,6 @@ body.page .post-entry header h1 {
     }
 }
 
-.page-pagination {
-    margin: 0 0 23px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.page-of-page {
-    span.inner {
-        padding: 0 10px;
-    }
-
-    font-size: 0.875em;
-    font-weight: normal;
-    line-height: 35px;
-    height: 35px;
-    text-align: center;
-    margin-right: 7px;
-    margin-bottom: 7px;
-    display: block;
-    float: left;
-    color: #fff;
-    background: #030507;
-    -moz-box-sizing: border-box;
-    border-radius: 2px;
-}
-
-.page-pagination {
-
-    a,
-    span.outer {
-        font-size: 0.875em;
-        font-weight: normal;
-        line-height: 35px;
-        height: 35px;
-        text-align: center;
-        margin-right: 7px;
-        margin-bottom: 7px;
-        display: block;
-        float: left;
-        color: #fff;
-        background: #030507;
-        -moz-box-sizing: border-box;
-        border-radius: 2px;
-    }
-
-    a,
-    span.outer {
-        width: 35px;
-    }
-
-    a:hover,
-    span.current {
-        color: #fff;
-        background: #279383;
-        text-decoration: none;
-    }
-}
-
 #footer-wrap {
     background: #ea5b4d;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -602,11 +537,182 @@ body.page .post-entry header h1 {
     }
 }
 
+
+input {
+
+    &[type="text"],
+    &[type="password"] {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    &[type="text"],
+    &[type="password"] {
+        font-family: $font-setting;
+        background: #fff;
+        border: 1px solid #ddd;
+        color: #666;
+        display: block;
+        font-size: 12px;
+        margin-left: 0;
+        padding: 0 15px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent, 0 0 0 transparent;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 100%;
+        -webkit-appearance: none;
+        border-radius: 2px;
+    }
+}
+
+textarea {
+    font-family: $font-setting;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #666;
+    display: block;
+    font-size: 12px;
+    margin-left: 0;
+    padding: 0 15px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent, 0 0 0 transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    -webkit-appearance: none;
+    border-radius: 2px;
+    width: 100%;
+    padding: 10px;
+}
+
+input {
+
+    &[type="text"]:focus,
+    &[type="password"]:focus {
+        outline: none;
+        border-color: #ccc;
+        -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
+        -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
+    }
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ccc;
+    -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.07);
+}
+
+.entry {
+    button {
+        font-family: $font-setting;
+        position: relative;
+        display: block;
+        padding: 0 15px;
+        height: 40px;
+        line-height: 40px;
+        outline: none;
+        border: none;
+        background: $link-bg-color;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        font-size: 0.813em;
+        cursor: pointer;
+        -webkit-appearance: none !important;
+    }
+
+    input {
+
+        &[type="button"],
+        &[type="submit"] {
+            font-family: $font-setting;
+            position: relative;
+            display: block;
+            padding: 0 15px;
+            height: 40px;
+            line-height: 40px;
+            outline: none;
+            border: none;
+            background: $link-bg-color;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            font-size: 0.813em;
+            cursor: pointer;
+            -webkit-appearance: none !important;
+        }
+    }
+}
+
+#commentsbox input[type="submit"] {
+    font-family: $font-setting;
+    position: relative;
+    display: block;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    border: none;
+    background: $link-bg-color;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 0.813em;
+    cursor: pointer;
+    -webkit-appearance: none !important;
+}
+
 .entry {
     button:hover {
         background: #35c9b3;
     }
 
+    input {
+
+        &[type="button"]:hover,
+        &[type="submit"]:hover {
+            background: #35c9b3;
+        }
+    }
+}
+
+#commentsbox input[type="submit"]:hover {
+    background: #35c9b3;
+}
+
+.entry {
+    button:active {
+        top: 1px;
+    }
+
+    input {
+
+        &[type="button"]:active,
+        &[type="submit"]:active {
+            top: 1px;
+        }
+    }
+}
+
+#commentsbox {
+    input[type="submit"]:active {
+        top: 1px;
+    }
+
+    margin-top: 30px;
 }
 
 h3.comments-title {
@@ -696,7 +802,7 @@ h3.comments-title {
 
 .comment-reply-link {
     font-size: 0.688em;
-    color: #2eae9b;
+    color: $link-bg-color;
 
     &:before {
         content: "\b7\a0";
@@ -738,11 +844,43 @@ h3#reply-title {
     width: 95.6%;
 }
 
+#commentform {
+    input {
+        float: left;
+        margin-right: 10px;
+    }
+
+    label {
+        font-family: $font-setting;
+        font-size: 13px;
+        font-weight: normal;
+    }
+}
+
 #commentsbox span.required {
     color: #C30;
     font-size: 9px;
 }
 
+#commentform {
+    input {
+
+        &#author,
+        &#email,
+        &#url {
+            font-size: 13px;
+            width: 40%;
+            margin-top: 0;
+        }
+    }
+
+    textarea {
+        font-size: 13px;
+        width: 100%;
+        margin-top: 10px;
+        height: 5rem;
+    }
+}
 
 #error-page-title {
     font-size: 5em;
@@ -900,7 +1038,7 @@ body {
 #post-pagination a {
     display: block;
     line-height: 1.2em;
-    color: #2eae9b;
+    color: $link-bg-color;
 }
 
 #post-pagination {
@@ -984,14 +1122,6 @@ body {
     padding: 20px 0;
 }
 
-.page-pagination a,
-.page-of-page {
-    background: #2eae9b;
-}
-
-.page-pagination span.current {
-    background: #ccc;
-}
 
 
 
@@ -1101,10 +1231,6 @@ body {
         margin-bottom: 0;
     }
 
-    .page-pagination {
-        margin-left: 14px;
-    }
-
     i {
         padding-right: .5em;
     }
@@ -1132,8 +1258,7 @@ body {
 
 @include for-1024below {
 
-    #navigation ul,
-    #searchbar {
+    #navigation ul {
         display: none
     }
 
@@ -1155,7 +1280,6 @@ body {
         left: auto;
         right: auto;
         margin-top: 0;
-        background: #279383 url("../images/responsive-nav.png") right center no-repeat;
     }
 
     #navigation .selector {
@@ -1216,6 +1340,11 @@ body {
         border-bottom: 1px solid #222;
     }
 
+    #commentform input#author,
+    #commentform input#email,
+    #commentform input#url {
+        width: 60%
+    }
 }
 
 @include for-1024below {

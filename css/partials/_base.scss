@@ -81,6 +81,21 @@ body {
 
 // #contents END
 
+//NO display search-window on base web site
+.search-window {
+    display: none;
+}
+
+//display search-window on blogs
+.ENblog-wrapper,
+.JAblog-wrapper {
+    .search-window {
+        display: block;
+    }
+}
+
+
+
 .cpy {
     font-family: $font-setting;
 }

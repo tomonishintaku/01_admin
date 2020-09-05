@@ -83,9 +83,82 @@ a {
     }
 }
 
-
 .button {
     font-size: 2pc
 }
 
 //LINK style hover, input parts END  
+
+
+//for blog parts: pagenation
+//{page-pagination} is EN & {st-pagelink} is JA
+
+$pager-size:34px;
+$pager-spacing:8px;
+
+.page-pagination {
+    color: $lighter-dark;
+    padding: 20px 0;
+
+    a,
+    span.outer,
+    .page-numbers {
+        line-height: $pager-size;
+        height: $pager-size;
+        margin-right: $pager-spacing;
+        margin-bottom: $pager-spacing;
+        display: block;
+        float: left;
+        border: 1px solid $light-gray;
+        -moz-box-sizing: border-box;
+        border-radius: 2px;
+        width: $pager-size;
+        text-align: center;
+    }
+
+    a {
+        font-size: 13px;
+        text-decoration: none;
+        overflow: hidden;
+
+        &:hover,
+        .current {
+            background: $light-gray;
+            color: $white;
+            text-decoration: none;
+        }
+
+        &.prev,
+        &.next {
+            width: 3rem;
+        }
+
+        &.dots {
+            line-height: 26px;
+        }
+    }
+
+    .page-of-page {
+        span.inner {
+            padding: 0 10px;
+            color: $dark;
+        }
+
+        line-height: $pager-size;
+        height: $pager-size;
+        margin-right: $pager-spacing;
+        margin-bottom: $pager-spacing;
+        display: block;
+        float: left;
+        border: 1px solid $light-gray;
+        -moz-box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+}
+
+
+
+
+
+//for blog parts: pagenation END
