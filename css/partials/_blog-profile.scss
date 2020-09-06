@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+@import "_variables";
+@import "_breakpoints";
+
+/*__USE mixin--MIN-width group
+@include for-481up {}
+@include for-769up {}
+@include for-1025up {}
+__USE mixin--MAX-width group
+@include for-480below {}
+@include for-768below {}
+@include for-1024below {}
+*/
+
+
+.profile-unit {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    height: 100%;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    &__image img {
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 auto;
+
+        @include for-768below {
+            padding: 15px 0 0 0;
+            float: left;
+            margin-left: -4px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            display: block;
+            margin: 0 auto;
+
+            a {
+                padding-left: 0.4rem;
+            }
+        }
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+
+        a {
+            color: $deep-dark;
+        }
+    }
+}
+
+.JAblog-wrapper {
+    .profile-unit {
+        &__detail {
+            margin-bottom: 0;
+        }
+
+        .en-name {
+            font-size: 0.75rem;
+            color: $light-dark;
+            padding-left: 0.5rem;
+        }
+    }
+}
+
+.profile-unit {
+    display: flex;
+
+    &__list {
+
+        .button {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__sns-icons {
+        height: 50px;
+        margin: -5px 0 0 2rem;
+    }
+
+    &__name-sns-wrap {
+        display: flex;
+
+        @include for-768below {
+            display: block;
+        }
+    }
+
+    &__name {
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    &__image {
+        width: 15%;
+        margin-top: 6px;
+
+        @include for-768below {
+            width: 30%;
+        }
+    }
+
+    &__image img {
+        display: inline;
+        width: 100%;
+    }
+
+    &__detail {
+        width: 80%;
+        margin-left: 5%;
+    }
+}
+
+.JAblog-wrapper {
+    .profile-unit {
+        &__sns-icons {
+            margin: -5px 0 0 0;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+    }
+}
+
+.ENblog-wrapper {
+    .profile-unit {
+        &__sns-icons {
+            margin: -3px 0 0 2rem;
+        }
+    }
+}

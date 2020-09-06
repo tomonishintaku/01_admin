@@ -22,7 +22,7 @@ $sns = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/inc/sns.php');
             </ul>
         </div>
         </div>        
-        <p class="profile-unit__text" itemprop="description">
+        <p class="profile-unit__text clear" itemprop="description">
             <?php branchURL('/en/', 'Contemporary artist based in Los Angeles. I’ve learned at an Art College and Culinary Institute. I attempt to connect ART and FOOD.', '広島→福岡→東京→シンガポール→現在ロサンゼルス在住の現代美術家。美大と調理師専門学校に学んだ経験から食をテーマに作品を制作。無類の居酒屋好き。'); ?></p>
     </section>
 </article>

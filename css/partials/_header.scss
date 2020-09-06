@@ -135,6 +135,7 @@
 
         .sns ul {
             display: flex;
+            padding: 0;
             @extend .list-base;
         }
     }
