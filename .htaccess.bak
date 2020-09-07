@@ -1,7 +1,6 @@
 AddType application/x-httpd-lsphp .html
 SetEnvIf Request_URI ".*" UnlimitedWpLogin
 SetEnvIf Request_URI ".*" AllowForeignWpLogin
-ErrorDocument 404 /404.html
 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -43,7 +42,20 @@ Redirect permanent /works/others/ https://tomonishintaku.com/works/others
 # Fix Google Search Console Coverage error END
 
 
+<ifModule mod_expires.c>
+ExpiresActive On
 ExpiresDefault "access plus 1 days"
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType text/css "access plus 6 hour"
+ExpiresByType image/gif "access plus 10 days"
+ExpiresByType image/jpg "access plus 10 days"
+ExpiresByType image/jpeg "access plus 10 days"
+ExpiresByType image/png "access plus 10 days"
+ExpiresByType text/js "access plus 10 days"
+ExpiresByType text/javascript "access plus 10 days"
+ExpiresByType application/javascript "access plus 10 days"
+ExpiresByType application/x-javascript "access plus 10 days"
+</ifModule>
 SiteGuard_User_ExcludeSig 00201019
 SiteGuard_User_ExcludeSig 00201009
 SiteGuard_User_ExcludeSig 00302027

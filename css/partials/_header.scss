@@ -8,7 +8,8 @@
 
     .ad,
     .blog,
-    .sp-ad {
+    .sp-ad,
+    .voice {
         display: none;
     }
 
@@ -47,7 +48,9 @@
 }
 
 #logotype {
-    .blog {
+
+    .blog,
+    .voice {
         display: none;
     }
 
