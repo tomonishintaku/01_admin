@@ -89,7 +89,7 @@ __USE mixin--MAX-width group
 
     &__sns-icons {
         height: 50px;
-        margin: -5px 0 0 2rem;
+        margin: 4px 0 0 3rem;
     }
 
     &__name-sns-wrap {
@@ -128,7 +128,9 @@ __USE mixin--MAX-width group
 .JAblog-wrapper {
     .profile-unit {
         &__sns-icons {
-            margin: -5px 0 0 0;
+            @include for-768below {
+                margin: -5px 0 0 0;
+            }
         }
 
         p {

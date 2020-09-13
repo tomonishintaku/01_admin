@@ -49,8 +49,8 @@
 
 #logotype {
 
-    .blog,
-    .voice {
+    .voice,
+    .blog {
         display: none;
     }
 
@@ -221,6 +221,13 @@
                 margin-top: 0.6rem;
                 width: 60%;
             }
+
+            .voice {
+                img {
+                    margin: 0.9rem auto 0 auto;
+                }
+            }
+
         }
     }
 

@@ -8,10 +8,8 @@
                     alt="料理、食をテーマに作品を制作する現代美術家/新宅睦仁/シンタクトモニ"></a>
             <a href="/en<?php echo $_SERVER['PHP_SELF'] ?>" id="en-link" class="std"><img
                     src="/images/common/head-lang_jp.png" alt="website-for-english"></a>
-            <a href="/blog/" class="blog"><img src="/images/common/head_pic_blog.png"
-                    alt="現代美術家/新宅睦仁/シンタクトモニのエッセイ・コラムのブログ"></a>
-            <a href="/blog/voice/" class="voice"><img src="/images/blog/voice-blog-logo.png"
-                    alt="現代美術家/新宅睦仁の音声ブログ"></a>
+            <a href="/blog/" class="blog"><img src="/images/common/head_pic_blog.png" title="むろん、どこにも行きたくない。" alt="現代美術家/新宅睦仁/シンタクトモニのエッセイ・コラムのブログ"></a>
+            <a href="/blog/voice/" class="voice"><img src="/images/blog/voice-blog-logo.png" title="まだ、死んでない。" alt="現代美術家/新宅睦仁の音声ブログ"></a>
         </h2>
         <!-- English logo set -->
 
@@ -74,6 +72,9 @@
             <li itemprop="name">
                 <a href="/blog/" itemprop="URL" lang="ja">ブログ</a>
                 <a href="/en/blog/" itemprop="URL" lang="en">BLOG</a>
+            </li>
+            <li itemprop="name" lang="ja">
+                <a href="/blog/voice/" itemprop="URL" lang="ja">音声ブログ(毎日更新)</a>
             </li>
             <li itemprop="name">
                 <a href="/en/blog/" itemprop="URL" lang="ja">BLOG in English(毎日更新)</a>

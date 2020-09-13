@@ -2,9 +2,9 @@
 
 
 
-$sns_en = file_get_contents('https://tomonishintaku.com/en/inc/sns.php');
+$sns_en = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/en/inc/sns.php');
 
-$sns = file_get_contents('https://tomonishintaku.com/inc/sns.php');
+$sns = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/inc/sns.php');
 
 
 
