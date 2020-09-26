@@ -18,6 +18,11 @@ __USE mixin--MAX-width group
     list-style-type: none;
 }
 
+.kanren dt,
+img.float-left {
+    float: left;
+}
+
 #comments input {
     box-sizing: border-box;
 }
@@ -683,11 +688,11 @@ footer {
 }
 
 .kanren {
-    h3 {
-        font-size: 1.5rem;
-    }
 
-    .blog_info p {}
+    .blog_info p,
+    h3 {
+        margin: 0 0 5px;
+    }
 }
 
 .blog_info p a {
@@ -1052,14 +1057,16 @@ img.float-right {
     width: auto;
 }
 
-ul {
-    list-style-type: disc;
-    //padding: 10px 20px 10px 30px;
-}
+.post {
+    ul {
+        list-style-type: disc;
+        padding: 10px 20px 10px 30px;
+    }
 
-ol {
-    list-style-type: decimal;
-    padding: 10px 10px 20px 30px;
+    ol {
+        list-style-type: decimal;
+        padding: 10px 10px 20px 30px;
+    }
 }
 
 input,
@@ -1162,11 +1169,6 @@ nav li a:hover {
 
             &:last-child {
                 margin-left: 0;
-            }
-
-            .line a {
-
-                line-height: 16px;
             }
 
             a {
@@ -1740,7 +1742,7 @@ footer {
 }
 
 main {
-    padding: 0 10px 20px 10px;
+    padding: 20px 10px;
     margin: 0 -10px 20px;
 }
 
@@ -2590,7 +2592,6 @@ main {
         .smanone2 p {
             line-height: 1.2em;
             font-size: 1em;
-            margin-top: 1rem;
         }
 
         h5 {
@@ -2677,9 +2678,7 @@ p.descr {
     }
 
     #head #logotype {
-
-        .blog,
-        .voice {
+        .blog {
             display: block;
             margin: 0 auto;
 

@@ -8,8 +8,7 @@
 
     .ad,
     .blog,
-    .sp-ad,
-    .voice {
+    .sp-ad {
         display: none;
     }
 
@@ -48,8 +47,6 @@
 }
 
 #logotype {
-
-    .voice,
     .blog {
         display: none;
     }
@@ -138,7 +135,6 @@
 
         .sns ul {
             display: flex;
-            padding: 0;
             @extend .list-base;
         }
     }
@@ -221,13 +217,6 @@
                 margin-top: 0.6rem;
                 width: 60%;
             }
-
-            .voice {
-                img {
-                    margin: 0.9rem auto 0 auto;
-                }
-            }
-
         }
     }
 

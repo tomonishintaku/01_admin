@@ -1431,23 +1431,10 @@ ul.img_4 {
         margin: -1em 0 1em;
     }
 
-    .ex_info {
-
-        img {
-            max-width: 440px;
-            height: auto;
-        }
+    .ex_info img {
+        max-width: 440px;
+        height: auto;
     }
-}
-
-.img-first {
-    &__frame {
-        @include for-769up {
-            width: 70%;
-            margin-right: 2rem;
-        }
-    }
-
 
     #pinterest {
         width: 100%;
@@ -1581,16 +1568,6 @@ ul.social-button-syncer {
         margin: 0 0 0 2%;
         display: flex;
         margin-bottom: 2rem;
-
-        &.img-first {
-            margin: 0;
-
-            .txt {
-                @include for-769up {
-                    margin-top: -1.5rem;
-                }
-            }
-        }
 
         .txt {
             width: 96%;

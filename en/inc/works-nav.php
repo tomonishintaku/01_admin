@@ -83,7 +83,7 @@
 		<p><?php echo $convenibentomountain_en;?></p></a>
 	</li>
 		<li>
-		<a class="ex-active" href="/en/works/double-flag.html"><img class="lazyload" alt="double flag, singapore and Japan" src="/images/works/nav/double-flag.jpg">
+		<a href="/en/works/double-flag.html"><img class="lazyload" alt="double flag, singapore and Japan" src="/images/works/nav/double-flag.jpg">
 		<h3>Double Flag</h3>
 		<p><?php echo $doubleflag_en;?></p></a>
 	</li>

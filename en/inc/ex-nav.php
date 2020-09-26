@@ -15,7 +15,7 @@
 	<h2 class="line">2016</h2>
 	<ul class="img_txt_1">
 		<li>
-			<a href="2016-conveni-bento-yama-time-is-money.html" class="ex-active"><img alt="Solo show, Mountains of Bento Meals from Convenience Stores－Time is money" border="0" src="/images/exhibition/list_img/161126-mtcvbento-time-is-money.jpg">
+			<a href="2016-conveni-bento-yama-time-is-money.html"><img alt="Solo show, Mountains of Bento Meals from Convenience Stores－Time is money" border="0" src="/images/exhibition/list_img/161126-mtcvbento-time-is-money.jpg">
 			<p>Nov 26 - Dec 25<br>
 			<span class="ttl"><span class="type">Solo Show</span>Mountains of Bento Meals from Convenience Stores－Time is money</span> Tokyo Wonder Site Shibuya, Tokyo</p><span class="sub">2016/"Mountains of Bento Meals from Convenience Stores－Time is money" at Tokyo</span></a>
 		</li>
