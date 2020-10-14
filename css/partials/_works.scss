@@ -270,7 +270,7 @@ __USE mixin--MAX-width group
     height: 600px;
 
     @include for-768below {
-        height: 430px;
+        height: 100%;
     }
 
     a {
@@ -288,6 +288,10 @@ __USE mixin--MAX-width group
 
                 @include for-768below {
                     height: 160px;
+                }
+
+                @include for-480below {
+                    height: 100px;
                 }
             }
 
@@ -1001,7 +1005,7 @@ h3.article_ttl {
     }
 
     body #contents {
-        padding: 34px 0 0 0;
+        padding: 0.25rem 0 0 0;
     }
 
     .sp_mt {
@@ -1244,10 +1248,6 @@ ul.img_4 {
                 padding: 1.5%;
             }
 
-            @include for-480below {
-                min-height: 368px;
-            }
-
         }
     }
 
@@ -1275,8 +1275,10 @@ ul.img_4 {
             font-size: 14px;
             color: #333;
             padding: .2em;
-            line-height: 1.2em;
-            height: 2.5rem;
+            margin-top: 0.5rem;
+            height: 1.25rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             overflow: hidden;
 
         }

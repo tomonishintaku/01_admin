@@ -135,3 +135,19 @@ input[type="search"] {
 
 
 // search-window modal-wrapper END
+
+
+// search-result 
+.search-result-wrap {
+
+    &__not-found,
+    .kanren {
+        @include for-1025up {
+            width: 92%;
+        }
+    }
+
+}
+
+
+// search-result  END

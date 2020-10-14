@@ -35,6 +35,11 @@ __USE mixin--MAX-width group
     &__list {
         display: flex;
         width: 50vw;
+
+        @include for-768below {
+            width: auto;
+        }
+
         margin: 0 auto;
 
         li {
