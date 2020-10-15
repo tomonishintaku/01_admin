@@ -36,9 +36,15 @@ Redirect permanent /works/others/ https://tomonishintaku.com/works/others.html
 Redirect permanent /exhibition/141002-gyudonnotaki/150907-cupnoodlenotaki.html https://tomonishintaku.com/exhibition/150907-cupnoodlenotaki.html
 Redirect permanent /exhibition/141002-gyudonnotaki/2018_colour-me-well.html https://tomonishintaku.com/exhibition/2018_colour-me-well.html
 Redirect permanent /exhibition/141002-gyudonnotaki/150531-bjshokudo.html https://tomonishintaku.com/exhibition/150531-bjshokudo.html
+Redirect permanent /exhibition/161126_conveni-bento2/2018_colour-me-well.html https://tomonishintaku.com/exhibition/161126_conveni-bento2.html
+Redirect permanent https://tomonishintaku.com/exhibition/141002-gyudonnotaki/150531-bjshokudo.html https://tomonishintaku.com/exhibition/141002-gyudonnotaki
 Redirect permanent /en/works/one-bite-challenge/ https://tomonishintaku.com/en/works/one-bite-challenge
 Redirect permanent /works/others/ https://tomonishintaku.com/works/others
 Redirect permanent /works/others/ https://tomonishintaku.com/works/others
+Redirect permanent /works/others/ https://tomonishintaku.com/works/others
+Redirect permanent /blog/category/essay/daily https://tomonishintaku.com/blog/category/essay/
+
+
 
 # Fix Google Search Console Coverage error END
 
