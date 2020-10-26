@@ -1,0 +1,8 @@
+# Basic access authentication
+
+	AuthType Basic
+	AuthName "lock_generator"
+	AuthUserFile "/home/c8378821/public_html/tomonishintaku.com/.htpasswd"
+	require valid-user
+
+# Basic access authentication END
