@@ -4,7 +4,7 @@
 	<ul class="img_txt_1">
 
 		<li>
-			<a href="http://whiteboxnyc.org/event/good-trouble/"><img class="lazyload" alt="WhiteBox/ニューヨーク グループ展「GOOD TROUBLE」" border="0" src="/images/exhibition/list_img/good-trouble_2010.jpg">
+			<a href="/blog/good-trouble_2020"><img class="lazyload" alt="WhiteBox/ニューヨーク グループ展「GOOD TROUBLE」" border="0" src="/images/exhibition/list_img/good-trouble_2010.jpg">
 			<p>2020/10/17-2020/11/11<br>
 
 			<span class="ttl"><span class="type">グループ展</span>GOOD TROUBLE</span> WhiteBox/ニューヨーク</p><span class="sub">2020/グループ展「GOOD TROUBLE」＠ニューヨーク</span></a>

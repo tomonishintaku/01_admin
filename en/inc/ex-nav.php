@@ -1,4 +1,61 @@
 	<div class=" clearfix">
+
+
+
+	<h2 class="line">2020</h2>
+
+	<ul class="img_txt_1">
+
+		<li>
+			<a href="/en/blog/good-trouble_2020"><img class="lazyload" alt="WhiteBox/New York Group Show GOOD TROUBLE" border="0" src="/images/exhibition/list_img/good-trouble_2010.jpg">
+			<p>Oct 17 - Sept 11<br>
+
+			<span class="ttl"><span class="type">Group Show</span>GOOD TROUBLE</span> WhiteBox/New York</p><span class="sub">2020/Group Show"GOOD TROUBLE" at New York</span></a>
+		</li>
+
+		<li>
+			<a href="/en/blog/mind-the-gap_2020"><img class="lazyload" alt="THE blank GALLERY/Tokyo Group Show MIND THE GAP" border="0" src="/images/exhibition/list_img/mind-the-gap_2020.jpg">
+			<p>Sept 19 - Oct 4<br>
+
+			<span class="ttl"><span class="type">Group Show</span>MIND THE GAP</span> THE blank GALLERY/Tokyo</p><span class="sub">2020/Group Show"MIND THE GAP"at Tokyo</span></a>
+		</li>
+
+		<li>
+			<a href="/en/blog/satans-food-court_2019"><img class="lazyload" alt="Art Share L.A./Los Angeles Group Show Satans Food Court" border="0" src="/images/exhibition/list_img/satans-food-court_2019.jpg">
+			<p>April 27 - May 6<br>
+
+			<span class="ttl"><span class="type">Group Show</span>Satan's Food Court</span> Art Share L.A./Los Angeles</p><span class="sub">2020/Group Show"Satan's Food Court"＠Los Angeles</span></a>
+		</li>
+
+	</ul>
+
+	<h2 class="line">2019</h2>
+
+	<ul class="img_txt_1">
+
+		<li>
+			<a href="/en/blog/11th-annual-5050-show_2019"><img class="lazyload" alt="Sanchez Art Center/San Francisco Group Show 11th Annual 50|50 Show" border="0" src="/images/exhibition/list_img/11th-annual-5050-show_2019.jpg">
+			<p>Aug 30 - July 22<br>
+
+			<span class="ttl"><span class="type">Group Show</span>11th Annual 50|50 Show</span> Sanchez Art Center/San Francisco</p><span class="sub">2019/Group Show"11th Annual 50|50 Show" at San Francisco</span></a>
+		</li>
+
+		<li>
+			<a href="/en/blog/let-me-eat-cake-too_1906"><img class="lazyload" alt="Blue Roof Studios/Los Angeles Group Show Let Me Eat Cake, Too" border="0" src="/images/exhibition/list_img/let-me-eat-cake-too_1906.jpg">
+			<p>June 20 - July 13<br>
+
+			<span class="ttl"><span class="type">Group Show</span>Let Me Eat Cake, Too</span> Blue Roof Studios/Los Angeles</p><span class="sub">2019/Group Show"Let Me Eat Cake, Too"＠Los Angeles</span></a>
+		</li>
+
+		<li>
+			<a href="/en/blog/kitchen-art-space-zero-point_1904"><img class="lazyload" alt="ART Space ZERO-POINT/Tokyo Group Show KITCHEN" border="0" src="/images/exhibition/list_img/kitchen-art-space-zero-point_1904.jpg">
+			<p>April 27 - May 6<br>
+
+			<span class="ttl"><span class="type">Group Show</span>KITCHEN</span> ART Space ZERO-POINT/Tokyo</p><span class="sub">2019/Group Show"KITCHEN"at Tokyo</span></a>
+		</li>
+
+	</ul>
+
 	<h2 class="line">2018</h2>
 	<ul class="img_txt_1">
 		<li>

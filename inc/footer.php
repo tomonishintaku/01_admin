@@ -31,7 +31,7 @@
     <div class="foot__copy">
         <p class="public_caution" lang="ja">当サイト内の文章・画像等の内容の無断転載及び複製等の行為はご遠慮ください。</p>
         <p class="public_caution" lang="en">Unauthorized copying and replication of the contents of this site, text and images are strictly prohibited. All Rights Reserved.</p>
-        <address> Copyright <span class="cpy">&copy;</span> 2012-<?php echo date("Y"); ?> Shintaku Tomoni. All Rights Reserved. </address>
+        <address style="font-style: inherit;"> Copyright <span class="cpy">&copy;</span> 2012-<?php echo date("Y"); ?> Shintaku Tomoni. All Rights Reserved. </address>
     </div>
 </div>
 
