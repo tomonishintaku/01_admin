@@ -1,0 +1,149 @@
+	<?php get_header(); ?>
+	<style type="text/css">
+#head #logotype .blog {
+    display: none;
+}
+
+    #head #logotype .voice {
+            display: block;
+    }
+	</style>
+
+	<div id="content" class="clearfix single-page">
+	    <div id="contentInner">
+	        <main <?php st_text_copyck(); ?>>
+	            <article>
+	                <div id="post-<?php the_ID(); ?>" <?php st_post_class(); ?>>
+	                    <!--breadcrumb-->
+	                    <div id="breadcrumb">
+	                        <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+	                            <a href="<?php echo home_url(); ?>" itemprop="url"> <span itemprop="title">ホーム</span>
+	                            </a> &gt;
+	                        </div>
+	                        <?php $postcat = get_the_category(); ?>
+	                        <?php $catid = $postcat[0]->cat_ID; ?>
+	                        <?php $allcats = array( $catid ); ?>
+	                        <?php
+						while ( !$catid == 0 ) {
+							$mycat = get_category( $catid );
+							$catid = $mycat->parent;
+							array_push( $allcats, $catid );
+						}
+						array_pop( $allcats );
+						$allcats = array_reverse( $allcats );
+						?>
+	                        <?php foreach ( $allcats as $catid ): ?>
+	                        <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+	                            <a href="<?php echo get_category_link( $catid ); ?>" itemprop="url">
+	                                <span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span> </a>
+	                            &gt;
+	                        </div>
+	                        <?php endforeach; ?>
+	                    </div>
+	                    <!--/breadcrumb-->
+	                    <!--ループ開始 -->
+	                    <?php if (have_posts()) : while (have_posts()) :
+					the_post(); ?>
+	                    <h1 class="entry-title"><?php the_title(); //タイトル ?></h1>
+	                    <p>
+	                        <span class="kdate">
+	                            <!--i class="fa fa-calendar"></i-->
+	                            <time class="entry-date date updated" datetime="<?php the_time(DATE_W3C); ?>">
+	                                <?php the_time( 'Y/m/d' ); ?>
+	                            </time>
+	                            <?php if ( $mtime = st_get_mtime( 'Y/m/d' ) ) {
+									echo ' <i class="fa fa-repeat"></i>&nbsp; ', $mtime;
+								} ?>
+	                        </span>
+	                    </p>
+
+	                    <?php // You can check archive URL
+						//echo get_post_type_archive_link( 'voice' ); ?>
+	                    <!--VAR-->
+	                    <?php $audio_file = get_field('audio_file'); ?>
+	                    <?php $notes = get_field('notes'); ?>
+	                    <!--VAR END-->
+	                    <section class="voice-wrap">
+	                        <?php if(empty($audio_file)):?>
+	                        <!--none-->
+	                        <?php else:?>
+	                        <!--Conditional branch VAR-->
+	                        <section class="voice-wrap__main">
+	                            <audio src="<?php echo $audio_file; ?>" controls>
+	                                <p>どうやらご使用のブラウザが古くて頑固な方で、音声の再生なんぞするものかとおっしゃっています。どなたか最近の方をお呼びしてはいかがでしょう。</p>
+	                            </audio>
+	                        </section>
+	                        <?php endif;?>
+	                        <!--END Conditional branch VAR-->
+	                        <?php if(empty($notes)):?>
+	                        <!--none-->
+	                        <?php else:?>
+	                        <h2>なにを話したか、かいつまんで言いますと……</h2>
+	                        <p><?php echo $notes; ?></p>
+	                        <?php endif;?>
+	                        <!--END Conditional branch VAR-->
+	                    </section>
+
+	                </div>
+	                <?php the_content(); //本文 ?>
+	                <?php include ($_SERVER['DOCUMENT_ROOT'].'/inc/common/blog-profile.php'); //common pfofile unit for blog ?>
+	                <?php $support = file_get_contents('https://tomonishintaku.com/blog/wp-content/themes/stinger7/common_inc/support.php'); echo $support; //支援のお願い ?>
+	                <?php get_template_part( 'sns' ); //ソーシャルボタン読み込み ?>
+	                <?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 5 ) ) : else : ?>
+	                <?php endif; ?>
+	                <?php get_template_part( 'popular-thumbnail' ); //任意のエントリ ?>
+	                <?php get_template_part( 'st-rank' ); ?>
+	                <?php wp_link_pages(); ?>
+	                <!--p class="tagst"><i class="fa fa-tags"></i>&nbsp;-
+						<?php the_category( ', ' ) ?>
+						<?php the_tags( '', ', ' ); ?>
+					</p-->
+	                <!-- /#wrapper -->
+	                <section style="margin-top:0;">
+	                    <aside>
+	                        <?php
+								//コメント
+								if ( ( $GLOBALS["stdata6"] ) === '' ) { ?>
+	                        <?php if ( comments_open() || get_comments_number() ) {
+										comments_template();
+									} ?>
+	                        <?php } ?>
+	                    </aside>
+	                </section>
+	                <!--ページナビ-->
+	                <div class="p-navi clearfix">
+	                    <dl>
+	                        <?php
+								$prev_post = get_previous_post();
+								if ( !empty( $prev_post ) ): ?>
+	                        <dt><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>前の記事</dt>
+	                        <dd>
+	                            <a
+	                                href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php echo $prev_post->post_title; ?></a>
+	                        </dd>
+	                        <?php endif; ?>
+	                        <?php
+								$next_post = get_next_post();
+								if ( !empty( $next_post ) ): ?>
+	                        <dt>次の記事<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></dt>
+	                        <dd>
+	                            <a
+	                                href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo $next_post->post_title; ?></a>
+	                        </dd>
+	                        <?php endif; ?>
+	                    </dl>
+	                </div>
+	                <?php endwhile; else: ?>
+	                <p>記事がありません</p>
+	                <?php endif; ?>
+	                <!--ループ終了-->
+	                </aside>
+	                <!--/post-->
+	            </article>
+	        </main>
+	    </div>
+	    <!-- /#contentInner -->
+	    <!--?php get_sidebar(); ?-->
+	</div>
+	<!--/#content -->
+	<?php get_footer(); ?>
