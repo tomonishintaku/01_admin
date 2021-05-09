@@ -25,5 +25,7 @@ node_modules/
 *.psd
 *.ai
 images/
-blog/
-en/blog/
+en/blog/wp-content/uploads/
+en/blog/wp-content/plugins/
+blog/wp-content/uploads/
+blog/wp-content/plugins/
