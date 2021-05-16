@@ -5,7 +5,7 @@
 	<?php include("../../inc/meta.php"); ?><!--/include meta -->
 	<meta content="<?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $selfportrait_jp;?>" lang="ja" name="description">
 	<meta content="自画像,鉛筆画,セルフポートレート" lang="ja" name="keywords">
-	<title>自画像(2000-2020)｜美術家/新宅睦仁</title>
+	<title>自画像(2000-<?php echo date("Y"); ?>)｜現代美術家/新宅睦仁</title>
 	<link href="/css/works.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -13,8 +13,7 @@
 	<!--コンテンツここから-->
 	<div id="contents">
 		<!-- filmset_start　-->
-		<h1 class="line">自画像(2000-2020)</h1>
-
+		<h1 class="line">自画像(2000-<?php echo date("Y"); ?>)</h1>
 
 		<!-- 
 プログラムの要件
@@ -27,46 +26,52 @@
 三段階のforかwhileループで取得する。
 		　-->
 
-
-
-    <div id="pinterest">
-      <div id="columns">
+      <article class="wrap">
 		  
-		 		  
+		  <?php
+		  $target_dir = dirname(__FILE__).'/../../images/works/self-portrait/';
+		  
+		  $result = array();
+		  $command = "find " . $target_dir . " -name '*.jpg' | wc -l";
+		  exec($command, $result);
+		  $result = $result[0] - 1;
+		  //for ($i=0; $i<=$result; $i++) { 
+		  for ($year = 2005; $year <= 2100; $year++) { 
+		  for ($month = 1; $month <= 12; $month++) { 
+		  for ($day = 1; $day <= 31; $day++) {  
+		  $imageFile = $year.'-'.$month.'-'.$day;	  
+		  
+		  //画像ファイルの存在チェック
+		  $file = dirname(__FILE__).'/../../images/works/self-portrait/'.$imageFile.'.jpg';
+		  if (file_exists($file)) {
+			  // 画像あり
+		  
+		   ?>
+		  
+			  <figure>
+				  <img alt="現代美術家の新宅睦仁(シンタクトモニ)の<?php echo $year.'年'.$month.'月'.$day.'日' ?>の自画像/鉛筆ドローイング" data-src="/images/works/self-portrait/<?php echo $imageFile ?>.jpg" src="/images/common/white.gif" class="lazyload">
+				  <figcaption><time datetime="<?php echo $year.'/'.$month.'/'.$day ?>" itemprop="datepublished"><?php echo $year.'/'.$month.'/'.$day ?></time>
+				  <small><?php echo$year; ?>年 紙、鉛筆、30.5×30.5cm &#12316 30.5×30.5cm</small>
+				  </figcaption>
+			  </figure>
+
 <?php
 
-$target_dir = dirname(__FILE__).'/../../images/works/self-portrait/';
-$imageFile = $year.'-'.$month.'-'.$day;
-
-$result = array();
-$command = "find " . $target_dir . " -name '*.jpg' | wc -l";
-exec($command, $result);
-$result = $result[0] - 1;
-
-for ($i = 1; $i <= $result; $i++) {
-
-//for ($year = 2005; $year <= 2006; $year++) { 
-//for ($month = 1; $month <= 12; $month++) { 
-//for ($day = 1; $day <= 31; $day++) {  
+} else {
+  // 画像なし
+  
+  
+  }
 
 ?>
-
-<div class="pin">
-	<figure>
-		<img alt="現代美術家の新宅睦仁(シンタクトモニ)の<?php echo $year.'年'.$month.'月'.$day.'日' ?>の自画像/鉛筆ドローイング" data-src="/images/works/add/self-portrait/<?php echo $imageFile ?>.jpg" src="/images/common/white.gif" class="lazyload">
-		<figcaption><time datetime="<?php echo $year.'/'.$month.'/'.$day ?>"><?php echo $year.'/'.$month.'/'.$day ?></time>
-		</figcaption>
-	</figure>
-</div>
-
-<?php 
-}//imageFile Loop
-//}//day Loop
-//}//month Loop
-//}//year Loop
- ?>
-			</div>
-		</div><!--no-pinterest end-->
+		  	  
+	
+		  <?php }}}
+	  
+	  //} ?>
+		  
+	  </article>
+		  
 		<section id="works-nav">
 			<?php include("../../inc/works-nav.php"); ?>
 		</section><!--foot_nav end-->
