@@ -13,6 +13,7 @@
 	<div id="contents">
 		<!-- filmset_start　-->
 		<h1 class="line">自画像(2000-<?php echo date("Y"); ?>)</h1>
+        <p class="details">紙、鉛筆、色鉛筆、水彩、ボールペン他、30.5×30.5cm &#12316 30.5×30.5cm</p>
 
 		<!-- 
 プログラムの要件
@@ -26,16 +27,53 @@
 		　-->
 
 <style>
+
+
 .wrap__inner{
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
-.wrap__inner__col{
-width: 25%;
+.inner__col{
+width: 24.85%;
+margin-right: 0.2%;
 }
-.wrap__inner__col img{
-	width: 100%;
-	}
+
+.inner__col:nth-child(4n){
+    margin-right: 0;
+    }
+
+.inner__col img{
+    width: 100%;
+    }
+.col__caption{
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 0;
+    display: block;
+    color: #777;
+    padding-bottom: 0.5rem;
+}
+@media only screen and (max-width: 768px){
+    .inner__col{
+     width: 32%;
+     margin-right: 1.5%;
+        }
+        .inner__col{
+             width: 33.133333333333333%;
+             margin-right: 0.2%;
+                }
+                
+                .inner__col:nth-child(3n){
+margin-right: 0;
+                    
+                }
+                .inner__col:nth-child(4n){
+                    margin-right: 0.2%;
+                    }
+                
+    }
+
+
 	
 	</style>
 
@@ -66,10 +104,12 @@ width: 25%;
 		  
 		   ?>
 		  
-			  <figure class="wrap__inner__col">
-				  <img alt="現代美術家の新宅睦仁(シンタクトモニ)の<?php echo $year.'年'.$month.'月'.$day.'日' ?>の自画像/鉛筆ドローイング" data-src="/images/works/self-portrait/<?php echo $imageFile ?>.jpg" src="/images/common/white.gif" class="lazyload">
-				  <figcaption><time datetime="<?php echo $year.'/'.$month.'/'.$day ?>" itemprop="datepublished"><?php echo $year.'/'.$month.'/'.$day ?></time>
-				  <small><?php echo$year; ?>年 紙、鉛筆、30.5×30.5cm &#12316 30.5×30.5cm</small>
+			  <figure class="inner__col">
+				  <a href="/images/works/self-portrait/<?php echo $imageFile ?>@2x.jpg" class="zoom">
+                      <img alt="現代美術家の新宅睦仁(シンタクトモニ)の<?php echo $year.'年'.$month.'月'.$day.'日' ?>の自画像/鉛筆ドローイング" data-src="/images/works/self-portrait/<?php echo $imageFile ?>.jpg" src="/images/common/white.gif" class="lazyload">
+                  </a>
+				  <figcaption class="col__caption"><time datetime="<?php echo $year.'/'.$month.'/'.$day ?>" itemprop="datepublished"><?php echo $year.'/'.$month.'/'.$day ?></time>
+				  <!-- small><?php echo$year; ?>年 紙、鉛筆、30.5×30.5cm &#12316 30.5×30.5cm</small-->
 				  </figcaption>
 			  </figure>
 
@@ -92,6 +132,7 @@ width: 25%;
 		  
 		<section id="works-nav">
 			<?php include("../../inc/works-nav.php"); ?>
+            <?php include("../../js/luminous/image-zoom.php"); ?>
 		</section><!--foot_nav end-->
 	</div><!--コンテンツここまで-->
 	<?php include("../../inc/footer.php"); ?>
