@@ -4,15 +4,15 @@
 	<!--include meta-->
 	<?php include("../../inc/meta.php"); ?><!--/include meta -->
 	<meta content="<?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $selfportrait_jp;?>" lang="ja" name="description">
-	<title>自画像(2005-<?php echo date("Y"); ?>)｜現代美術家/新宅睦仁</title>
+	<title>自画像(2004-<?php echo date("Y"); ?>)｜現代美術家/新宅睦仁</title>
 	<link href="/css/works.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<?php include("../../inc/header.php"); ?>
 	<!--コンテンツここから-->
 	<div id="contents">
-		<!-- filmset_start　-->
-		<h1 class="line">自画像(2005-<?php echo date("Y"); ?>)</h1>
+		<!-- 自画像プロジェクトの開始年月日 2004.03.03 16:28　-->
+		<h1 class="line">自画像(2004-<?php echo date("Y"); ?>)</h1>
         <p class="details">紙、鉛筆、色鉛筆、水彩、ボールペン他、15.8×21.0cm &#12316 22.9×30.5cm</p>
 
 <style>
