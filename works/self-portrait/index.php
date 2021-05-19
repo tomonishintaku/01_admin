@@ -97,7 +97,7 @@ margin-right: 0;
 				  <a href="/images/works/self-portrait/<?php echo $imageFile ?>@2x.jpg" class="zoom">
                       <img alt="現代美術家の新宅睦仁(シンタクトモニ)の<?php echo $year.'年'.$month.'月'.$day.'日' ?>の自画像/鉛筆ドローイング" data-src="/images/works/self-portrait/<?php echo $imageFile ?>.jpg" src="/images/common/white.gif" class="lazyload">
                   </a>
-				  <figcaption class="col__caption"><time datetime="<?php echo $year.'/'.$month.'/'.$day ?>" itemprop="datepublished"><?php echo $year.'/'.$month.'/'.$day ?></time>
+				  <figcaption class="col__caption"><time datetime="<?php echo $year.'-'.$month.'-'.$day ?>" itemprop="datepublished"><?php echo $year.'.'.$month.'.'.$day ?></time>
 				  <!-- small><?php echo$year; ?>年 紙、鉛筆、30.5×30.5cm &#12316 30.5×30.5cm</small-->
 				  </figcaption>
 			  </figure>
