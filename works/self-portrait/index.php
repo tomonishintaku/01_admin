@@ -4,7 +4,7 @@
 	<!--include meta-->
 	<?php include("../../inc/meta.php"); ?><!--/include meta -->
 	<meta content="<?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $selfportrait_jp;?>" lang="ja" name="description">
-	<title>自画像(2000-<?php echo date("Y"); ?>)｜現代美術家/新宅睦仁</title>
+	<title>自画像(2005-<?php echo date("Y"); ?>)｜現代美術家/新宅睦仁</title>
 	<link href="/css/works.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -12,22 +12,11 @@
 	<!--コンテンツここから-->
 	<div id="contents">
 		<!-- filmset_start　-->
-		<h1 class="line">自画像(2000-<?php echo date("Y"); ?>)</h1>
-        <p class="details">紙、鉛筆、色鉛筆、水彩、ボールペン他、30.5×30.5cm &#12316 30.5×30.5cm</p>
-
-		<!-- 
-プログラムの要件
-フォルダを「年」、「月」まで分けて、31日まで回す
-それをを、何年から何年まで、
-2020年フォルダの
-11月フォルダの
-11日など
-ファイル名の、拡張子を除外したものを、各画像の下に吐き出す。
-三段階のforかwhileループで取得する。
-		　-->
+		<h1 class="line">自画像(2005-<?php echo date("Y"); ?>)</h1>
+        <p class="details">紙、鉛筆、色鉛筆、水彩、ボールペン他、15.8×21.0cm &#12316 22.9×30.5cm</p>
 
 <style>
-
+/*最終的にcssファイルに移行予定*/
 
 .wrap__inner{
     display: flex;
