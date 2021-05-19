@@ -23,7 +23,13 @@
     wpex_img("blog_width"),
     wpex_img("blog_width"),
     wpex_img("blog_crop")
-); ?>" alt="<?php echo the_title(); ?>" />
+); 
+$thumbID = get_post_thumbnail_id($postID);
+?>" alt="<?php
+$alt = get_post_meta($thumbID, '_wp_attachment_image_alt', true);
+echo $alt; ?>" title="<?php
+$title = get_post( $thumbID )->post_title;;
+echo $title; ?>" />
             <?php if (!is_singular()) { ?>
         </a>
         <?php } ?>
