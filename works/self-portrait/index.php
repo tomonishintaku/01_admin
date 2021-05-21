@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<!--include meta-->
-	<?php include("../../inc/meta.php"); ?><!--/include meta -->
+	<?php include("../../inc/meta.php"); ?>
 	<meta content="<?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $selfportrait_jp;?>" lang="ja" name="description">
 	<title>自画像(2004-<?php echo date("Y"); ?>)｜現代美術家/新宅睦仁</title>
 	<link href="/css/works.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<?php include("../../inc/header.php"); ?>
-	<!--コンテンツここから-->
+	<!-- START contents-->
 	<div id="contents">
 		<!-- 自画像プロジェクトの開始年月日 2004.03.03 16:28　-->
 		<h1 class="line">自画像(2004-<?php echo date("Y"); ?>)</h1>
@@ -61,9 +60,6 @@ margin-right: 0;
                     }
                 
     }
-
-
-	
 	</style>
 
 
@@ -76,21 +72,19 @@ margin-right: 0;
 		  $command = "find " . $target_dir . " -name '*.jpg' | wc -l";
 		  exec($command, $result);
 		  $result = $result[0] - 1;
-		  //for ($i=0; $i<=$result; $i++) { 
-		  //for ($year = 2005; $year <= 2100; $year++) { 
-		  //for ($month = 1; $month <= 12; $month++) { 
-		  //for ($day = 1; $day <= 31; $day++) {  
-		  for ($year = 2100; $year >= 2005; $year--) { 
+		  
+		  // 2082 would be the year when I must die because I would have been 100 years old.
+		  for ($year = 2082; $year >= 2005; $year--) { 
 		  for ($month = 12; $month >= 1; $month--) { 
 		  for ($day = 31; $day >= 1; $day--) {  
 		  
-		  $imageFile = $year.'-'.$month.'-'.$day;	  
-		  
-		  //画像ファイルの存在チェック
+		  //zero padding = sprintf(%02d)
+		  $imageFile = $year.'-'.sprintf('%02d', $month).'-'.sprintf('%02d', $day);
+		  		  
+		  //Check exists of the images
 		  $file = dirname(__FILE__).'/../../images/works/self-portrait/'.$imageFile.'.jpg';
 		  if (file_exists($file)) {
-			  // 画像あり
-		  
+			  // START images exist
 		   ?>
 		  
 			  <figure class="inner__col">
@@ -102,28 +96,28 @@ margin-right: 0;
 				  </figcaption>
 			  </figure>
 
-<?php
-
-} else {
-  // 画像なし
-  
-  
-  }
-
-?>
-		  	  
-	
-		  <?php }}}
-	  
-	  //} ?>
+			<?php
+			// images exist END
+			} 
+			else {
+			// No images
+			  	 }
+	   		?>
+		  	 <?php
+		   	}//day Loop END
+		   	}//month Loop END
+	   		}//year Loop END
+	  		?>
 		  </section>		  
 	  </article>
 		  
 		<section id="works-nav">
 			<?php include("../../inc/works-nav.php"); ?>
             <?php include("../../js/luminous/image-zoom.php"); ?>
-		</section><!--foot_nav end-->
-	</div><!--コンテンツここまで-->
+		</section>
+		<!--foot_nav end-->
+	</div>
+	<!-- contents END-->
 	<?php include("../../inc/footer.php"); ?>
 </body>
 </html>
