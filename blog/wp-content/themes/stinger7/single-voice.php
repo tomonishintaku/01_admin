@@ -120,7 +120,13 @@ text-align: center;
 	                        <!--END Conditional branch VAR-->
 							<p class="voice-wrap__comment-link">
 							<strong>皆さまからのお便りをお待ちしております。</strong><br><a href="#comments"><u>コメント欄</u> <i class="far fa-comment-dots"></i></a>より何でも遠慮なくお書き込みください。いただきましたお便りは、すべて次回の音声ブログで紹介させていただきます。</a>
-							</p>
+							</p>							
+							<aside class="voice-wrap__comment-link" style="font-size: 0.75rem!important;">
+								<strong style="display:block;margin-bottom:0.5rem;color: #ff1493;">*アートプロジェクトとしての音声ブログ
+								</strong>
+								この音声ブログは新宅睦仁の人生その日々の限られた時間を用いたアートプロジェクトです。<strong>死ぬ前日あるいは死ぬ当日まで、毎日1回録音・公開</strong>いたします(各平均5分程度)。<br>
+									録音件数が多くなればなるほど＝積み重ねた時間が増えれば増えるほど、最期の日の録音、その声は、言葉は、たとえどんなにくだらない内容であったとしても、有無を言わさず他人になにかしら得も言われぬ感慨――災難に巻き込まれた人々の遺した最期の声に感ずるような――を与えることになるでしょう。
+								</aside>
 	                    </section>
 
 	                </div>
