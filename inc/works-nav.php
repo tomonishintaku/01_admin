@@ -114,6 +114,11 @@
 		<p><?php echo $others_jp;?></p></a>
 	</li>
 	<li>
+		<a href="/works/self-portrait"><img alt="2004年から毎日描き続けている新宅睦仁の自画像、鉛筆ドローイング、デッサン画像" class="lazyload" src="/images/works/nav/self-portrait.jpg">
+		<h3>自画像</h3>
+		<p><?php echo $selfportrait_jp;?></p></a>
+	</li>
+	<li>
 		<a href="/works/filmset/index.html"><img alt="モチーフ用写真素材撮影風景" class="lazyload" src="/images/works/nav/filmset.jpg">
 		<h3>写真素材撮影風景</h3>
 		<p><?php echo $filmset_jp;?></p></a>
