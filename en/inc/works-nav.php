@@ -122,6 +122,11 @@
 		<p><?php echo $filmset_en;?></p></a>
 	</li>
 	<li>
+		<a href="/en/works/self-portrait"><img alt="Self-portrait, pencil drawing, drawing image of Mutsuhito Shintaku, who has been drawing every day since 2004" class="lazyload" src="/images/works/nav/self-portrait.jpg">
+		<h3>Self-portrait</h3>
+		<p><?php echo $selfportrait_en;?></p></a>
+	</li>
+	<li>
 		<a href="/en/portfolio/"><img alt="Artist Portfolio Download in PDF format" src="/images/works/nav/portfolio.jpg">
 		<h3>Artist Portfolio(PDF)</h3>
 		<p>You can see an overview of my artworks in this PDF file.</p></a>

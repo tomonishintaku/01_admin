@@ -1,4 +1,8 @@
 <?php
+
+/*自画像*/
+$selfportrait_en = "A record of self-portraits that I have been drawing as a training, diary, or an art project every day since 2004.";
+
 /*たいままんじゅう*/
 $cannabisbuns_en = "I dropped a cannabis tincture on buns. Whether this would be illegal or not depends on the country. This satirizes the globalism.";
 
