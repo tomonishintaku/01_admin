@@ -159,4 +159,21 @@ function admin_favicon() {
 }
 add_action('admin_head', 'admin_favicon');
 
+//新規投稿に初期値を入力
+function my_default_title( $post_title, $post ){
+    if( $post->post_type == 'post' ){
+        $post_title = get_the_date();
+    } 
+      return $post_title;
+}
+add_filter( 'default_title', 'my_default_title', 10, 2 );
+
+function my_default_content( $post_content, $post ){
+    if( $post->post_type == 'post' ){
+        $post_content = '<p style="color:#c00;text-align:center;">*Before correction</p>';
+    }
+    return $post_content;
+}
+add_filter( 'default_content', 'my_default_content', 10, 2 );
+
 // ALl you can search even custom post END **************************************************************
