@@ -24,6 +24,7 @@ node_modules/
 
 *.psd
 *.ai
+*.DS_Store
 images/
 en/blog/wp-content/uploads/
 en/blog/wp-content/plugins/
