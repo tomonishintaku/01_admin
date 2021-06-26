@@ -17,14 +17,14 @@ if ( preg_match( "/<title>(.*?)<\/title>/i", $html, $matches) ) {
 }
 
 ?>
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34577324-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BM6T539L9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-34577324-1');
+
+  gtag('config', 'G-1BM6T539L9');
 </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
