@@ -105,7 +105,8 @@ text-align: center;
 	                        <?php else:?>
 	                        <!--Conditional branch VAR-->
 	                        <section class="voice-wrap__main">
-	                            <audio src="<?php echo $audio_file; ?>" controls>
+	                            <audio preload="metadata" controls>
+								<source src="<?php echo $audio_file; ?>">
 	                                <p>どうやらご使用のブラウザが古くて頑固な方で、音声の再生なんぞするものかとおっしゃっています。どなたか最近の方をお呼びしてはいかがでしょう。</p>
 	                            </audio>
 	                        </section>
