@@ -23,6 +23,6 @@ $sns = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/inc/sns.php');
         </div>
         </div>        
         <p class="profile-unit__text clear" itemprop="description">
-            <?php branchURL('/en/', 'Contemporary artist / WEB designer (WEB design business: <a href="https://shintaku.co/en" target="_blank"><u>SHINTAKU。</u></a>) based in Hiroshima. I’ve learned at an Art College and Culinary Institute. I attempt to connect ART and FOOD.', '広島→福岡→東京→シンガポール→ロサンゼルス→現在広島在住の現代美術家/WEBデザイナー/<a href="https://shintaku.co" target="_blank"><u>合同会社シンタク</u></a>代表。 美大と調理師専門学校に学んだ経験から食をテーマに作品を制作。無類の居酒屋好き。'); ?></p>
+            <?php branchURL('/en/', 'Contemporary artist / Web Developer (President & CEO at <a href="https://shintaku.co/en/" target="_blank"><u>SHINTAKU LLC</u></a>) based in Hiroshima. I’ve learned at an Art College and Culinary Institute. I attempt to connect ART and FOOD.', '広島→福岡→東京→シンガポール→ロサンゼルス→現在広島在住の現代美術家/WEBデザイナー/<a href="https://shintaku.co" target="_blank"><u>合同会社シンタク</u></a>代表。 美大と調理師専門学校に学んだ経験から食をテーマに作品を制作。無類の居酒屋好き。'); ?></p>
     </section>
 </article>
