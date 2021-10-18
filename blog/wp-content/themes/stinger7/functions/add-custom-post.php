@@ -18,7 +18,6 @@ function create_post_type() {
 // 'supports' option is here
 // 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky'
 
-
     ]);
 }
 
@@ -48,14 +47,14 @@ add_action( 'pre_get_posts', function ( $query ) {
 } );
 
 
-//cusom post for Bento Recipe　
+//cusom post for Books　================================
 //add cusom post
 add_action( 'init', 'create_post_type_2' );
 function create_post_type_2() {
-    register_post_type( 'bento', [ // 投稿タイプ名の定義
+    register_post_type( 'books', [ // 投稿タイプ名の定義
         'labels' => [
-            'name'          => '弁当レシピ', // 管理画面上で表示する投稿タイプ名
-            'singular_name' => 'bento',    // カスタム投稿の識別名
+            'name'          => '読書記録', // 管理画面上で表示する投稿タイプ名
+            'singular_name' => 'books',    // カスタム投稿の識別名
         ],
         'public'        => true,  // 投稿タイプをpublicにするか
         'has_archive'   => true, // アーカイブ機能ON/OFF
@@ -63,22 +62,18 @@ function create_post_type_2() {
         'show_in_rest'  => true,  // 5系から出てきた新エディタ「Gutenberg」を有効にする
         'supports' => array( 'title', 'custom-fields', 'comments', 'revisions') // control what elements display
 
-// 'supports' option is here
-// 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky'
-
-
     ]);
 }
 
 // Add CATEGORY and TAG for custom post
 add_action( 'init', function () {
-    register_taxonomy( 'post_tag', [ 'post', 'bento' ],
+    register_taxonomy( 'post_tag_2', [ 'post', 'books' ],
         [
             'hierarchical' => false,
             'query_var'    => 'tag',
         ]
     );
-    register_taxonomy( 'category', [ 'post', 'bento' ],
+    register_taxonomy( 'category_2', [ 'post', 'books' ],
         [
             'hierarchical' => true,
             'query_var'    => 'category_name',
@@ -91,11 +86,27 @@ add_action( 'pre_get_posts', function ( $query ) {
         return;
     }
     if ( $query->is_category() || $query->is_tag() ) {
-        $query->set( 'post_type', [ 'post', 'bento' ] );
+        $query->set( 'post_type', [ 'post', 'books' ] );
     }
 } );
 
 
+//cusom post for Bento Recipe　================================
+//add cusom post
+add_action( 'init', 'create_post_type_3' );
+function create_post_type_3() {
+    register_post_type( 'bento', [ // 投稿タイプ名の定義
+        'labels' => [
+            'name'          => '弁当レシピ', // 管理画面上で表示する投稿タイプ名
+            'singular_name' => 'bento',    // カスタム投稿の識別名
+        ],
+        'public'        => true,  // 投稿タイプをpublicにするか
+        'has_archive'   => true, // アーカイブ機能ON/OFF
+        'menu_position' => 7,     // 管理画面上での配置場所
+        'show_in_rest'  => true,  // 5系から出てきた新エディタ「Gutenberg」を有効にする
+        'supports' => array( 'title', 'custom-fields', 'comments', 'revisions') // control what elements display
 
+    ]);
+}
 
 ?>
