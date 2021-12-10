@@ -1245,12 +1245,12 @@ add_filter( 'nonce_life', function () { return 4320 * HOUR_IN_SECONDS; } );
 function add_posts_columns($columns) {
 	$columns = array(
 	'cb'         => '<input type="checkbox" />',
-	'title'      => 'タイトル',
-	'author'     => '作成者',
-	'categories' => 'カテゴリー',
-	'tags'       => 'タグ',
-	'comments'   => '<div class="comment-grey-bubble" title="コメント"></div>',
-	'date'       => '日時'
+	'title'      => 'Titel',
+	'author'     => 'Auteur',
+	'categories' => 'Categorieën',
+	'tags'       => 'Tags',
+	'comments'   => '<div class="comment-grey-bubble" title="Reacties">Reacties</div>',
+	'date'       => 'Datum'
 );
 	return $columns;
 }
