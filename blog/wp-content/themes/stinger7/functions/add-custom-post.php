@@ -46,7 +46,6 @@ add_action( 'pre_get_posts', function ( $query ) {
     }
 } );
 
-
 //cusom post for Books　================================
 //add cusom post
 add_action( 'init', 'create_post_type_2' );
@@ -60,20 +59,20 @@ function create_post_type_2() {
         'has_archive'   => true, // アーカイブ機能ON/OFF
         'menu_position' => 6,     // 管理画面上での配置場所
         'show_in_rest'  => true,  // 5系から出てきた新エディタ「Gutenberg」を有効にする
-        'supports' => array( 'title', 'custom-fields', 'comments', 'revisions') // control what elements display
+        'supports' => array( 'title', 'thumbnail', 'editor', 'custom-fields', 'comments', 'revisions') // control what elements display
 
     ]);
 }
 
 // Add CATEGORY and TAG for custom post
 add_action( 'init', function () {
-    register_taxonomy( 'post_tag_2', [ 'post', 'books' ],
+    register_taxonomy( 'post_tag_2', [ 'post_2', 'books' ],
         [
             'hierarchical' => false,
             'query_var'    => 'tag',
         ]
     );
-    register_taxonomy( 'category_2', [ 'post', 'books' ],
+    register_taxonomy( 'category_2', [ 'post_2', 'books' ],
         [
             'hierarchical' => true,
             'query_var'    => 'category_name',
@@ -81,12 +80,12 @@ add_action( 'init', function () {
     );
 } );
 
-add_action( 'pre_get_posts', function ( $query ) {
+add_action( 'pre_get_posts_2', function ( $query ) {
     if ( is_admin() && ! $query->is_main_query() ) {
         return;
     }
     if ( $query->is_category() || $query->is_tag() ) {
-        $query->set( 'post_type', [ 'post', 'books' ] );
+        $query->set( 'post_type_2', [ 'post_2', 'books' ] );
     }
 } );
 
@@ -108,5 +107,46 @@ function create_post_type_3() {
 
     ]);
 }
+
+// Add CATEGORY and TAG for custom post
+add_action( 'init', function () {
+    register_taxonomy( 'post_tag_3', [ 'post_3', 'bento' ],
+        [
+            'hierarchical' => false,
+            'query_var'    => 'tag',
+        ]
+    );
+    register_taxonomy( 'category_3', [ 'post_3', 'bento' ],
+        [
+            'hierarchical' => true,
+            'query_var'    => 'category_name',
+        ]
+    );
+} );
+
+add_action( 'pre_get_posts_3', function ( $query ) {
+    if ( is_admin() && ! $query->is_main_query() ) {
+        return;
+    }
+    if ( $query->is_category() || $query->is_tag() ) {
+        $query->set( 'post_type_3', [ 'post_3', 'bento' ] );
+    }
+} );
+
+
+// Change Side bar's Icon
+function my_dashboard_print_styles() {
+	?>
+	<style>
+	#dashboard_right_now .voice-count:before { content: "\f488"; }
+	#adminmenu #menu-posts-voice div.wp-menu-image:before { content: "\f488"; }
+	#dashboard_right_now .books-count:before { content: "\f330"; }
+	#adminmenu #menu-posts-books div.wp-menu-image:before { content: "\f330"; }
+	#dashboard_right_now .bento-count:before { content: "\f187"; }
+	#adminmenu #menu-posts-bento div.wp-menu-image:before { content: "\f187"; }
+	</style>
+	<?php
+	}
+	add_action( 'admin_print_styles', 'my_dashboard_print_styles' );
 
 ?>
