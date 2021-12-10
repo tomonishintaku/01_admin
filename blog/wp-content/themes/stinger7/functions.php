@@ -1238,4 +1238,22 @@ require_once('functions/utilities.php');
 require_once('functions/add-custom-post.php');
 require_once('functions/search-including-custom-post.php');
 
+//nonce の有効期間の変更　6ヶ月(4320時間)に設定
+add_filter( 'nonce_life', function () { return 4320 * HOUR_IN_SECONDS; } );
+
+//Display information on admin article list
+function add_posts_columns($columns) {
+	$columns = array(
+	'cb'         => '<input type="checkbox" />',
+	'title'      => 'タイトル',
+	'author'     => '作成者',
+	'categories' => 'カテゴリー',
+	'tags'       => 'タグ',
+	'comments'   => '<div class="comment-grey-bubble" title="コメント"></div>',
+	'date'       => '日時'
+);
+	return $columns;
+}
+add_filter( 'manage_posts_columns', 'add_posts_columns' );
+
  ?>
