@@ -37,15 +37,34 @@
                                 <h3>
                                     <?php the_title(); ?>
                                 </h3>
+                            </a>
                             <div class="blog_info <?php st_hidden_class(); ?>">
                                 <p>
                                     <!--i class="fa fa-clock-o"></i--><?php the_time( 'Y/m/d' ); ?>
                                     &nbsp;<span class="pcone"><i class="fa fa-tags"></i>
-                                        <?php the_category( ', ' ); ?>
-                                        <?php the_tags( '', ', ' ); ?>
+                                        <?php //the_category( ', ' ); ?>
+                                        <?php //the_tags( '', ', ' ); ?>
+
+
+                            <?php $postcat = get_the_category(); ?>
+                            <?php $catid = $postcat[0]->cat_ID; ?>
+                            <?php $allcats = array( $catid ); ?>
+                            <?php
+                        while ( !$catid == 0 ) {
+                            $mycat = get_category( $catid );
+                            $catid = $mycat->parent;
+                            array_push( $allcats, $catid );
+                        }
+                        array_pop( $allcats );
+                        $allcats = array_reverse( $allcats );
+                        ?>
+                            <?php foreach ( $allcats as $catid ): ?>
+                                <a href="<?php echo get_category_link( $catid ); ?>" itemprop="url" class="cat-link">
+                                    <span itemprop="title"><?php echo esc_html( get_cat_name( $catid ) ); ?></span></a><span class="separate">,</span> 
+                                <?php endforeach; ?>
+
                                     </span>
                                 </p>
-                                </a>
                                             <!--p style="margin:1rem 0;font-weight:bold;color: #555;"><i class="fa fa-paper-plane" aria-hidden="true"></i>
                                         <em>お便りを書こう！次回のブログで必ず読みます。</em><br>
                                         <a href="<?php comments_link(); ?>" style="text-decoration: underline;color: #1546a7;"><?php comments_number(); ?></a>
@@ -58,7 +77,7 @@
                             </section-->
                             <a href="<?php the_permalink(); ?>">
                             <div class="smanone2">
-                                <p><?php echo mb_substr(get_field('notes'),0,20). '...'; ?></p>
+                                <p><?php echo mb_substr(get_field('notes'),0,44). '...'; ?></p>
                             </div>
                           </a>
                         </div>
