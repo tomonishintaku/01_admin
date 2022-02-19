@@ -19,11 +19,13 @@
         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <?php } ?>
             <style type="text/css">
-                .post-entry img {height: auto;}
+                .post-entry img {
+                    max-width: 640px;
+                    height: auto;}
             </style>
             <?php
               $post_id = '';
-              $thumb = get_the_post_thumbnail( $post_id, 'large' );
+              $thumb = get_the_post_thumbnail( $post_id, 'medium' );
               echo $thumb;
             ?>
             <?php if (!is_singular()) { ?>

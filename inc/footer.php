@@ -24,7 +24,17 @@
     <p id="pagetop"><a href="#head"><i class="fa fa-chevron-circle-up"></i></a></p>
     <div class="foot__sns">
         <ul>
-            <?php branchURL('/en/', $sns_en, $sns); /*This function from "/inc/common/functions.php"*/?>
+                <?php
+        //Branch SNS for Japanese and English
+           $url = $_SERVER['REQUEST_URI'];
+           if(strstr($url,'/en/')==true):
+                ?>
+    <?php $bnr = file_get_contents('https://tomonishintaku.com/en/inc/sns.php'); echo $bnr; ?>
+    <?php else: ?>
+    <?php $bnr = file_get_contents('https://tomonishintaku.com/inc/sns.php'); echo $bnr; ?>
+    <?php endif; 
+        //Branch SNS for Japanese and English END
+        ?>
         </ul>
     </div>
 

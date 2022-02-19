@@ -30,6 +30,15 @@ __USE mixin--MAX-width group
     margin-bottom: 1.5em;
 }
 
+span.status {
+    padding: 0 .2em;
+    background: #555;
+    color: #fff;
+    white-space: nowrap;
+    margin-left: 3px;
+    font-weight: 400;
+}
+
 .img_list {
     width: $content-width;
     padding: 0;
@@ -43,16 +52,7 @@ __USE mixin--MAX-width group
         clear: both;
         visibility: hidden;
     }
-
-    span.status {
-        padding: 0 .2em;
-        background: #555;
-        color: #fff;
-        white-space: nowrap;
-        margin-left: 3px;
-        font-weight: 400;
-    }
-
+    
     .ex-img {
         display: block;
         padding: 0 .2em;

@@ -177,3 +177,6 @@ function my_default_content( $post_content, $post ){
 add_filter( 'default_content', 'my_default_content', 10, 2 );
 
 // ALl you can search even custom post END **************************************************************
+
+/** Undisplay PHP error due to update for PHP version */
+error_reporting(0);

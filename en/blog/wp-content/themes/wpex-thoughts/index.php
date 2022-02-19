@@ -17,7 +17,7 @@ if (have_posts()) : ?>
 	<?php
 	// Loop through each post
     while (have_posts()) : the_post();
-        get_template_part( 'content', get_post_format() );
+        get_template_part( 'content-list', get_post_format() );
     endwhile;        	
     ?>           
 </div><!-- /post -->

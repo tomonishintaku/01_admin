@@ -8,8 +8,8 @@ echo "<strong style='display:block;font-weight:normal;margin-top:2em;padding-top
 $series_list = array(
   "https://tomonishintaku.com/blog/essence-art-and-chimpom_2019" => "Chim↑Pom(チンポム)の本質はアートの本質",
   "https://tomonishintaku.com/blog/chimpom-controversy_2008" => "Chim↑Pom(チンポム)の是非-広島のピカッ",
-  "http://tomonishintaku.com/blog/about-act-chimpom_2008" => "Chim↑Pom(チンポム)の行為について",
-  "http://tomonishintaku.com/blog/about-act-chimpom-2_2008" => "Chim↑Pom(チンポム)の行為について(2)",
+  "https://tomonishintaku.com/blog/about-act-chimpom_2008" => "Chim↑Pom(チンポム)の行為について",
+  "https://tomonishintaku.com/blog/about-act-chimpom-2_2008" => "Chim↑Pom(チンポム)の行為について(2)",
 );
 
 # 現在表示しているページのURL

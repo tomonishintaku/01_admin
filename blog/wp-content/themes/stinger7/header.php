@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <?php wp_head(); ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34577324-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BM6T539L9"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-34577324-1');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1BM6T539L9');
     </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -48,7 +47,20 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php include_once( "st-font.php" ) //googlefont ?>
     <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
-    <style>*:lang(en) {display: none !important;}#head #logotype .voice {display: none;}</style>
+    <style>
+    *:lang(en) *:lang(ja){
+        display: none;
+        /*display: none !important;*/        
+    }
+    *:lang(ja) *:lang(en){
+        display: none;
+        /*display: none !important;*/        
+    }
+    #head #logotype .voice {display: none;}
+    .JAblog-wrapper {
+        position: initial!important;
+    }
+</style>    
 </head>
 
 <body <?php body_class('JAblog-wrapper'); ?>>

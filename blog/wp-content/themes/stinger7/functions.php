@@ -1237,6 +1237,7 @@ if ( !function_exists( 'st_post_class' ) ) {
 require_once('functions/utilities.php');
 require_once('functions/add-custom-post.php');
 require_once('functions/search-including-custom-post.php');
+require_once('functions/calculate-reading-time.php');
 
 //nonce の有効期間の変更　6ヶ月(4320時間)に設定
 add_filter( 'nonce_life', function () { return 4320 * HOUR_IN_SECONDS; } );
@@ -1255,5 +1256,9 @@ function add_posts_columns($columns) {
 	return $columns;
 }
 add_filter( 'manage_posts_columns', 'add_posts_columns' );
+
+
+/** Undisplay PHP error due to update for PHP version */
+error_reporting(0);
 
  ?>

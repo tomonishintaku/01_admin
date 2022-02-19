@@ -2,8 +2,8 @@
 
 //cusom post for VOICE BLOG
 //add cusom post
-add_action( 'init', 'create_post_type_voice' );
-function create_post_type_voice() {
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
     register_post_type( 'voice', [ // 投稿タイプ名の定義
         'labels' => [
             'name'          => '音声ブログ', // 管理画面上で表示する投稿タイプ名
@@ -20,6 +20,31 @@ function create_post_type_voice() {
 
     ]);
 }
+
+// Add CATEGORY and TAG for custom post
+add_action( 'init', function () {
+    register_taxonomy( 'category_voice', [ 'post_voice', 'voice' ],
+        [
+            'hierarchical' => true,
+            'query_var'    => 'category_name',
+        ]
+    );
+    register_taxonomy( 'post_tag_voice', [ 'post_voice', 'voice' ],
+        [
+            'hierarchical' => false,
+            'query_var'    => 'tag',
+        ]
+    );
+} );
+
+add_action( 'pre_get_posts_voice', function ( $query ) {
+    if ( is_admin() && ! $query->is_main_query() ) {
+        return;
+    }
+    if ( $query->is_category() || $query->is_tag() ) {
+        $query->set( 'post_type_voice', [ 'post_voice', 'voice' ] );
+    }
+} );
 
 //cusom post for Books　================================
 //add cusom post
@@ -38,6 +63,31 @@ function create_post_type_books() {
 
     ]);
 }
+// Add CATEGORY and TAG for custom post
+add_action( 'init', function () {
+    register_taxonomy( 'category_books', [ 'post_books', 'books' ],
+        [
+            'hierarchical' => true,
+            'query_var'    => 'category_name_books',
+        ]
+    );
+    register_taxonomy( 'post_tag_books', [ 'post_books', 'books' ],
+        [
+            'hierarchical' => false,
+            'query_var'    => 'tag_books',
+        ]
+    );
+} );
+
+add_action( 'pre_get_posts_books', function ( $query ) {
+    if ( is_admin() && ! $query->is_main_query() ) {
+        return;
+    }
+    if ( $query->is_category() || $query->is_tag() ) {
+        $query->set( 'post_type_books', [ 'post_books', 'books' ] );
+    }
+} );
+
 
 //cusom post for Bento Recipe　================================
 //add cusom post
@@ -59,35 +109,28 @@ function create_post_type_bento() {
 
 // Add CATEGORY and TAG for custom post
 add_action( 'init', function () {
-    register_taxonomy( 'category', [ 'post', 'voice', 'books', 'bento' ],
+    register_taxonomy( 'category_bento', [ 'post_bento', 'bento' ],
         [
             'hierarchical' => true,
-            'query_var'    => 'category_name',
+            'query_var'    => 'category_name_bento',
         ]
     );
-    register_taxonomy( 'post_tag', [ 'post', 'voice', 'books', 'bento' ],
+    register_taxonomy( 'post_tag_bento', [ 'post_bento', 'bento' ],
         [
             'hierarchical' => false,
-            'query_var'    => 'tag',
+            'query_var'    => 'tag_bento',
         ]
     );
 } );
 
-add_action( 'pre_get_posts', function ( $query ) {
+add_action( 'pre_get_posts_bento', function ( $query ) {
     if ( is_admin() && ! $query->is_main_query() ) {
         return;
     }
     if ( $query->is_category() || $query->is_tag() ) {
-        $query->set( 'post_type', [ 'post', 'voice', 'books', 'bento' ] );
+        $query->set( 'post_type_bento', [ 'post_bento', 'bento' ] );
     }
 } );
-
-function add_post_category_archive( $wp_query ) {
-if ($wp_query->is_main_query() && $wp_query->is_category()) {
-$wp_query->set( 'post_type', array('post', 'voice', 'books', 'bento'));
-}
-}
-add_action( 'pre_get_posts', 'add_post_category_archive' , 10 , 1);
 
 
 // Change Side bar's Icon

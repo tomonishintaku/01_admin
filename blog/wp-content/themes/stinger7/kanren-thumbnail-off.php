@@ -6,7 +6,7 @@
 		array_push( $category_ID, $category->cat_ID );
 	endforeach;
 	$args = array(
-		'post__not_in' => array( $post->ID ),
+		'post__not_in' => array( $post->ID, 56 ),
 		'posts_per_page' => 5,
 		'category__in' => $category_ID,
 		'orderby' => 'rand',

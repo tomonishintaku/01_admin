@@ -1,49 +1,4 @@
 	<?php get_header(); ?>
-	<style type="text/css">
-#head #logotype .blog {
-    display: none;
-}
-
-    #head #logotype .voice {
-            display: block;
-    }
-.voice-wrap__lead{
-font-weight: bold;
-margin:2rem 0 1rem 0;
-display: block;
-}
-
-.voice-wrap__comment-link{
-	margin-top:1.5rem;
-	padding-top: 1.5rem;
-	border-top:1px solid #ccc;
-}
-.voice-wrap__comment-link a{
-color: #ff1493;
-}
-.single-voice #support h3{
-	font-size: 1.2rem;
-	margin-top: 1rem;
-		margin-bottom:1rem;
-	padding-bottom: 1rem;
-	border-bottom:1px solid #ccc;
-}
-
-.single-voice #support p{
-line-height: 1.5rem;
-}
-.single-voice #comments h3{
-	font-size: 1.2rem;
-	background: #ff1493;
-font-weight: normal;
-padding: 0.25rem 1rem;
-border-radius: 4px;
-color: #fff;
-font-weight: bold;
-text-align: center;
-}
-
-	</style>
 
 	<div id="content" class="clearfix single-page">
 	    <div id="contentInner">
@@ -93,9 +48,6 @@ text-align: center;
 	                        </span>
 	                    </p>
 
-	                    <?php // You can check archive URL
-						//echo get_post_type_archive_link( 'voice' ); ?>
-	                    <!--VAR-->
 	                    <?php $audio_file = get_field('audio_file'); ?>
 	                    <?php $notes = get_field('notes'); ?>
 	                    <!--VAR END-->
@@ -103,21 +55,92 @@ text-align: center;
 	                        <?php if(empty($audio_file)):?>
 	                        <!--none-->
 	                        <?php else:?>
-	                        <!--Conditional branch VAR-->
-	                        <section class="voice-wrap__main">
-	                            <audio preload="metadata" controls>
-								<source src="<?php echo $audio_file; ?>">
-	                                <p>どうやらご使用のブラウザが古くて頑固な方で、音声の再生なんぞするものかとおっしゃっています。どなたか最近の方をお呼びしてはいかがでしょう。</p>
-	                            </audio>
-	                        </section>
 	                        <?php endif;?>
 	                        <!--END Conditional branch VAR-->
-	                        <?php if(empty($notes)):?>
-	                        <!--none-->
-	                        <?php else:?>
-	                        <small class="voice-wrap__lead">なにを話したか、かいつまんで言いますと……</small>
-	                        <p><?php echo $notes; ?></p>
-	                        <?php endif;?>
+
+
+<!-- ACF Definitions -->
+<?php $statusSelect = get_field('statusSelect'); ?>
+<?php $bg_color = get_field('bg_color'); ?>
+<?php $date_ja = get_field('date_ja'); ?>
+<?php $date_en = get_field('date_en'); ?>
+<?php $main_image = get_field('main_image'); ?>
+<?php $title_ja = get_field('title_ja'); ?>
+<?php $title_en = get_field('title_en'); ?>
+<?php $costs = get_field('costs'); ?>
+<?php $site_ja = get_field('site_ja'); ?>
+<?php $site_en = get_field('site_en'); ?>
+<?php $main_dish_ja = get_field('main_dish_ja'); ?>
+<?php $main_dish_en = get_field('main_dish_en'); ?>
+<?php $side_dishes = get_field('side_dishes'); ?>
+<?php $description_ja = get_field('description_ja'); ?>
+<?php $description_en = get_field('description_en'); ?>
+<?php $ingredients = get_field('ingredients'); ?>
+<?php $howto = get_field('howto'); ?>
+<?php $memo_ja = get_field('memo_ja'); ?>
+<?php $memo_en = get_field('memo_en'); ?>
+<?php $receipt_image = get_field('receipt_image'); ?>
+<?php $cost_no_convert = get_field('cost_no_convert'); ?>
+
+
+<div class="hash">
+<span class="common"><?php echo $statusSelect; ?></span>
+<span class="common"><?php echo $bg_color; ?></span>
+<span class="ja"><?php echo $date_ja; ?></span>
+<span class="en"><?php echo $date_en; ?></span>
+<span class="common"><?php echo $main_image; ?></span>
+<span class="ja"><?php echo $title_ja; ?></span>
+<span class="en"><?php echo $title_en; ?></span>
+<?php echo $costs; ?></span>	
+<span class="ja"><?php echo $site_ja; ?></span>
+<span class="en"><?php echo $site_en; ?></span>
+<span class="ja"><?php echo $main_dish_ja; ?></span>
+<span class="en"><?php echo $main_dish_en; ?></span>
+<?php echo $side_dishes; ?></span>
+<span class="ja"><?php echo $description_ja; ?></span>
+<span class="en"><?php echo $description_en; ?></span>
+<?php echo $ingredients; ?></span>
+<?php echo $howto; ?></span>
+<span class="ja"><?php echo $memo_ja; ?></span>
+<span class="en"><?php echo $memo_en; ?></span>
+<span class="common"><?php echo $receipt_image; ?></span>
+<span class="common"><?php echo $cost_no_convert; ?></span>
+</div>
+
+
+
+<script>
+	
+// URLのパラメータを取得
+var urlParam = location.search.substring(1);
+ 
+// URLにパラメータが存在する場合
+if(urlParam) {
+  // 「&」が含まれている場合は「&」で分割
+  var param = urlParam.split('&');
+ 
+  // パラメータを格納する用の配列を用意
+  var paramArray = [];
+ 
+  // 用意した配列にパラメータを格納
+  for (i = 0; i < param.length; i++) {
+	var paramItem = param[i].split('=');
+	paramArray[paramItem[0]] = paramItem[1];
+  }
+ 
+  // パラメータidがosakaかどうかを判断する
+  if (paramArray.id == 'en') {
+	$('.ja').append('<p>大阪です</p>');
+  } else {
+	$('.en').append('<p>大阪ではありません</p>');
+  }
+}
+
+</script>
+
+
+
+
 
 	                <!--ページナビ-->
 	                <div class="p-navi clearfix">
@@ -143,51 +166,19 @@ text-align: center;
 	                    </dl>
 	                </div>
 
-	                        <!--END Conditional branch VAR-->
-							<p class="voice-wrap__comment-link">
-							<strong>皆さまからのお便りをお待ちしております。</strong><br><a href="#comments"><u>コメント欄</u> <i class="far fa-comment-dots"></i></a>より何でも遠慮なくお書き込みください。いただきましたお便りは、すべて次回の音声ブログで紹介させていただきます。</a>
-							</p>							
-							<aside class="voice-wrap__comment-link" style="font-size: 0.75rem!important;">
-								<strong style="display:block;margin-bottom:0.5rem;color: #ff1493;">*アートプロジェクトとしての音声ブログ
-								</strong>
-								この音声ブログは新宅睦仁の人生その日々の限られた時間を用いたアートプロジェクトです。<strong>死ぬ前日あるいは死ぬ当日まで、毎日1回録音・公開</strong>いたします(各平均5分程度)。<br>
-									録音件数が多くなればなるほど＝積み重ねた時間が増えれば増えるほど、最期の日の録音、その声は、言葉は、たとえどんなにくだらない内容であったとしても、有無を言わさず他人になにかしら得も言われぬ感慨――災難に巻き込まれた人々の遺した最期の声に感ずるような――を与えることになるでしょう。
-								</aside>
-	                    </section>
+	            
+					    </section>
 
-	                </div>
-	                <?php the_content(); //本文 ?>
-	                <?php include ($_SERVER['DOCUMENT_ROOT'].'/inc/common/blog-profile.php'); //common pfofile unit for blog ?>
-	                <?php $support = file_get_contents('https://tomonishintaku.com/blog/wp-content/themes/stinger7/common_inc/support.php'); echo $support; //支援のお願い ?>
-	                <?php get_template_part( 'sns' ); //ソーシャルボタン読み込み ?>
-	                <?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 5 ) ) : else : ?>
-	                <?php endif; ?>
-	                <?php get_template_part( 'popular-thumbnail' ); //任意のエントリ ?>
-	                <?php get_template_part( 'st-rank' ); ?>
-	                <?php wp_link_pages(); ?>
-	                <!--p class="tagst"><i class="fa fa-tags"></i>&nbsp;-
-						<?php the_category( ', ' ) ?>
-						<?php the_tags( '', ', ' ); ?>
-					</p-->
-	                <!-- /#wrapper -->
-	                <section style="margin-top:0;">
-	                    <aside>
-	                        <?php
-								//コメント
-								if ( ( $GLOBALS["stdata6"] ) === '' ) { ?>
-	                        <?php if ( comments_open() || get_comments_number() ) {
-										comments_template();
-									} ?>
-	                        <?php } ?>
-	                    </aside>
-	                </section>
+
+
+
 	                <!--ページナビ-->
 	                <div class="p-navi clearfix">
 	                    <dl>
 	                        <?php
 								$prev_post = get_previous_post();
 								if ( !empty( $prev_post ) ): ?>
-	                        <dt><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>前の記事</dt>
+	                        <dt><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>前のレシピ</dt>
 	                        <dd>
 	                            <a
 	                                href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php echo $prev_post->post_title; ?></a>
@@ -196,7 +187,7 @@ text-align: center;
 	                        <?php
 								$next_post = get_next_post();
 								if ( !empty( $next_post ) ): ?>
-	                        <dt>次の記事<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></dt>
+	                        <dt>次のレシピ<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></dt>
 	                        <dd>
 	                            <a
 	                                href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo $next_post->post_title; ?></a>
