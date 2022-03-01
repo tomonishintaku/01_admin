@@ -48,6 +48,11 @@
 		<p><?php echo $cannabisbuns_en;?></p></a>
 	</li>
 	<li>
+		<a href="/en/works/edible-flowers.html"><img class="lazyload" alt="Today's Meal" src="/images/works/nav/edible-flowers.jpg">
+		<h3>Edible Flowers</h3>
+		<p><?php echo $edibleflowers_en;?></p></a>
+	</li>
+	<li>
 		<a href="/en/works/todays-meal.html"><img class="lazyload" alt="Today's Meal" src="/images/works/nav/todays-meal.jpg">
 		<h3>Today's Meal</h3>
 		<p><?php echo $todaysmeal_en;?></p></a>

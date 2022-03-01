@@ -6,6 +6,9 @@ $selfportrait_en = "A record of self-portraits that I have been drawing as a tra
 /*たいままんじゅう*/
 $cannabisbuns_en = "I dropped a cannabis tincture on buns. Whether this would be illegal or not depends on the country. This satirizes the globalism.";
 
+/*Edible Flowers*/
+$edibleflowers_en = "Sprinkle mayonnaise and ketchup on edible flowers, which look like semen and blood, to reveal old-fashioned men's mind";
+
 /*Today's Meal*/
 $todaysmeal_en = "I blended daily meals into a paste and then shaped them to resemble the whipped cream that I take photos of.";
 

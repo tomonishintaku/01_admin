@@ -41,6 +41,11 @@
 		<p><?php echo $mysterymeat_jp;?></p></a>
 	</li>
 	<li>
+		<a href="/works/edible-flowers.html"><img alt="Edible Flowers" class="lazyload" src="/images/works/nav/edible-flowers.jpg">
+		<h3>Edible Flowers</h3>
+		<p><?php echo $edibleflowers_jp;?></p></a>
+	</li>
+	<li>
 		<a href="/works/todays-meal.html"><img alt="今日のごはん" class="lazyload" src="/images/works/nav/todays-meal.jpg">
 		<h3>今日のごはん</h3>
 		<p><?php echo $todaysmeal_jp;?></p></a>

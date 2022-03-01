@@ -35,6 +35,11 @@
 		<p>I express how contemporary opaque foods are blended into daily meals and then made into a paste.</p></a>
 	</li>
 	<li>
+		<a href="/en/works/filmset/fs_edible-flowers.html"><img class="lazyload" alt="Photographing elements for the Today's Meal series" src="/images/works/add/list_img/edible-flowers_filmset.jpg">
+		<h3 class="fs-ttl">Photos for <span>Edible Flowers</span></h3>
+		<p>Sprinkle mayonnaise or ketchup on edible flowers and stir to take a picture.</p></a>
+	</li>
+	<li>
 		<a href="/en/works/filmset/fs_cannabis-buns.html"><img class="lazyload" alt="Photographing elements for the Cannabis-Shaped Sweet Buns series" src="/images/works/add/list_img/cannabis-buns_filmset.jpg">
 		<h3 class="fs-ttl">Photos for <span>Cannabis-Shaped Sweet Buns</span></h3>
 		<p>I took photos of painted sweet bun green and dropped cannabis tincture in the US California.</p></a>
