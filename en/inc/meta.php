@@ -3,8 +3,20 @@
 // URL を指定する
 $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
+function curl_get_contents( $url ){
+  $ch = curl_init();
+  curl_setopt( $ch, CURLOPT_URL, $url );
+  curl_setopt( $ch, CURLOPT_HEADER, false );
+  curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+  curl_setopt( $ch, CURLOPT_TIMEOUT, 5 );
+  curl_setopt( $ch, CURLOPT_FAILONERROR, true );
+  $result = curl_exec( $ch );
+  curl_close( $ch );
+  return $result;
+}
+
 // 指定された URL から HTML 文字列を取得
-$html = file_get_contents($url);
+$html = curl_get_contents($url);
 
 // 内部エンコーディングに指定している文字コードに変換
 $html = mb_convert_encoding($html, mb_internal_encoding(), "auto" );
