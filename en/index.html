@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Contemporary Japanese Artist｜SHINTAKU Tomoni</title>
-	<!--include meta-->
-	<?php include("inc/meta.php"); ?><!--/include meta -->
-	<meta content="Create art works focus on the concept of food, based on my experience of studying at a culinary school and obtaining a cooking license following my graduation from a university of the arts" lang="en" name="description">
-	<meta content="painting, foods, cuisine, meal, cooking" lang="en" name="keywords">
+    <title>Contemporary Japanese Artist｜SHINTAKU Tomoni</title>
+    <!--include meta-->
+    <?php include("inc/meta.php"); ?>
+    <!--/include meta -->
+    <meta content="Create art works focus on the concept of food, based on my experience of studying at a culinary school and obtaining a cooking license following my graduation from a university of the arts" lang="en" name="description">
+    <meta content="painting, foods, cuisine, meal, cooking" lang="en" name="keywords">
 </head>
+
 <body>
-	<?php include("../inc/header.php"); ?>
-	<!--コンテンツここから-->
-	<div id="contents_back">
-		<div class="clearfix" id="contents">
-	<section id="main-3">
-					<ul class="clearfix">
-<?php
+    <?php include("../inc/header.php"); ?>
+    <!--コンテンツここから-->
+    <div id="contents_back">
+        <div class="clearfix" id="contents">
+            <section id="main-3">
+                <ul class="clearfix">
+                    <?php
 $add_rand_1 = array(
 '<a href="/en/works/bento.html"><img class="lazyload" src="/images/top/main3/work_1-a.jpg" alt="BENTO-November 25"><p><span>BENTO-November 25</span> 2017, acrylic on canvas, 14 × 18 inches (35.5 × 45.5 cm)<i class="fa fa-chevron-circle-right"></i></p></a>',
 '<a href="/en/works/non-gmo.html"><img class="lazyload" src="/images/top/main3/work_1-b.jpg" alt="Non-GMO(Chinese Cabbage and Crab)"><p><span>Non-GMO(Chinese Cabbage and Crab)</span> 2018, acrylic on canvas, 30 × 40 inches (76 × 102 cm)<i class="fa fa-chevron-circle-right"></i></p></a>',
@@ -30,18 +33,18 @@ $add_rand_3 = array(
 '<a href="/en/exhibition/2018_colour-me-well.html"><img class="lazyload" src="/images/top/main3/work_3-b.jpg" alt="Scenes of the SHINTAKU Tomoni Solo Show Cup Noodles Waterfall"><p>2018: Solo Show <span>COLOUR ME WELL</span> One East Asia Gallery/Singapore<i class="fa fa-chevron-circle-right"></i></p></a>',
 '<!--a href="/en/works/exhibition/160112-cvbentonoyama.html"><img class="lazyload" src="/images/top/main3/work_3-c.jpg" alt="Scenes of the Solo Show Mountains of Bento Meals from Convenience Stores"><p>2016: Solo Show <span>Mountains of Bento Meals from Convenience Stores</span> CCC/Shizuoka<i class="fa fa-chevron-circle-right"></i></p></a--><a href="/en/exhibition/2018_colour-me-well.html"><img class="lazyload" src="/images/top/main3/work_3-b.jpg" alt="Scenes of the SHINTAKU Tomoni Solo Show Cup Noodles Waterfall"><p>2018: Solo Show <span>COLOUR ME WELL</span> One East Asia Gallery/Singapore<i class="fa fa-chevron-circle-right"></i></p></a>',
 );
-$add_rand_1 = $add_rand_1[mt_rand(0, count($add_rand_1)-1)];
-$add_rand_2 = $add_rand_2[mt_rand(0, count($add_rand_2)-1)];
-$add_rand_3 = $add_rand_3[mt_rand(0, count($add_rand_3)-1)];
+$add_rand_1 = $add_rand_1[rand(0, 2)];
+$add_rand_2 = $add_rand_2[rand(0, 2)];
+$add_rand_3 = $add_rand_3[rand(0, 2)];
 echo '<li>'.$add_rand_1.'</li>', '<li>'.$add_rand_2.'</li>', '<li>'.$add_rand_3.'</li>';
 ?>
-				</section>
-			<?php include("inc/bnr.php"); ?>
-			<!--トピックスここから-->
-			<div id="topicstop">
+            </section>
+            <?php include("inc/bnr.php"); ?>
+            <!--トピックスここから-->
+            <div id="topicstop">
                 <h3 class="news_ttl" id="topicstitle">NEWS</h3>
-   <div class="news-list">
-<?php
+                <div class="news-list">
+                    <?php
   $arg = array(
              'posts_per_page' => 5, // 表示する件数
              'orderby' => 'date', // 日付でソート
@@ -50,22 +53,35 @@ echo '<li>'.$add_rand_1.'</li>', '<li>'.$add_rand_2.'</li>', '<li>'.$add_rand_3.
          );
   $posts = get_posts( $arg );
   if( $posts ): ?>
-    <ul>
-  <?php
+                    <ul>
+                        <?php
       foreach ( $posts as $post ) :
         setup_postdata( $post ); ?>
-      <li><a href="<?php the_permalink(); ?>"><div class="image"><?php the_post_thumbnail('thumbnail'); ?></div><div class="text"><span class="date"><?php the_time( 'Y.m.d' ); ?></span><h4><?php the_title(); ?></h4></div></a></li>
-<?php endforeach; ?>
-    </ul>
-<?php
+                        <li><a href="<?php the_permalink(); ?>">
+                                <div class="image">
+                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                </div>
+                                <div class="text"><span class="date">
+                                        <?php the_time( 'Y.m.d' ); ?></span>
+                                    <h4>
+                                        <?php the_title(); ?>
+                                    </h4>
+                                </div>
+                            </a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php
   endif;
   wp_reset_postdata();
 ?>
-</div>
-				<p class="all_news"><a href="/en/news/"><i class="fa fa-chevron-circle-right"></i>See all news</a></p>
-			</div><!--トピックスここまで-->
-		</div>
-	</div><!--コンテンツここまで-->
-	<?php include("../inc/footer.php"); ?>
+                </div>
+                <p class="all_news"><a href="/en/news/"><i class="fa fa-chevron-circle-right"></i>See all news</a></p>
+            </div>
+            <!--トピックスここまで-->
+        </div>
+    </div>
+    <!--コンテンツここまで-->
+    <?php include("../inc/footer.php"); ?>
 </body>
+
 </html>
