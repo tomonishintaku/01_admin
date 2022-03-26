@@ -46,7 +46,9 @@
 					</div>
 					<?php the_content(); //本文 ?>
 					<?php include ($_SERVER['DOCUMENT_ROOT'].'/inc/common/blog-profile.php'); //common pfofile unit for blog ?>
-					<?php $support = file_get_contents('https://tomonishintaku.com/blog/wp-content/themes/stinger7/common_inc/support.php'); echo $support; //支援のお願い ?>
+					<?php get_template_part('common_inc/support'); //支援のお願い ?>
+			　　　　　<?php get_template_part('common_inc/blogs-link-list'); //各ブログへのリンク ?>
+
 					<?php get_template_part( 'sns' ); //ソーシャルボタン読み込み ?>
 					<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 5 ) ) : else : ?>
 					<?php endif; ?>					

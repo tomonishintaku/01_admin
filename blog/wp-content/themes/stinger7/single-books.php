@@ -1,5 +1,74 @@
 	<?php get_header(); ?>
 
+<style type="text/css">
+	
+
+.entry-title {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+	}
+.entry-title .entry-title__book-info{
+	font-size: 1rem;
+	display: block;
+    margin-top: 1rem;
+}
+	.entry-content .book-info {
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+}
+.entry-content .book-info__star span {
+    color: #fb0;
+    padding-left: 0.5em;
+}
+.entry-content .post-outline__reading_time {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0.3rem 0 0.3rem 0.5rem;
+}
+.entry-content .post-outline__summary strong {
+	font-size: 0.8rem;
+}
+.entry-content .post-outline__summary p {
+	    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+.entry-content .post-outline__summary {
+    position: relative;
+    margin: 0 0 2.5rem;
+    padding: 0 0 0.5rem;
+    background: #fff;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #c71585;
+}
+
+
+.entry-content .post-outline__summary:after, .entry-content .post-outline__summary:before {
+    content: "";
+    border: 14px solid transparent;
+    border-top-color: transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -14px;
+}
+.entry-content .post-outline__summary:before {
+    content: "";
+    border: 14px solid transparent;
+    border-top-color: transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -14px;
+}
+.entry-content .post-outline__summary:before {
+    border-top-color: #c71585;
+    bottom: -28px;
+}
+.entry-content .post-outline__summary:after {
+    border-top-color: #fff;
+    bottom: -27px;
+}
+
+</style>
 
 	<div id="content" class="clearfix single-page">
 	    <div id="contentInner">
@@ -56,9 +125,9 @@
 						itemtype="http://schema.org/BlogPosting">
 					
 						<header class="article-header entry-header">
-							<aside class="article-tag">
+							<!--aside class="article-tag">
 								<?php printf( get_the_category_list(', ') ); ?>
-							</aside>
+							</aside-->
 							<h1 class="entry-title single-title" itemprop="headline" rel="bookmark">
 								<?php the_title(); ?>
 								<?php if(empty($author || $publisher)):?>
@@ -206,11 +275,17 @@
 									} ?>
 	                        <?php } ?>
 	                    </aside>
+	                    					<?php get_template_part('common_inc/support'); //支援のお願い ?>
+			　　　　　<?php get_template_part('common_inc/blogs-link-list'); //各ブログへのリンク ?>
+
 	                </section>
 	                <?php endwhile; else: ?>
 	                <p>記事がありません</p>
 	                <?php endif; ?>
 	                <!--ループ終了-->
+	                						<!--関連記事-->
+						<?php get_template_part( 'kanren' ); ?>
+
 	                </aside>
 	                <!--/post-->
 	            </article>

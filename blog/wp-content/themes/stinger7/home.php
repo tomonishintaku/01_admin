@@ -3,6 +3,7 @@
 <div id="content" class="clearfix">
 	<div id="contentInner">
 		<main <?php st_text_copyck(); ?>>
+			<?php get_template_part('common_inc/blogs-link-list'); //各ブログへのリンク ?>
 			<article>
 				<?php if (!is_paged()): ?>
 					<?php get_template_part( 'news-st' ); //お知らせ ?>
