@@ -1,7 +1,5 @@
 <?php
 // Picking up the page title 
-// URL を指定する
-$url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 function curl_get_contents( $url ){
   $ch = curl_init();
@@ -15,8 +13,11 @@ function curl_get_contents( $url ){
   return $result;
 }
 
+// URL を指定する
+$page_url = "https://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+
 // 指定された URL から HTML 文字列を取得
-$html = curl_get_contents($url);
+$html = curl_get_contents( $page_url );
 
 // 内部エンコーディングに指定している文字コードに変換
 $html = mb_convert_encoding($html, mb_internal_encoding(), "auto" );
