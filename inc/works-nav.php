@@ -21,6 +21,11 @@
 		<p><?php echo $onebitechallengeaftercovid19_jp;?></p></a>
 	</li>
 	<li>
+		<a href="/works/eat-hate.html"><img alt="Eat Hate、市井の人々に、憎悪(ヘイトメッセージ)を食パンにチョコシロップで書いてもらい、作家が食べる" class="lazyload" src="/images/works/nav/eat-hate.jpg">
+		<h3>Eat Hate</h3>
+		<p><?php echo $eathate_jp;?></p></a>
+	</li>
+	<li>
 		<a href="/works/cannabis-buns.html"><img alt="たいままんじゅう" class="lazyload" src="/images/works/nav/cannabis-buns.jpg">
 		<h3>たいままんじゅう</h3>
 		<p><?php echo $cannabisbuns_jp;?></p></a>

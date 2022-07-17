@@ -20,6 +20,11 @@
 		<p>After coronavirus (COVID-19), I ask homeless people in LA to collaborate with me to take their photos for an art project.</p></a>
 	</li>
 	<li>
+		<a href="/en/works/filmset/fs_eat-hate.html"><img class="lazyload" alt="Photographing elements for the Eat Hate series" src="/images/works/add/list_img/eat-hate_filmset.jpg">
+		<h3 class="fs-ttl">Photos for <span>Eat Hate</span></h3>
+		<p>I collaborat with applicants on the streets of Amsterdam in the Netherlands and at private homes.</p></a>
+	</li>
+	<li>
 		<a href="/en/works/filmset/fs_non-gmo.html"><img class="lazyload" alt="Photographing elements for the Non-GMO series" src="/images/works/add/list_img/non-gmo_filmset.jpg">
 		<h3 class="fs-ttl">Photos for <span>Non-GMO</span></h3>
 		<p>I use photography to emphasize the importance of 100% organic food items.</p></a>

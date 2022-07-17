@@ -1,5 +1,8 @@
 <?php
 
+/*Eat Hate*/
+$eathate_en = "People write their hatred on bread with chocolate syrup, and the artist eats it, causing psychological catharsis.";
+
 /*自画像*/
 $selfportrait_en = "A record of self-portraits that I have been drawing as a training, diary, or an art project every day since 2004.";
 

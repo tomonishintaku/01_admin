@@ -1,25 +1,66 @@
-<?php require_once dirname(__FILE__).'/common/functions.php';?>
+<style type="text/css">
+body, p, h1, h2, h3, h4, h5, h6{
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+.bio .main_info ul.list h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+.foot p.public_caution, .blogs-foot p.public_caution {
+    line-height: 1.25;
+    font-size: 0.85rem;
+    padding-bottom: 0.5rem;
+    }
+@media only screen and (min-width: 1025px){
+.foot__copy, .blogs-foot__copy {
+    height: 90px;
+}
+.foot__copy address{
+font-size: 0.85rem;
+    padding-left: 0;
+}
+}
+
+@media only screen and (max-width: 1024px){
+.foot__sns, .blogs-foot__sns {
+    margin-top: 1rem;
+}
+}
+@media only screen and (min-width: 1025px){
+.head #logotype #en-link img {
+    top: -2px;
+}
+}
+/* for works pages */
+#contents .col-12.col-md-6 .title span {
+	padding-right: 0.75rem;
+}
+</style>
 <header id="head" class="head">
     <!--  HUMBURGER menu contents-->
     <div class="min-header head__logo">
         <!-- Japanese logo set -->
         <h2 id="logotype" lang="ja">
-            <a href="/" class="std"><img src="/images/common/site-logo.png"
-                    alt="料理、食をテーマに作品を制作する現代美術家/新宅睦仁/シンタクトモニ"></a>
+            <a href="/" class="std"><img src="/images/common/site-logo.svg" alt="料理、食をテーマに作品を制作する現代美術家/新宅睦仁/シンタクトモニ" style="width:80%;"></a>
             <a href="/en<?php echo $_SERVER['PHP_SELF'] ?>" id="en-link" class="std"><img
-                    src="/images/common/head-lang_jp.png" alt="website-for-english"></a>
-            <a href="/blog/" class="blog"><img src="/images/common/head_pic_blog.png" title="むろん、どこにも行きたくない。" alt="現代美術家/新宅睦仁/シンタクトモニのエッセイ・コラムのブログ"></a>
+                    src="/images/common/head-lang_jp.svg" alt="website-for-english"></a>
+            <a href="/blog/" class="blog"><img src="/images/common/head_pic_blog.svg" title="むろん、どこにも行きたくない。" alt="現代美術家/新宅睦仁/シンタクトモニのエッセイ・コラムのブログ" style="width:80%;"></a>
             <a href="/blog/voice/" class="voice"><img src="/images/blog/voice-blog-logo.png" title="まだ、死んでない。" alt="現代美術家/新宅睦仁の音声ブログ"></a>
         </h2>
         <!-- English logo set -->
 
         <h2 id="logotype" lang="en">
             <a class="std" href="/en/"><img alt="Contemporary artist｜SHINTAKU Tomoni website"
-                    src="/images/common/site-logo_en.png"></a>
+                    src="/images/common/site-logo_en.svg" style="width:80%;"></a>
             <a href="<?php $str = $_SERVER['PHP_SELF']; $str = str_replace('/en', '', $str); echo $str;?>" id="en-link"
-                class="std"><img alt="website-for-Japanese" src="/images/common/head-lang_en.png"></a>
+                class="std"><img alt="website-for-Japanese" src="/images/common/head-lang_en.svg"></a>
             <a href="/en/blog/" class="blog"><img alt="Contemporary artist｜SHINTAKU Tomoni website"
-                    src="/images/common/head_pic_blog_en.png"></a>
+                    src="/images/common/head_pic_blog_en.svg" style="width:70%;"></a>
         </h2>
     </div>
 
@@ -45,7 +86,7 @@
 
                 </div>
 
-                <?php endif; 
+                <?php endif;
 
         //Branch WP load for Japanese and English END
 
@@ -73,6 +114,9 @@
                 <a href="/blog/" itemprop="URL" lang="ja">ブログ</a>
                 <a href="/en/blog/" itemprop="URL" lang="en">BLOG</a>
             </li>
+            <li itemprop="name">
+                <a href="/blog/books/" itemprop="URL" lang="ja">読書記録</a>
+            </li>
             <li itemprop="name" lang="ja">
                 <a href="/blog/voice/" itemprop="URL" lang="ja">音声ブログ(毎日更新)</a>
             </li>
@@ -86,8 +130,45 @@
             </li>
             <li class="sns" itemprop="name">
                 <ul>
-                    <?php branchURL('/en/', $sns_en, $sns); /*This function from "/inc/common/functions.php"*/?>
-                </ul>
+                <?php
+        //Branch SNS for Japanese and English
+           $url = $_SERVER['REQUEST_URI'];
+           if(strstr($url,'/en/')==true):
+                ?>
+    <li class="main-sns">
+        <a class="button twitter" href="https://twitter.com/tomoni_en" target="_blank" title="Click to share this post on Twitter"><i aria-hidden="true" class="fab fa-twitter-square"></i></a>
+    </li>
+    <li class="main-sns">
+        <a class="button facebook" href="https://www.facebook.com/tomoni.shintaku" target="_blank"><i aria-hidden="true" class="fab fa-facebook-square"></i></a>
+    </li>
+    <li>
+        <a class="button instagram" href="https://www.instagram.com/tomonishintaku/" target="_blank" title="Click to share this post on Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+    </li>
+    <li>
+        <a class="button youtube" href="https://www.youtube.com/channel/UCDnt1pKShw7vYrD1JavHBkg" target="_blank" title="Click to share this post on YouTube"><i class="fab fa-youtube-square"></i></a>
+    </li>
+    <li>
+        <a class="button linkedin" href="https://www.linkedin.com/in/tomonishintaku/" target="_blank" title="Click to share this post on LinkedIn"><i aria-hidden="true" class="fab fa-linkedin"></i></a>
+    </li>
+    <?php else: ?>
+    <li class="main-sns">
+        <a class="button twitter" href="https://twitter.com/tomonishintaku" target="_blank" title="Click to share this post on Twitter"><i aria-hidden="true" class="fab fa-twitter-square"></i></a>
+    </li>
+    <li class="main-sns">
+        <a class="button facebook" href="https://www.facebook.com/tomoni.shintaku" target="_blank"><i aria-hidden="true" class="fab fa-facebook-square"></i></a>
+    </li>
+    <li>
+        <a class="button instagram" href="https://www.instagram.com/tomonishintaku/" target="_blank" title="Click to share this post on Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+    </li>
+    <li>
+        <a class="button youtube" href="https://www.youtube.com/channel/UCDnt1pKShw7vYrD1JavHBkg" target="_blank" title="Click to share this post on YouTube"><i class="fab fa-youtube-square"></i></a>
+    </li>
+    <li>
+        <a class="button linkedin" href="https://www.linkedin.com/in/tomonishintaku/" target="_blank" title="Click to share this post on LinkedIn"><i aria-hidden="true" class="fab fa-linkedin"></i></a>
+    </li>
+    <?php endif;
+        //Branch SNS for Japanese and English END
+        ?>                </ul>
             </li>
             <li class="lang-switch" itemprop="name" lang="ja">
                 <div class="lang-switch__left"><a class="common-nav en" href="/en<?php echo $_SERVER['PHP_SELF'] ?>"
@@ -148,17 +229,6 @@
     </nav>
 
     <!-- DESKTOP menu END-->
-
-    <!--a href="/news" lang="ja">
-        <div class="pc-line-news">
-            <?php/* $page_id = 7229; $content = get_page($page_id); echo $content->post_content; */?>
-        </div>
-    </a>
-    <a href="/en/news" lang="en">
-        <div class="pc-line-news" lang="en">
-            <?php/* $page_id = 932; $content = get_page($page_id); echo $content->post_content; */?>
-        </div>
-    </a-->
 
     <!-- HUMBURGER menu  -->
 

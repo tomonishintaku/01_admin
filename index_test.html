@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>現代美術家｜新宅睦仁のたいとるですから</title>
+    <!--include meta-->
+    <?php include("inc/meta2.php"); ?>
+    <!--/include meta -->
+    <meta name="description" lang="ja" content="絵画/ペインティングを中心に、食物をモチーフとして作品を制作している現代美術家の新宅睦仁。牛丼やカップヌードル、コンビニ弁当等の卑近な食べ物を用い現代の状況をクリティカルに表現する。" />
+    <meta name="keywords" lang="ja" content="絵画,現代アート,食物,食文化,料理,食のアート" />
+</head>
+
+<body>
+    <?php include("inc/header.php"); ?>
+    <!--コンテンツここから-->
+    <div id="contents_back">
+        <div id="contents" class="clearfix">
+            <section id="main-3">
+                <ul class="clearfix">
+                    <?php
+$add_rand_1 = array(
+'<a href="/works/bento.html"><img class="lazyload" src="/images/top/main3/work_1-a.jpg" alt="BENTO/弁当-November 25"><p><span>BENTO-November 25</span> 2017年 キャンバスにアクリル 35.5×45.5cm<i class="fa fa-chevron-circle-right"></i></p></a>',
+'<a href="/works/non-gmo.html"><img class="lazyload" src="/images/top/main3/work_1-b.jpg" alt="遺伝子組み換えでない(白菜×カニ)"><p><span>遺伝子組み換えでない(白菜×カニ)</span> 2018年 キャンバス、アクリル 76×102cm<i class="fa fa-chevron-circle-right"></i></p></a>',
+'<a href="/works/one-bite-challenge.html"><img class="lazyload" src="/images/top/main3/work_1-c.jpg" alt="ONE BITE CHALLENGE(ジョン/45歳/男性/2019年5月23日)"><p><span>ONE BITE CHALLENGE(ジョン/45歳/男性/2019年5月23日)</span> 2019年 キャンバス、アクリル 30×30cm<i class="fa fa-chevron-circle-right"></i></p></a>',
+);
+$add_rand_2 = array(
+'<a href="/works/filmset//fs_one-bite-challenge.html"><img class="lazyload" src="/images/top/main3/work_2-a.jpg" alt="ONE BITE CHALLENGEのための写真素材撮影風景"><p><span>ONE BITE CHALLENGE</span>シリーズのための写真素材撮影風景<i class="fa fa-chevron-circle-right"></i></p></a>',
+'<a href="/works/filmset/fs_cannabis-buns.html"><img class="lazyload" src="/images/top/main3/work_2-b.jpg" alt="たいままんじゅうのための写真素材撮影風景"><p><span>たいままんじゅう</span>シリーズのための写真素材撮影風景<i class="fa fa-chevron-circle-right"></i></p></a>',
+'<a href="/works/filmset/fs_cooking-leather.html"><img class="lazyload" src="/images/top/main3/work_2-c.jpg" alt="レザー料理のための写真素材撮影風景"><p><span>レザー料理</span>シリーズのための写真素材撮影風景<i class="fa fa-chevron-circle-right"></i></p></a>',
+);
+$add_rand_3 = array(
+'<a href="/exhibition/2018_colour-me-well.html"><img class="lazyload" src="/images/top/main3/work_3-b.jpg" alt="個展・グループ展の展示風景"><p>2018:個展「COLOUR ME WELL」One East Asia Gallery/シンガポール<i class="fa fa-chevron-circle-right"></i></p></a><!--a href="/works/exhibition/161126_conveni-bento2.html"><img class="lazyload" src="/images/top/main3/work_3-a.jpg" alt="個展・グループ展の展示風景"><p>2016:個展「コンビニ弁当の山－Time is money.」トーキョーワンダーサイト渋谷/東京<i class="fa fa-chevron-circle-right"></i></p></a-->',
+'<a href="/exhibition/2018_colour-me-well.html"><img class="lazyload" src="/images/top/main3/work_3-b.jpg" alt="個展・グループ展の展示風景"><p>2018:個展「COLOUR ME WELL」One East Asia Gallery/シンガポール<i class="fa fa-chevron-circle-right"></i></p></a>',
+'<!--a href="/works/exhibition/160112-cvbentonoyama.html"><img class="lazyload" src="/images/top/main3/work_3-c.jpg" alt="個展・グループ展の展示風景"><p>2016:個展「コンビニ弁当の山」静岡市クリエーター支援センター（CCC）/静岡<i class="fa fa-chevron-circle-right"></i></p></a--><a href="/exhibition/2018_colour-me-well.html"><img class="lazyload" src="/images/top/main3/work_3-b.jpg" alt="個展・グループ展の展示風景"><p>2018:個展「COLOUR ME WELL」One East Asia Gallery/シンガポール<i class="fa fa-chevron-circle-right"></i></p></a>',
+);
+$add_rand_1 = $add_rand_1[rand(0, 2)];
+$add_rand_2 = $add_rand_2[rand(0, 2)];
+$add_rand_3 = $add_rand_3[rand(0, 2)];
+echo '<li>'.$add_rand_1.'</li>', '<li>'.$add_rand_2.'</li>', '<li>'.$add_rand_3.'</li>';
+?>
+            </section>
+            <!--bnr_area_START-->
+            <?php include("inc/bnr.php"); ?>
+            <!--bnr_area_END-->
+            <!--トピックスここから-->
+            <div id="topicstop">
+                <h3 class="news_ttl" id="topicstitle">ニュース</h3>
+                <div class="news-list">
+                    <?php
+  $arg = array(
+             'posts_per_page' => 5, // 表示する件数
+             'orderby' => 'date', // 日付でソート
+             'order' => 'DESC', // DESCで最新から表示、ASCで最古から表示
+             'category_name' => 'notice' // 表示したいカテゴリーのスラッグを指定
+         );
+  $posts = get_posts( $arg );
+  if( $posts ): ?>
+                    <ul>
+                        <?php
+      foreach ( $posts as $post ) :
+        setup_postdata( $post ); ?>
+                        <li><a href="<?php the_permalink(); ?>">
+                                <div class="image">
+                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                </div>
+                                <div class="text"><span class="date">
+                                        <?php the_time( 'Y.m.d' ); ?></span>
+                                    <h4>
+                                        <?php the_title(); ?>
+                                    </h4>
+                                </div>
+                            </a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php
+  endif;
+  wp_reset_postdata();
+?>
+                </div>
+                <!--NEWS start-->
+                <p class="all_news"><a href="news/"><i class="fa fa-chevron-circle-right"></i>全ニュースを見る</a></p>
+                <!--end NEWS-->
+            </div>
+            <!--トピックスここまで-->
+        </div>
+    </div>
+    <!--コンテンツここまで-->
+    <?php include("inc/footer.php"); ?>
+</body>
+
+</html>

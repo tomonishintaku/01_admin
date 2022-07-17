@@ -23,6 +23,11 @@
 		<p><?php echo $onebitechallengeaftercovid19_en;?></p></a>
 	</li>
 	<li>
+		<a href="/en/works/eat-hate.html"><img alt="Eat Hate、Ask the people write hatred (hate message) on bread with chocolate syrup, and the artist eats it" class="lazyload" src="/images/works/nav/eat-hate.jpg">
+		<h3>Eat Hate</h3>
+		<p><?php echo $eathate_en;?></p></a>
+	</li>
+	<li>
 		<a href="/en/works/non-gmo.html"><img class="lazyload" alt="Non-GMO" src="/images/works/nav/non-gmo.jpg">
 		<h3>Non-GMO</h3>
 		<p><?php echo $nongmo_en;?></p></a>

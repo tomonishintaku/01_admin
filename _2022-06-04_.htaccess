@@ -1,0 +1,73 @@
+﻿AddType application/x-httpd-lsphp .html
+SetEnvIf Request_URI ".*" UnlimitedWpLogin
+SetEnvIf Request_URI ".*" AllowForeignWpLogin
+ErrorDocument 404 /404.html
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+RewriteCond %{REQUEST_URI} ^.*/index.(html|php)
+RewriteRule ^(.*)index.(html|php)$ https://tomonishintaku.com/$1 [R=301,L]
+
+RewriteBase /
+RewriteRule ^works/exhibition/(.*)$ https://tomonishintaku.com/exhibition/$1 [R=301,L]
+RewriteRule ^en/works/exhibition/(.*)$ https://tomonishintaku.com/en/exhibition/$1 [R=301,L]
+RewriteRule ^images/works/mndtabeyo/(.*)$ https://tomonishintaku.com/images/works/lets-eat-everyone/$1 [R=301,L]
+RewriteRule ^images/works/exhibition/(.*)$ https://tomonishintaku.com/images/exhibition/$1 [R=301,L]
+Redirect permanent /en/works/hidden-flag.html https://tomonishintaku.com/en/works/double-flag.html
+Redirect permanent /works/hidden-flag.html https://tomonishintaku.com/works/double-flag.html
+Redirect permanent /en/exhibition/2016-conveni-bento-yama-time-is-money.html https://tomonishintaku.com/en/exhibition/161126_conveni-bento2.html
+Redirect permanent /en/portfolio/171025_shintaku_tomoni_en.pdf https://tomonishintaku.com/en/portfolio/180321_shintaku_tomoni_en.pdf
+Redirect permanent /images/common/white.jpg https://tomonishintaku.com/images/common/white.gif
+AddType image/svg+xml .svg .svgz
+
+# Fix Google Search Console Coverage error
+
+Redirect permanent /blog/category/宗教 https://tomonishintaku.com/blog/category/religion
+Redirect permanent /en/works/exhibition/2018_lets-eat-everyone.html https://tomonishintaku.com/en/exhibition/2018_colour-me-well.html
+Redirect permanent /works/artdisfor/about/ https://tomonishintaku.com/works/artdisfor/aboutus.html
+Redirect permanent /portfolio/171027_shintaku_tomoni_jp.pdf https://tomonishintaku.com/portfolio/shintakutomoni_jp.pdf
+Redirect permanent /works/exhibition/2018_lets-eat-everyone.html https://tomonishintaku.com/exhibition/2018_colour-me-well.html
+Redirect permanent /blog/category/宗教/キリスト教 https://tomonishintaku.com/blog/category/religion
+Redirect permanent /blog/category/essay/シンガポール https://tomonishintaku.com/blog/category/essay/singapore
+Redirect permanent /works/others/ https://tomonishintaku.com/works/others.html
+Redirect permanent /exhibition/141002-gyudonnotaki/150907-cupnoodlenotaki.html https://tomonishintaku.com/exhibition/150907-cupnoodlenotaki.html
+Redirect permanent /exhibition/141002-gyudonnotaki/2018_colour-me-well.html https://tomonishintaku.com/exhibition/2018_colour-me-well.html
+Redirect permanent /exhibition/141002-gyudonnotaki/150531-bjshokudo.html https://tomonishintaku.com/exhibition/150531-bjshokudo.html
+Redirect permanent /exhibition/161126_conveni-bento2/2018_colour-me-well.html https://tomonishintaku.com/exhibition/161126_conveni-bento2.html
+Redirect permanent https://tomonishintaku.com/exhibition/141002-gyudonnotaki/150531-bjshokudo.html https://tomonishintaku.com/exhibition/141002-gyudonnotaki
+Redirect permanent /en/works/one-bite-challenge/ https://tomonishintaku.com/en/works/one-bite-challenge
+Redirect permanent /works/others/ https://tomonishintaku.com/works/others
+Redirect permanent /works/others/ https://tomonishintaku.com/works/others
+Redirect permanent /works/others/ https://tomonishintaku.com/works/others
+Redirect permanent /blog/category/essay/daily https://tomonishintaku.com/blog/category/essay/
+
+
+
+# Fix Google Search Console Coverage error END
+
+# No display PHP errors
+# php_flag display_errors Off
+
+ExpiresDefault "access plus 1 days"
+SiteGuard_User_ExcludeSig 00201019
+SiteGuard_User_ExcludeSig 00201009
+SiteGuard_User_ExcludeSig 00302027
+SiteGuard_User_ExcludeSig 00201022
+SiteGuard_User_ExcludeSig 00201020
+SiteGuard_User_ExcludeSig 00201055
+SiteGuard_User_ExcludeSig 00201021
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 weeks"
+  ExpiresByType application/javascript "access plus 1 weeks"
+  ExpiresByType text/javascript "access plus 1 weeks"
+  ExpiresByType image/gif "access plus 1 weeks"
+  ExpiresByType image/jpeg "access plus 1 weeks"
+  ExpiresByType image/png "access plus 1 weeks"
+  ExpiresByType image/svg "access plus 1 weeks"
+  ExpiresByType image/x-icon "access plus 1 weeks"
+</IfModule>

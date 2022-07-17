@@ -1,15 +1,15 @@
-
 # BEGIN WordPress
-# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /en/blog/
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /en/blog/index.php [L]
+	RewriteEngine On
+	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+	RewriteBase /en/blog/
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /en/blog/index.php [L]
 </IfModule>
 
 # END WordPress
@@ -18,6 +18,6 @@ RewriteRule . /en/blog/index.php [L]
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwritten.
 <IfModule Litespeed>
-SetEnv noabort 1
+	SetEnv noabort 1
 </IfModule>
 # END LiteSpeed

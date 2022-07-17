@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--include meta-->
+    <?php include("../../inc/meta.php"); ?>
+    <!--/include meta -->
+    <meta name="description" lang="en" content="<?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $eathate_en;?>" />
+    <title>Photographing elements for the "Eat Hate" series</title>
+    <link href="/css/works.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <?php include("../../../inc/header.php"); ?>
+    <div id="contents">
+        <!-- filmset_start　-->
+        <h1 class="line">Photographing elements for the "Eat Hate" series</h1>
+        <div class="clearfix" id="no-pinterest">
+            <ul class="img_3">
+                <?php
+                    $target_dir = dirname(__FILE__).'/../../../images/works/add/eat-hate_filmset';
+                    $result = array();
+                    $command = "find " . $target_dir . " -name '*.jpg' | wc -l";
+                    exec($command, $result);
+                    $result = $result[0] - 1;
+                    for ($i=1; $i<=$result; $i++) {
+                ?>
+                <li><img alt="Photographing elements for the Eat Hate series, participants in the Netherlands" data-src="/images/works/add/eat-hate_filmset/img_<?php echo $i ?>.jpg" src="/images/common/white.gif" class="lazyload"></li>
+                <?php } ?>
+            </ul>
+        </div>
+        <!--no-pinterest end-->
+        <div class="row mx-auto mt-1 pt-4 pb-5 mb-3 qa-image-frame">
+            <div class="col-12 col-sm-6 p-1 text-center mt-3">
+                <h3 class="mb-2">Questionnaire for the participant</h3>
+                <a href="/images/works/add/eat-hate_filmset/questionnaire.pdf" target="_blank"><img alt="Questionnaire for the participant" src="/images/works/add/eat-hate_filmset/questionnaire.png" class="lazyload qa-image mb-1"><i class="far fa-file-pdf" aria-hidden="true"></i>PDF Download(372KB)</a>
+            </div>
+            <div class="col-12 col-sm-6 p-1 text-center mt-3">
+                <h3 class="mb-2">Explanation of the "Eat Hate"</h3>
+                <a href="/images/works/add/eat-hate_filmset/explanation.pdf" target="_blank"><img alt="Explanation of the Eat Hate" src="/images/works/add/eat-hate_filmset/explanation.png" class="lazyload qa-image mb-1"><i class="far fa-file-pdf" aria-hidden="true"></i>PDF Download(350KB)</a>
+            </div>
+        </div>
+        <div id="filmset-nav" class="img_list sp_mt">
+            <!--this-work-nav start-->
+            <ul class="img_txt_1">
+                <li>
+                    <a href="/en/works/eat-hate.html">
+                        <img src="/images/works/nav/eat-hate.jpg" alt="Eat Hate" class="lazyload">
+                        <h3>Eat Hate series</h3>
+                        <p>
+                            <?php require_once dirname(__FILE__).'/../../inc/short-concept.php'; echo $eathate_en;?>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+            <!--this-work-nav end-->
+            <!--filmset-nav start-->
+            <?php include("../../inc/filmset-nav.php"); ?>
+            <!--filmset-nav end-->
+        </div>
+    </div>
+    <?php include("../../../inc/footer.php"); ?>
+</body>
+
+</html>
